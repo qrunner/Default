@@ -1,0 +1,53 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Online</title>
+    <style type="text/css">
+        .online-order 
+        {
+            height: 100px;
+            
+        }
+
+        .new {
+            background-color: red;
+        }
+
+        .processing {
+            background-color: green;
+        }
+    </style>
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script type="text/javascript">
+        (function () {
+            var flickerApi = "http://localhost:6672/api/order/place/1";
+            $.getJSON(flickerApi)
+              .done(function (data) {
+                  $.each(data.items, function (i, item) {
+                      $("<div>").attr("id", item.id).appendTo("#images");
+                      if (i === 3)
+                      {
+                          return false;
+                      }
+                  });
+              });
+        })();
+    </script>
+</head>
+<body>
+    <div>
+        <div id="images"></div>
+
+        <div id="1" class="online-order new">
+            <div>Стол №1</div>
+        </div>
+        <div id="1" class="online-order processing"></div>
+    </div>
+</body>
+</html>

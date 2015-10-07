@@ -1,0 +1,145 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "Bakery.Modeling", "Bakery.Modeling\Bakery.Modeling.modelproj", "{AC5776BA-6B4B-47E3-AF4A-07C76C0FDC54}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bakery.Repository", "Bakery.Repository\Bakery.Repository.csproj", "{000DA3D0-F3F1-4345-A850-160ED3071A3B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accounting", "Bakery.Accounting\Accounting.csproj", "{0124E24D-C6EF-4104-ACE3-67A7CC126837}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bakery.Model", "Bakery.Abstractions\Bakery.Model.csproj", "{6C4C4EE1-10A9-4C6E-A976-FE780F8E25F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bakery.Logic", "Bakery.Logic\Bakery.Logic.csproj", "{DDE07115-76B2-4E72-87F8-2B2B3DC142C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fortius", "Common\Fortius.csproj", "{5DE43DD1-FF70-442D-A894-04D79C290AE7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Membership", "Membership\Membership.csproj", "{6965C7C6-5646-4EAD-83FF-94ED12C4ED81}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Production", "Production\Production.csproj", "{B53BE638-ECD3-49C6-AD4E-012F79B91E20}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Production.Test", "Production.Test\Production.Test.csproj", "{AD693E93-A079-443D-A677-0C0A59FF1A7A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bakery.Model.Test", "Bakery.Model.Test\Bakery.Model.Test.csproj", "{CBBFDEDD-BB9E-4538-BC9F-BEA67D8A29A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fortius.Data.Entity", "Fortius.Data.Entity\Fortius.Data.Entity.csproj", "{93DE0D62-EB9A-4946-A740-59D3D2AA4397}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bakery.App", "Bakery.App\Bakery.App.csproj", "{E17574ED-A8A0-40F0-BE36-97742E4ED972}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bakery.UI", "Bakery.ViewModels\Bakery.UI.csproj", "{B91E3571-B37D-449F-BBF2-32926440C66F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bakery.UI.WinForms", "Bakery.Views\Bakery.UI.WinForms.csproj", "{B0C394EE-DDF1-4AF2-90A7-85F538F1D46C}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 14
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://fortius.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Bakery.Abstractions\\Bakery.Model.csproj
+		SccProjectName1 = Bakery.Abstractions
+		SccLocalPath1 = Bakery.Abstractions
+		SccProjectUniqueName2 = Bakery.Accounting\\Accounting.csproj
+		SccProjectName2 = Bakery.Accounting
+		SccLocalPath2 = Bakery.Accounting
+		SccProjectUniqueName3 = Bakery.App\\Bakery.App.csproj
+		SccProjectName3 = Bakery.App
+		SccLocalPath3 = Bakery.App
+		SccProjectUniqueName4 = Bakery.Logic\\Bakery.Logic.csproj
+		SccProjectName4 = Bakery.Logic
+		SccLocalPath4 = Bakery.Logic
+		SccProjectUniqueName5 = Bakery.Model.Test\\Bakery.Model.Test.csproj
+		SccProjectName5 = Bakery.Model.Test
+		SccLocalPath5 = Bakery.Model.Test
+		SccProjectUniqueName6 = Bakery.Modeling\\Bakery.Modeling.modelproj
+		SccProjectName6 = Bakery.Modeling
+		SccLocalPath6 = Bakery.Modeling
+		SccProjectUniqueName7 = Common\\Fortius.csproj
+		SccProjectName7 = Common
+		SccLocalPath7 = Common
+		SccProjectUniqueName8 = Fortius.Data.Entity\\Fortius.Data.Entity.csproj
+		SccProjectName8 = Fortius.Data.Entity
+		SccLocalPath8 = Fortius.Data.Entity
+		SccProjectUniqueName9 = Membership\\Membership.csproj
+		SccProjectName9 = Membership
+		SccLocalPath9 = Membership
+		SccProjectUniqueName10 = Production.Test\\Production.Test.csproj
+		SccProjectName10 = Production.Test
+		SccLocalPath10 = Production.Test
+		SccProjectUniqueName11 = Production\\Production.csproj
+		SccProjectName11 = Production
+		SccLocalPath11 = Production
+		SccProjectUniqueName12 = Bakery.ViewModels\\Bakery.UI.csproj
+		SccProjectName12 = Bakery.ViewModels
+		SccLocalPath12 = Bakery.ViewModels
+		SccProjectUniqueName13 = Bakery.Views\\Bakery.UI.WinForms.csproj
+		SccProjectName13 = Bakery.Views
+		SccLocalPath13 = Bakery.Views
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AC5776BA-6B4B-47E3-AF4A-07C76C0FDC54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC5776BA-6B4B-47E3-AF4A-07C76C0FDC54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC5776BA-6B4B-47E3-AF4A-07C76C0FDC54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC5776BA-6B4B-47E3-AF4A-07C76C0FDC54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{000DA3D0-F3F1-4345-A850-160ED3071A3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{000DA3D0-F3F1-4345-A850-160ED3071A3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{000DA3D0-F3F1-4345-A850-160ED3071A3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{000DA3D0-F3F1-4345-A850-160ED3071A3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0124E24D-C6EF-4104-ACE3-67A7CC126837}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0124E24D-C6EF-4104-ACE3-67A7CC126837}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0124E24D-C6EF-4104-ACE3-67A7CC126837}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0124E24D-C6EF-4104-ACE3-67A7CC126837}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C4C4EE1-10A9-4C6E-A976-FE780F8E25F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C4C4EE1-10A9-4C6E-A976-FE780F8E25F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C4C4EE1-10A9-4C6E-A976-FE780F8E25F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C4C4EE1-10A9-4C6E-A976-FE780F8E25F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDE07115-76B2-4E72-87F8-2B2B3DC142C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDE07115-76B2-4E72-87F8-2B2B3DC142C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDE07115-76B2-4E72-87F8-2B2B3DC142C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDE07115-76B2-4E72-87F8-2B2B3DC142C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DE43DD1-FF70-442D-A894-04D79C290AE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DE43DD1-FF70-442D-A894-04D79C290AE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DE43DD1-FF70-442D-A894-04D79C290AE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DE43DD1-FF70-442D-A894-04D79C290AE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6965C7C6-5646-4EAD-83FF-94ED12C4ED81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6965C7C6-5646-4EAD-83FF-94ED12C4ED81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6965C7C6-5646-4EAD-83FF-94ED12C4ED81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6965C7C6-5646-4EAD-83FF-94ED12C4ED81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B53BE638-ECD3-49C6-AD4E-012F79B91E20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B53BE638-ECD3-49C6-AD4E-012F79B91E20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B53BE638-ECD3-49C6-AD4E-012F79B91E20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B53BE638-ECD3-49C6-AD4E-012F79B91E20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD693E93-A079-443D-A677-0C0A59FF1A7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD693E93-A079-443D-A677-0C0A59FF1A7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD693E93-A079-443D-A677-0C0A59FF1A7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD693E93-A079-443D-A677-0C0A59FF1A7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBBFDEDD-BB9E-4538-BC9F-BEA67D8A29A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBBFDEDD-BB9E-4538-BC9F-BEA67D8A29A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBBFDEDD-BB9E-4538-BC9F-BEA67D8A29A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBBFDEDD-BB9E-4538-BC9F-BEA67D8A29A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93DE0D62-EB9A-4946-A740-59D3D2AA4397}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93DE0D62-EB9A-4946-A740-59D3D2AA4397}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93DE0D62-EB9A-4946-A740-59D3D2AA4397}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93DE0D62-EB9A-4946-A740-59D3D2AA4397}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E17574ED-A8A0-40F0-BE36-97742E4ED972}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E17574ED-A8A0-40F0-BE36-97742E4ED972}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E17574ED-A8A0-40F0-BE36-97742E4ED972}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E17574ED-A8A0-40F0-BE36-97742E4ED972}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B91E3571-B37D-449F-BBF2-32926440C66F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B91E3571-B37D-449F-BBF2-32926440C66F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B91E3571-B37D-449F-BBF2-32926440C66F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B91E3571-B37D-449F-BBF2-32926440C66F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0C394EE-DDF1-4AF2-90A7-85F538F1D46C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0C394EE-DDF1-4AF2-90A7-85F538F1D46C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0C394EE-DDF1-4AF2-90A7-85F538F1D46C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0C394EE-DDF1-4AF2-90A7-85F538F1D46C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

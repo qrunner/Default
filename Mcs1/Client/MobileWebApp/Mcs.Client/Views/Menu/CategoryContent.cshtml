@@ -1,0 +1,137 @@
+﻿@model IEnumerable<Mcs.Client.ViewModels.DishQty>
+
+@{
+    ViewBag.Title = "Блюда";
+}
+
+@section Header {
+    @Html.ActionLink("Назад", "Menu", "Menu", null, new { data_icon = "arrow-l", data_rel = "back" })
+    <h1>@ViewBag.Title</h1>
+}
+
+@section HeadSection{
+    <link href="~/Content/core.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-1.8.2.min.js" type="text/javascript"></script>
+}
+
+@section scripts{
+    // Функциональные кнопки заголовка
+    $(".ui-header").append(<span style="position: absolute;top: 3px;right: 50px;margin: 0px;"> 
+                                <a href="@Url.Action("Menu", "Menu")"><img src="~/Content/images/book_32.png" alt="" /></a></span>
+                                <span style="position: absolute;top: 3px;right: 5px;margin: 0px;">
+                                <a href="@Url.Action("ShoppingCart", "ShoppingCart")"><img src="~/Content/images/cart_32.png" alt="" /></a></span>);
+}
+
+<script type="text/javascript">
+    $(function () {
+        // Увеличивает количество заказанных порций блюда
+        $(".AddDish").click(function () {
+            var dishId = $(this).attr("data-id");
+            $.post('@Url.Action("AddToCart", "ShoppingCart")', { "id": dishId },
+                function (qty) {
+                    $('#' + dishId).text(qty);
+                });
+        });
+
+        // Уменьшает количество заказанных порций блюда
+        $(".RemoveDish").click(function () {
+            var dishId = $(this).attr("data-id");
+            $.post('@Url.Action("RemoveFromCart", "ShoppingCart")', { "id": dishId },
+                function (qty) {
+                    $('#' + dishId).text(qty);
+                });
+        });
+
+        // Заполняет список элементами
+        function populateList(dishList) {
+            var listControl = $('#dish-list');
+            listControl.empty();
+            dishList.forEach(function (dish) {
+                var listItem = document.createElement('li');
+                var hypertext = '<table border="0" style="table-layout: fixed; overflow: hidden; word-wrap: break-word; ">' +
+                    '<tr>' +
+                    '<td rowspan="2"><img src="/Content/images/dish_64.png" alt="" /></td>' +
+                    '<td rowspan="2" width="60%">' + dish.Name + ' <br> ' + dish.Description + '</td>' +
+                    '<td>' +
+                    '<a href="#" class="AddDish" data-id="' + dish.DishId + '">' +
+                    '<img src="/Content/images/plus_24.png" alt="" />' +
+                    '</a>' +
+                    '</td>' +
+                    '</tr>' +
+                    '<tr>' +
+                    '<td>' +
+                    '<a href="#" class="RemoveDish" data-id="' + dish.DishId + '">' +
+                    '<img src="/Content/images/minus_24.png" alt="" />' +
+                    '</a>' +
+                    '</td>' +
+                    '</tr>' +
+                    '<tr>' +
+                    '<td>' +
+                    '<img src="/Content/images/details_32.png" alt="" />' +
+                    '</td>' +
+                    '<td>' + dish.Price + '</td>' +
+                    '<td><label id="' + dish.DishId + '">' + dish.Quantity + '</label></td>' +
+                    '</tr>' +
+                    '</table>';
+                var fragment = document.createElement("bt");
+                fragment.innerHTML = hypertext;
+                listItem.appendChild(fragment);
+                listItem.className = "ui-li ui-li-static ui-btn-up-b";
+                listControl.append(listItem);
+            });
+        };
+
+        // Фильтрация блюд по названию
+        $(".search-panel").keyup(function () {
+            var searchStr = $("#search-box").val();
+            if (searchStr == "") {
+                var categoryId = $("#category-id").val();
+                $.post('@Url.Action("DefaultCategoryContent", "Menu")', { "id": categoryId }, populateList);
+            } else
+                $.post('@Url.Action("SearchDishes", "Menu")', { "searchStr": searchStr }, populateList);
+        });
+    });
+</script>
+
+<input type="hidden" id="category-id" value="@ViewBag.CategoryId" />
+<div class="right-inner-addon search-panel">
+    <i class="icon-search"></i>
+    <input type="search" placeholder="Search" id="search-box" />
+</div>
+
+<ul data-role="listview" data-inset="true" id="dish-list">
+    @foreach (var item in Model)
+    {
+        <li style="padding: 0">
+            <table border="0" style="table-layout: fixed; overflow: hidden; word-wrap: break-word; width: 100%;" cellpadding="0" cellspacing="0">
+
+                <tr>
+                    <td rowspan="2" width="80px" align="center"><img src="~/Content/images/dish_64.png" alt="" /></td>
+                    <td rowspan="2">@item.Name <br> @item.Description</td>
+                    <td width="50px" align="center">
+                        <a href="#" class="AddDish" data-id="@item.DishId">
+                            <img src="~/Content/images/plus_24.png" alt="" />
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="50px" align="center">
+                        <a href="#" class="RemoveDish" data-id="@item.DishId">
+                            <img src="~/Content/images/minus_24.png" alt="" />
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="80px" align="center">
+                        <a href="@Url.Action("DishDetails", "DishDetails", new { dishId = @item.DishId })">
+                            <img src="~/Content/images/details_32.png" alt="" />
+                        </a>
+                    </td>
+                    <td>@item.Price</td>
+                    <td width="50px" align="center"><label id="@item.DishId">@item.Quantity</label></td>
+                </tr>
+            </table>
+        </li>
+    }
+</ul>
+

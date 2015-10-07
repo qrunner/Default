@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="msapplication-tap-highlight" content="no">
+        <link rel="stylesheet" href="/content/chui/chui-android-3.8.0.min.css">
+        <meta name="viewport" content="width=device-width" />
+        
+        <script src="/scripts/jquery-2.1.1.min.js"></script>
+        <script src="/content/chui/chui-3.8.0.min.js"></script>
+
+        <title>@ViewBag.Title</title>
+    </head>
+<body class="isAndroid isDesktopChrome isDesktop">
+    <nav id="global-nav"></nav>
+    
+        <nav class="current">
+            <h1>Mobile Menu</h1>
+        </nav>
+        <div>
+            @RenderBody()
+        </div>
+</body>
+</html>

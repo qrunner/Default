@@ -1,0 +1,38 @@
+﻿@using Mcs.Server.Extensions
+@using Mcs.WebExtensions
+@model IEnumerable<Mcs.Model.Promo>
+
+@{
+    ViewBag.Title = "Акции и предложения";
+    Layout = "~/Views/_Layout.cshtml";    
+}
+
+<h2>@ViewBag.Title</h2>
+
+<table>
+<thead>
+<tr>
+    <th>Изображение</th>
+    <th>Заголовок</th>
+    <th>Дата начала</th>
+    <th>Дата окончания</th>
+    <th>Видимость</th>
+    <th>Действия</th>
+</tr>
+</thead>
+@foreach(var item in Model)
+{
+    <tr>
+        <td><img alt="@item.Title" src="@Url.Content(@item.GetImagePathFit(48))" width="48px" height="48px"/></td> 
+        <td>@item.Title</td>
+        <td>@item.StartDate.ToString("D")</td>
+        <td>@item.EndDate.ToString("D")</td>        
+        <td><input type="checkbox" checked="@item.Visible" disabled></td>
+        <td>@Html.EditLinks("promo", item.Id)</td>        
+    </tr>
+}
+</table>
+
+<div class="f-actions">
+@Html.CreateButton("promo")
+</div>

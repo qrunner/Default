@@ -1,0 +1,353 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EC34DABE-9830-4EB6-974C-FF357289172F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Invoice.App</RootNamespace>
+    <AssemblyName>Invoice.App</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>1407375362_92584.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v14.1.Core, Version=14.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v14.1, Version=14.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Office.v14.1.Core, Version=14.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v14.1.Core, Version=14.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v14.1.Core, Version=14.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v14.1.Core, Version=14.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Sparkline.v14.1.Core, Version=14.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v14.1, Version=14.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v14.1.UI, Version=14.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v14.1, Version=14.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v14.1, Version=14.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v14.1, Version=14.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGauges.v14.1.Core, Version=14.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v14.1, Version=14.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v14.1, Version=14.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v14.1, Version=14.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v14.1, Version=14.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v14.1, Version=14.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v14.1, Version=14.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v14.1.Extensions, Version=14.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="MySql.Data, Version=6.8.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data.Entity, Version=6.8.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data.Entity.EF6, Version=6.8.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="NLog">
+      <HintPath>..\packages\NLog.3.1.0.0\lib\net40\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ViewModels\Filters\FilterViewModel.cs" />
+    <Compile Include="ViewModels\Filters\ThisYear.cs" />
+    <Compile Include="ViewModels\Filters\ThisMonth.cs" />
+    <Compile Include="ViewModels\Filters\PrevWeek.cs" />
+    <Compile Include="ViewModels\Filters\Today.cs" />
+    <Compile Include="ViewModels\Filters\Tomorrow.cs" />
+    <Compile Include="ViewModels\Filters\ThisWeek.cs" />
+    <Compile Include="ViewModels\Filters\Yesterday.cs" />
+    <Compile Include="Views\GridEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\GridEditor.Designer.cs">
+      <DependentUpon>GridEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceApp.cs" />
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrintRibbonControllerResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrintRibbonControllerResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Print\xrInvoice.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Print\xrInvoice.Designer.cs">
+      <DependentUpon>xrInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Route.cs" />
+    <Compile Include="ViewModels\InvoiceListViewModel.cs" />
+    <Compile Include="ViewModels\InvoicePrintPreviewModel.cs" />
+    <Compile Include="ViewModels\InvoicesFilter.cs" />
+    <Compile Include="ViewModels\InvoiceViewModel.cs" />
+    <Compile Include="ViewModels\ListEditorViewModel.cs" />
+    <Compile Include="ViewModels\MeasureUnitsViewModel.cs" />
+    <Compile Include="ViewModels\NamedEntityViewModel.cs" />
+    <Compile Include="ViewModels\IPrintPreviewViewModel.cs" />
+    <Compile Include="ViewModels\ProductViewModel .cs" />
+    <Compile Include="ViewModels\PackingViewModel.cs" />
+    <Compile Include="ViewModels\ViewModel.cs" />
+    <Compile Include="Views\AnalyseView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\AnalyseView.Designer.cs">
+      <DependentUpon>AnalyseView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\INamedEntityList.cs" />
+    <Compile Include="Views\InvoiceEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\InvoiceEditor.Designer.cs">
+      <DependentUpon>InvoiceEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\InvoiceEditorView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\InvoiceEditorView.Designer.cs">
+      <DependentUpon>InvoiceEditorView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\InvoiceListViewTest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\InvoiceListViewTest.Designer.cs">
+      <DependentUpon>InvoiceListViewTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\InvoiceListView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\InvoiceListView.Designer.cs">
+      <DependentUpon>InvoiceListView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MeasureUnitsEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\MeasureUnitsEditor.Designer.cs">
+      <DependentUpon>MeasureUnitsEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NamedEntityEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\NamedEntityEditor.Designer.cs">
+      <DependentUpon>NamedEntityEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PackingEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\PackingEditor.Designer.cs">
+      <DependentUpon>PackingEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PrintPreviewViewTest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\PrintPreviewViewTest.Designer.cs">
+      <DependentUpon>PrintPreviewViewTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PrintPreviewView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\PrintPreviewView.Designer.cs">
+      <DependentUpon>PrintPreviewView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ProductEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ProductEditor.Designer.cs">
+      <DependentUpon>ProductEditor.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintRibbonControllerResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>PrintRibbonControllerResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\xrInvoice.resx">
+      <DependentUpon>xrInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Views\AnalyseView.resx">
+      <DependentUpon>AnalyseView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\InvoiceEditor.resx">
+      <DependentUpon>InvoiceEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\InvoiceEditorView.resx">
+      <DependentUpon>InvoiceEditorView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\InvoiceListViewTest.resx">
+      <DependentUpon>InvoiceListViewTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\InvoiceListView.resx">
+      <DependentUpon>InvoiceListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MeasureUnitsEditor.resx">
+      <DependentUpon>MeasureUnitsEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\NamedEntityEditor.resx">
+      <DependentUpon>NamedEntityEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PackingEditor.resx">
+      <DependentUpon>PackingEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PrintPreviewViewTest.resx">
+      <DependentUpon>PrintPreviewViewTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PrintPreviewView.resx">
+      <DependentUpon>PrintPreviewView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ProductEditor.resx">
+      <DependentUpon>ProductEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\Invoice.App.ViewModels.InvoiceListViewModel.datasource" />
+    <None Include="Properties\DataSources\Invoice.App.ViewModels.InvoiceViewModel.datasource" />
+    <None Include="Properties\DataSources\Invoice.App.ViewModels.MeasureUnitsViewModel.datasource" />
+    <None Include="Properties\DataSources\Invoice.App.ViewModels.ProductViewModel.datasource" />
+    <None Include="Properties\DataSources\Invoice.Model.Customer.datasource" />
+    <None Include="Properties\DataSources\Invoice.Model.INamedEntity.datasource" />
+    <None Include="Properties\DataSources\Invoice.Model.Invoice.datasource" />
+    <None Include="Properties\DataSources\Invoice.Model.InvoiceItem.datasource" />
+    <None Include="Properties\DataSources\Invoice.Model.MeasureUnit.datasource" />
+    <None Include="Properties\DataSources\Invoice.Model.Packing.datasource" />
+    <None Include="Properties\DataSources\Invoice.Model.Producer.datasource" />
+    <None Include="Properties\DataSources\Invoice.Model.Product.datasource" />
+    <None Include="Properties\DataSources\Invoice.Model.Supplier.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Sirius\Sirius.Desktop.DevExpress\Sirius.Desktop.DevExpress.csproj">
+      <Project>{293BEA98-D0F2-4B5E-9BC4-A8DB9BAB44BA}</Project>
+      <Name>Sirius.Desktop.DevExpress</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Invoice.Application\Sirius.Desktop.csproj">
+      <Project>{ecf93a17-702c-4f3c-9e8b-5b2e503b4257}</Project>
+      <Name>Sirius.Desktop</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Invoice.DAL\Invoice.ServiceLayer.MySql.csproj">
+      <Project>{bc063441-7644-441c-9b2b-73e0f0aa7c8f}</Project>
+      <Name>Invoice.ServiceLayer.MySql</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Invoice.Model\Invoice.Model.csproj">
+      <Project>{c453dc24-edeb-4360-902f-62a5a03da5cf}</Project>
+      <Name>Invoice.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="1407375362_92584.ico" />
+    <None Include="Images\1407375892_gtk-go-back-rtl.png" />
+    <None Include="Images\1407375776_gtk-go-back-ltr.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<componentModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="0d40729f-1d7a-42d6-b17b-98498caf51e1" name="Components" linkedPackageId="3febdd7b-999a-49c1-8616-aae516f28690" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner">
+  <packagedElements>
+    <componentModelHasComponents>
+      <component Id="47d4a7d0-1836-4e26-9f57-ea86f92aef58" name="Workflow Provider" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="caa46324-a8b1-4f8c-9bc7-a5bed51a56ac" />
+        <suppliersInternal>
+          <dependency Id="0e93cd61-8b56-47d9-8570-4381560eeb9a">
+            <componentMoniker Id="e1ae0b7e-555a-4ea9-a24a-deaaa2d8ceda" LastKnownName="Service Bus" />
+            <elementDefinition Id="c976d08c-ae10-496c-9de8-641553b87a7c" />
+          </dependency>
+          <dependency Id="3e05eb29-e96a-448b-89be-b1136f73917b">
+            <componentMoniker Id="4d227d51-4d40-45e0-ab7b-e3521a1ea8e4" LastKnownName="Auditing Service" />
+            <elementDefinition Id="91e1039a-7e82-49d6-84ee-9d5ca28e1ced" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="a356be23-6069-4f18-9d8c-6403fe20f0cb" name="Task Planning Service" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="2556402e-7bc3-4bec-8e20-981b9a159ecd" />
+        <suppliersInternal>
+          <dependency Id="5d8dddf3-4376-4ce3-b12d-3ef8b881dfc8">
+            <componentMoniker Id="4d227d51-4d40-45e0-ab7b-e3521a1ea8e4" LastKnownName="Auditing Service" />
+            <elementDefinition Id="defcbd8f-1936-46b3-954d-dd018b33b5ab" />
+          </dependency>
+          <dependency Id="a509122e-e2c1-4ac7-a8f9-de6136a9b1ca">
+            <componentMoniker Id="a32387fd-ec04-4e82-89e5-246753da8bf2" LastKnownName="Artifacts Storage" />
+            <elementDefinition Id="659e4fba-3661-40de-9451-3d120c91a272" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="80612939-13e3-43e7-a8a1-c81940ac5c30" name="Notification Service" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="63660852-ace2-4e0b-92f2-76e68f58e9cf" />
+        <suppliersInternal>
+          <dependency Id="541fe46a-e930-450d-8837-19f662cc2776">
+            <componentMoniker Id="1a215b3b-9274-44cf-869d-a432a514ca90" LastKnownName="Contacts Provider" />
+            <elementDefinition Id="80a6d758-c51d-423d-9ded-67ecef0bbb9c" />
+          </dependency>
+          <dependency Id="d75372d6-61db-49e0-9e40-a23509c33051">
+            <componentMoniker Id="4d227d51-4d40-45e0-ab7b-e3521a1ea8e4" LastKnownName="Auditing Service" />
+            <elementDefinition Id="3eadce9f-443f-4cb6-8031-3dcb2eea9e45" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="a32387fd-ec04-4e82-89e5-246753da8bf2" name="Artifacts Storage" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="23a51da0-5fda-4b86-a3dc-ad50ba546984" />
+        <suppliersInternal>
+          <dependency Id="a811190a-add7-4271-b2b5-12da64072f66">
+            <componentMoniker Id="4d227d51-4d40-45e0-ab7b-e3521a1ea8e4" LastKnownName="Auditing Service" />
+            <elementDefinition Id="768422c1-4a64-443d-96ac-1e9b02e4b658" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="1a215b3b-9274-44cf-869d-a432a514ca90" name="Contacts Provider" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="9ee40c2c-2d1a-4139-9caa-6ce1dbe1a48c" />
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="008122d3-70ae-4f93-94ba-dc3286b3cd74" name="Membership Provider" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="74509da4-0fda-4fbf-9f13-f5911e4ca19b" />
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="1d61e0ca-de47-4db3-beee-b5cdc7b6d477" name="Dashboard Service" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="2316751c-04cb-4384-bc60-0ff3820d9b60" />
+        <suppliersInternal>
+          <dependency Id="3ee06f80-b6de-417f-b825-d6c90fb4c0dc">
+            <componentMoniker Id="008122d3-70ae-4f93-94ba-dc3286b3cd74" LastKnownName="Membership Provider" />
+            <elementDefinition Id="64124688-d415-4d09-adb2-27aac25a5c77" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="0184a549-5699-42ad-adc1-040924bcbdda" name="Communication Service" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="f471f892-c4f0-45dc-8519-41e4f3cd96d8" />
+        <suppliersInternal>
+          <dependency Id="ba1b39c5-f4db-49a7-afb5-1c408f3b57ce">
+            <componentMoniker Id="4d227d51-4d40-45e0-ab7b-e3521a1ea8e4" LastKnownName="Auditing Service" />
+            <elementDefinition Id="e66053c7-70cd-4312-8f8a-9fc462d5bcfe" />
+          </dependency>
+          <dependency Id="237e9194-3b15-42aa-8eeb-f6344ecf8358">
+            <componentMoniker Id="a32387fd-ec04-4e82-89e5-246753da8bf2" LastKnownName="Artifacts Storage" />
+            <elementDefinition Id="8d2a279b-7f71-4e7c-819e-292dbecdf782" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="e1ae0b7e-555a-4ea9-a24a-deaaa2d8ceda" name="Service Bus" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="254e26f0-fef9-45f8-a5eb-3479f962c049" />
+        <suppliersInternal>
+          <dependency Id="20bdc077-1b62-4a77-a35c-960b22c6d9ca">
+            <componentMoniker Id="80612939-13e3-43e7-a8a1-c81940ac5c30" LastKnownName="Notification Service" />
+            <elementDefinition Id="243daf6b-e477-448a-b8ff-58ee01935dd8" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="4d227d51-4d40-45e0-ab7b-e3521a1ea8e4" name="Auditing Service" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="f557271f-0007-44e9-8b77-e00d9c8f9611" />
+      </component>
+    </componentModelHasComponents>
+  </packagedElements>
+  <package Id="3febdd7b-999a-49c1-8616-aae516f28690" name="Architecture">
+    <elementDefinition Id="a2cca7bc-a604-4d6c-9e29-ac2e428a33f6" />
+    <profileInstances>
+      <packageHasProfileInstances Id="2bb18618-e510-4490-80e8-87c0a640d18d">
+        <profileInstance Id="ab08534e-329a-4fa8-95db-d56d4d3b14c7" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="a83b922b-6310-42a3-b4e4-92c4fc085c9f">
+        <profileInstance Id="49ef837f-ec5c-46b1-90ba-15c1df13a6dc" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</componentModel>

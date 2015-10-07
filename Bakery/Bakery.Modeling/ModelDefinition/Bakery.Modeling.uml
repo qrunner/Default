@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner"
+  dslVersion="1.0.0.0"
+  Id="0ce85f2c-bed6-488a-a29c-f013cdadff1f"
+  name="Bakery.Modeling" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <component
+        Id="bfb0d239-1076-4818-bb98-49a9f932747b"
+        name="Production.Model"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="ded2f04f-6468-4fa7-a772-b50aaed3e07a"
+        name="Interface1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="05e639f7-8842-4dd1-8fb0-62696ba9eaa3"
+        name="WinForms"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="40b2524d-6470-44f5-a21f-0678d277cedf"
+        name="Bakery.Model.Implementation"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="f17c4e24-59a2-4e48-b0b4-9dc0a121cfb4">
+            <componentMoniker
+              Id="f43e2bbd-1c1f-42d5-ba14-fbaae1fb2cca"
+              LastKnownName="Data Acces Layer (ORM)"
+              LastKnownLocation="Bakery.Modeling.uml" />
+          </dependency>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization
+            Id="b5be048f-f798-4c0f-9e49-648db60c7a2f"
+            isSubstitutable="false">
+            <componentMoniker
+              Id="bfb0d239-1076-4818-bb98-49a9f932747b"
+              LastKnownName="Production.Model"
+              LastKnownLocation="Bakery.Modeling.uml" />
+          </generalization>
+        </generalsInternal>
+      </component>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="f43e2bbd-1c1f-42d5-ba14-fbaae1fb2cca"
+        name="Data Acces Layer (ORM)"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="ca0179f6-7ae3-47ab-952a-4ed8a65e7c15"
+        name="Bakery.Logic"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="d85b9019-f955-4056-8c01-8487bfceb2f2">
+            <componentMoniker
+              Id="bfb0d239-1076-4818-bb98-49a9f932747b"
+              LastKnownName="Production.Model"
+              LastKnownLocation="Bakery.Modeling.uml" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="f75dc3dd-fbae-4da7-8b13-830a4863f08d"
+        name="Bakery.ViewModels"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="37a4ade1-f2ce-4fcc-aa7a-ef6820e2887b">
+            <componentMoniker
+              Id="ca0179f6-7ae3-47ab-952a-4ed8a65e7c15"
+              LastKnownName="Bakery.Logic"
+              LastKnownLocation="Bakery.Modeling.uml" />
+          </dependency>
+          <dependency
+            Id="d40e907d-387e-4bf6-a521-36a4d5967ace">
+            <componentMoniker
+              Id="bfb0d239-1076-4818-bb98-49a9f932747b"
+              LastKnownName="Production.Model"
+              LastKnownLocation="Bakery.Modeling.uml" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="2c800508-b0e7-40a0-9435-d5f477be7af9"
+        name="Accounting"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="ecd10fba-76d0-4fb7-85ac-d55af1f20f5f"
+        name="Production"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>

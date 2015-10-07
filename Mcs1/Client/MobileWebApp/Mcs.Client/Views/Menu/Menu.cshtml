@@ -1,0 +1,24 @@
+﻿@model IEnumerable<Mcs.Model.MenuCategory>
+
+@{
+    ViewBag.Title = "Категории меню";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section scripts{
+    // Функциональные кнопки заголовка
+    $(".ui-header").append(<span style="position: absolute;top: 3px;right: 5px;margin: 0px;">
+        <a href="@Url.Action("ShoppingCart", "ShoppingCart")"><img src="~/Content/images/cart_32.png" alt="" /></a></span>);
+}
+
+@section Header {
+    @Html.ActionLink("Назад", "Home", "Home", null, new { data_icon = "arrow-l", data_rel = "back" })
+    <h1>@ViewBag.Title</h1>
+}
+
+<ul data-role="listview" data-inset="true">
+    @foreach (var item in Model)
+    {
+        <li>@Html.ActionLink(item.Name, "CategoryContent", "Menu",new { id = item.Id }, null)</li>    
+    }
+</ul>

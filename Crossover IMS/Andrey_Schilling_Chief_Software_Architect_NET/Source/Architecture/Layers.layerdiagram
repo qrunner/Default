@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="ba2b4b8c-ec05-4057-9ded-9851162c78a1" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/LayerDesigner">
+  <layers>
+    <layer Id="0c799007-ea17-4ed7-a872-d5ae36274364" name="Dashboard Application">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="845c74c6-3437-4cb4-9578-950439c02a15" direction="Forward">
+          <layerMoniker Id="78d67fc9-bc3c-48f3-a3f5-0f6e44f4780d" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="06e4fdb0-1ae2-4a2c-a720-6d6bbeb267c8" direction="Bidirectional">
+          <layerMoniker Id="732571fb-a5d1-4263-ab53-8b784dde1d58" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+    </layer>
+    <layer Id="04178f0e-311b-4594-a35b-1e40d6f34712" name="Artifacts Storage">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="6d227c6a-7ee1-4b15-ad1c-072fd3ae3fc2" direction="Forward">
+          <layerMoniker Id="e9e91a7c-30ed-4d39-847a-f24d0c2362c5" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+    </layer>
+    <layer Id="78d67fc9-bc3c-48f3-a3f5-0f6e44f4780d" name="Communication Service">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="43542a84-02a1-4059-b403-32a367fb55a1" direction="Forward">
+          <layerMoniker Id="04178f0e-311b-4594-a35b-1e40d6f34712" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+    </layer>
+    <layer Id="5d9a0cd6-e75e-45a8-a86e-045f10b0fc42" name="Notification Service">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="d54845d7-2ae8-446b-b600-a34500b32ea0" direction="Bidirectional">
+          <layerMoniker Id="732571fb-a5d1-4263-ab53-8b784dde1d58" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+    </layer>
+    <layer Id="732571fb-a5d1-4263-ab53-8b784dde1d58" name="Enterprise Service Bus">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="ba43f877-8f95-4a4a-90c8-a836a95a8207" direction="Forward">
+          <layerMoniker Id="e9e91a7c-30ed-4d39-847a-f24d0c2362c5" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <childLayers>
+        <layer Id="d9ce9398-f96f-4a6e-a75b-9be6371ac0b9" name="Workflow Provider" />
+      </childLayers>
+    </layer>
+    <layer Id="0fffb7a0-c48b-4715-9ad0-933e4938bf04" name="Membership Provider">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="c20dcd33-f7a4-4dde-a067-16915ca5e35c" direction="Forward">
+          <layerMoniker Id="78d67fc9-bc3c-48f3-a3f5-0f6e44f4780d" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="d1111000-ced7-4fe3-932f-0929480f2840" direction="Forward">
+          <layerMoniker Id="0c799007-ea17-4ed7-a872-d5ae36274364" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="126929e1-0cbe-4707-a0d6-79c78843743d" direction="Forward">
+          <layerMoniker Id="04178f0e-311b-4594-a35b-1e40d6f34712" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="b9e3be31-e648-4f6a-8d32-7e6bcb54cd52" direction="Forward">
+          <layerMoniker Id="d9ce9398-f96f-4a6e-a75b-9be6371ac0b9" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+    </layer>
+    <layer Id="64bde120-6fb2-46df-9eed-b6343e3aa3f4" name="Employee Data Provider">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="e3036a2e-0767-4bef-8047-cf0b2cd391af" direction="Forward">
+          <layerMoniker Id="732571fb-a5d1-4263-ab53-8b784dde1d58" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+    </layer>
+    <layer Id="6a37c0d1-e499-48e4-99f2-5fe23fd0c97c" name="Contacts Provider">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="b454b9f4-38f0-4b64-b469-906b64fe1e71" direction="Forward">
+          <layerMoniker Id="732571fb-a5d1-4263-ab53-8b784dde1d58" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+    </layer>
+    <layer Id="17a800f9-893e-4bc9-aaf5-28249c26fd58" name="Resource Providers Systems">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="9e64acc6-a47c-40f4-9aa6-2aa25570f2ad" direction="Bidirectional">
+          <layerMoniker Id="732571fb-a5d1-4263-ab53-8b784dde1d58" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+    </layer>
+    <layer Id="e9e91a7c-30ed-4d39-847a-f24d0c2362c5" name="Auditing Service" />
+  </layers>
+</layerModel>

@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{993e7af4-f78f-4117-aa34-5cf58cbbfcf5}</ProjectGuid>
+    <ArchitectureToolsVersion>2.0.0.0</ArchitectureToolsVersion>
+    <Name>Crossover.AMS.Architecture</Name>
+    <RootNamespace>Architecture</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
+  <ItemGroup>
+    <Content Include="ResourceManagementWorkflow.activitydiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ResourceManagementWorkflow.activitydiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>ResourceManagementWorkflow.activitydiagram</DependentUpon>
+    </Content>
+    <Content Include="TeamRoles.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="TeamRoles.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>TeamRoles.usecasediagram</DependentUpon>
+    </Content>
+    <Folder Include="ModelDefinition\" />
+    <Content Include="CommonWorkflow.activitydiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="CommonWorkflow.activitydiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>CommonWorkflow.activitydiagram</DependentUpon>
+    </Content>
+    <Content Include="Components.componentdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Components.componentdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Components.componentdiagram</DependentUpon>
+    </Content>
+    <Content Include="IssueWorkflow.activitydiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="IssueWorkflow.activitydiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>IssueWorkflow.activitydiagram</DependentUpon>
+    </Content>
+    <Content Include="ModelDefinition\Architecture.uml">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Validate Include="Layers.layerdiagram">
+      <SubType>Content</SubType>
+    </Validate>
+    <Validate Include="Layers.layerdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Layers.layerdiagram</DependentUpon>
+    </Validate>
+    <Validate Include="Layers.layerdiagram.suppressions">
+      <SubType>Content</SubType>
+      <DependentUpon>Layers.layerdiagram</DependentUpon>
+    </Validate>
+  </ItemGroup>
+</Project>

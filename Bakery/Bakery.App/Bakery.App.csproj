@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E17574ED-A8A0-40F0-BE36-97742E4ED972}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Bakery.App</RootNamespace>
+    <AssemblyName>Bakery.App</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v14.1, Version=14.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v14.1.Core, Version=14.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v14.1, Version=14.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v14.1, Version=14.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v14.1, Version=14.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v14.1, Version=14.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v14.1, Version=14.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v14.1, Version=14.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.8.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data.Entity, Version=6.8.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data.Entity.EF6, Version=6.8.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\FormsController.cs" />
+    <Compile Include="Controller.cs" />
+    <Compile Include="FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Operations\Command.cs" />
+    <Compile Include="Operations\CommandCategory.cs" />
+    <Compile Include="Operations\MenuBinder.cs" />
+    <Compile Include="Operations\OperationController.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewMain.Designer.cs">
+      <DependentUpon>ViewMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\DocumentsListVM.cs" />
+    <Compile Include="ViewModels\DocumentVM.cs" />
+    <Compile Include="ViewModels\ReferenceVM.cs" />
+    <Compile Include="ViewModels\TimeFilter.cs" />
+    <Compile Include="ViewModels\UnitEntriesVM.cs" />
+    <Compile Include="ViewModels\UnitEntryListType.cs" />
+    <Compile Include="ViewModels\UnitEntryListVM.cs" />
+    <Compile Include="ViewModels\ViewModelBase.cs" />
+    <Compile Include="Views\IViewLayout.cs" />
+    <Compile Include="Views\ViewDocument.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ViewDocument.Designer.cs">
+      <DependentUpon>ViewDocument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewDocuments.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ViewDocuments.Designer.cs">
+      <DependentUpon>ViewDocuments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewEntryList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ViewEntryList.Designer.cs">
+      <DependentUpon>ViewEntryList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewLayout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ViewLayout.Designer.cs">
+      <DependentUpon>ViewLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ISelectorView.cs" />
+    <Compile Include="Views\ViewBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ViewBase.Designer.cs">
+      <DependentUpon>ViewBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewDocumentTypes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ViewDocumentTypes.Designer.cs">
+      <DependentUpon>ViewDocumentTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewAccountingSites.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ViewAccountingSites.Designer.cs">
+      <DependentUpon>ViewAccountingSites.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewUnitEntries.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ViewUnitEntries.Designer.cs">
+      <DependentUpon>ViewUnitEntries.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewUnits.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ViewUnits.Designer.cs">
+      <DependentUpon>ViewUnits.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewNamedEntity.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ViewNamedEntity.Designer.cs">
+      <DependentUpon>ViewNamedEntity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewMeasureUnits.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ViewMeasureUnits.Designer.cs">
+      <DependentUpon>ViewMeasureUnits.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ViewGrid.Designer.cs">
+      <DependentUpon>ViewGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewLayoutSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ViewLayoutSelector.Designer.cs">
+      <DependentUpon>ViewLayoutSelector.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ViewMain.resx">
+      <DependentUpon>ViewMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ViewDocument.resx">
+      <DependentUpon>ViewDocument.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ViewDocuments.resx">
+      <DependentUpon>ViewDocuments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ViewEntryList.resx">
+      <DependentUpon>ViewEntryList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ViewLayout.resx">
+      <DependentUpon>ViewLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ViewBase.resx">
+      <DependentUpon>ViewBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ViewDocumentTypes.resx">
+      <DependentUpon>ViewDocumentTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ViewAccountingSites.resx">
+      <DependentUpon>ViewAccountingSites.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ViewUnitEntries.resx">
+      <DependentUpon>ViewUnitEntries.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ViewUnits.resx">
+      <DependentUpon>ViewUnits.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ViewNamedEntity.resx">
+      <DependentUpon>ViewNamedEntity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ViewMeasureUnits.resx">
+      <DependentUpon>ViewMeasureUnits.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ViewGrid.resx">
+      <DependentUpon>ViewGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ViewLayoutSelector.resx">
+      <DependentUpon>ViewLayoutSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\Bakery.Model.AccountingSite.datasource" />
+    <None Include="Properties\DataSources\Bakery.Model.Company.datasource" />
+    <None Include="Properties\DataSources\Bakery.Model.Contractor.datasource" />
+    <None Include="Properties\DataSources\Bakery.Model.Document.datasource" />
+    <None Include="Properties\DataSources\Bakery.Model.DocumentType.datasource" />
+    <None Include="Properties\DataSources\Bakery.Model.IUnitEntryHost.datasource" />
+    <None Include="Properties\DataSources\Bakery.Model.MeasureUnit.datasource" />
+    <None Include="Properties\DataSources\Bakery.Model.NamedEntity.datasource" />
+    <None Include="Properties\DataSources\Bakery.Model.Unit.datasource" />
+    <None Include="Properties\DataSources\Bakery.Model.UnitCategory.datasource" />
+    <None Include="Properties\DataSources\Bakery.Model.UnitEntry.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Bakery.Abstractions\Bakery.Model.csproj">
+      <Project>{6c4c4ee1-10a9-4c6e-a976-fe780f8e25f0}</Project>
+      <Name>Bakery.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bakery.Accounting\Accounting.csproj">
+      <Project>{0124e24d-c6ef-4104-ace3-67a7cc126837}</Project>
+      <Name>Accounting</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\Fortius.csproj">
+      <Project>{5DE43DD1-FF70-442D-A894-04D79C290AE7}</Project>
+      <Name>Fortius</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Production\Production.csproj">
+      <Project>{B53BE638-ECD3-49C6-AD4E-012F79B91E20}</Project>
+      <Name>Production</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,32 @@
+﻿@using Mcs.Server.Extensions
+@using Mcs.WebExtensions
+@model IEnumerable<Mcs.Model.Desk>
+
+@{
+    ViewBag.Title = "Столы";
+    Layout = "~/Views/_Layout.cshtml";    
+}
+
+<h2>@ViewBag.Title</h2>
+
+<table>
+<thead>
+<tr>
+    <th>Номер/наименование</th>
+    <th>Заказан</th>
+    <th>Действия</th>
+</tr>
+</thead>
+@foreach(var desk in Model)
+{
+    <tr>
+        <td>@desk.Name</td>
+        <td><input type="checkbox" checked="@desk.Reserved" disabled></td>
+        <td>@Html.EditLinks("desk", desk.Id)</td>        
+    </tr>
+}
+</table>
+
+<div class="f-actions">
+    @Html.CreateButton("desk")
+</div>

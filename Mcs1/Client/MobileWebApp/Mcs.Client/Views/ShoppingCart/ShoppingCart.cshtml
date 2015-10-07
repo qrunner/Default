@@ -1,0 +1,93 @@
+﻿@model IEnumerable<Mcs.Client.ViewModels.DishQty>
+
+@{
+    ViewBag.Title = "Корзина";
+}
+
+@section scripts{
+    // Функциональные кнопки заголовка
+    $(".ui-header").append(<span style="position: absolute;top: 3px;right: 50px;margin: 0px;">
+        <a href="@Url.Action("Menu", "Menu")"><img src="~/Content/images/book_32.png" alt="" /></a>
+                           </span>);
+}
+
+@section Header {
+    @Html.ActionLink("Назад", "Home", "Home", null, new { data_icon = "arrow-l", data_rel = "back" })
+    <h1>@ViewBag.Title</h1>
+}
+
+@section HeadSection{
+    <link href="~/Content/core.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-1.8.2.min.js" type="text/javascript"></script>
+}
+
+<script type="text/javascript">
+    $(function () {
+        // Увеличивает количество заказанных порций блюда
+        $(".AddDish").click(function () {
+            fitText($("#fittext1"), 1.2, { minFontSize: '20px', maxFontSize: '40px' });
+            var dishId = $(this).attr("data-id");
+            $.post('@Url.Action("AddToCart", "ShoppingCart")', { "id": dishId },
+                function (qty) {
+                    $('#' + dishId).text(qty);
+                });
+        });
+
+        // Уменьшает количество заказанных порций блюда
+        $(".RemoveDish").click(function () {
+            var dishId = $(this).attr("data-id");
+            $.post('@Url.Action("RemoveFromCart", "ShoppingCart")', { "id": dishId },
+                function (qty) {
+                    $('#' + dishId).text(qty);
+                    if (qty == 0) {
+                        if (confirm("Удалить блюдо из корзины?")) {
+                            var li = $("#item-dish-" + dishId);
+                            li.remove();
+                        }
+                    }
+                });
+        });        
+    });
+</script>
+
+<ul data-role="listview" data-inset="true" id="dish-list">
+    @foreach (var item in Model)
+    {
+        <li style="padding: 0" id="item-dish-@item.DishId">
+            <table border="0" style="table-layout: fixed; overflow: hidden; word-wrap: break-word; width: 100%;" cellpadding="0" cellspacing="0">
+
+                <tr>
+                    <td rowspan="2" width="80px" align="center"><img src="~/Content/images/dish_64.png" alt="" /></td>
+                    <td rowspan="2">@item.Name <br> @item.Description</td>
+                    <td width="50px" align="center">
+                        <a href="#" class="AddDish" data-id="@item.DishId">
+                            <img src="~/Content/images/plus_24.png" alt="" />
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="50px" align="center">
+                        <a href="#" class="RemoveDish" data-id="@item.DishId">
+                            <img src="~/Content/images/minus_24.png" alt="" />
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="80px" align="center">
+                        <a href="@Url.Action("DishDetails", "DishDetails", new { dishId = @item.DishId })">
+                            <img src="~/Content/images/details_32.png" alt="" />
+                        </a>
+                    </td>
+                    <td>@item.Price</td>
+                    <td width="50px" align="center"><label id="@item.DishId">@item.Quantity</label></td>
+                </tr>
+            </table>
+        </li>
+    }
+</ul>
+
+<button onclick="location.href='@Url.Action("SaveOrder", "Orders")'">Сохранить заказ</button>
+
+<div class="price-panel">
+    <label id="fittext1">Total price - 1540 руб.</label>
+</div>

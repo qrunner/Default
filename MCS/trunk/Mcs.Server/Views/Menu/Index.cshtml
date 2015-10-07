@@ -1,0 +1,94 @@
+﻿@using Mcs.Model
+@using Mcs.Server.Extensions
+@using Mcs.Server.Models.Menu;
+@using Mcs.WebExtensions
+
+@model MenuModel
+
+@{
+    ViewBag.Title = "Меню";
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div class="g-row">
+            <div class="g-4">
+                
+                    <div class="treeview">                    
+                    @{
+                        DrawNode(null, 1, Model.Categories);
+                    }
+                    </div>
+
+                    <div class="f-actions">    
+                        @Html.ActionLink("Добавить", "create", "category", new { catid = Model.SelectedCategory, returl = Request.Url.PathAndQuery }, new { @class = "f-bu" })
+                    </div>                
+            </div>
+            <div class="g-8">
+                    <table>
+                    
+                    @if (Model.SelectedCategory == 0)
+                    {
+                        <p>Для отображения блюд выберите категорию</p>    
+                    }
+                    else
+                    {
+                    
+                        <thead>
+                            <tr>
+                                <th>Картинка</th>
+                                <th>Наименование</th>
+                                <th>Описание</th>
+                                <th>Цена</th>
+                                <th>Действия</th>
+                            </tr>
+                        </thead>
+                    }
+                        @foreach (var dish in Model.CategoryDishes)
+                        {
+                            <tr>
+                                <td><img alt="@dish.Name" src="@Url.Content(@dish.GetImagePath(48, 48))" width="48px" height="48px"/></td>
+                                <td>@dish.Name</td>
+                                <td>@dish.Description</td>
+                                <td>@dish.Price</td>
+                                <td>@Html.EditLinks("dish", dish.Id)</td>            
+                            </tr>
+                        }
+                    </table>
+
+                    @if (Model.SelectedCategory != 0)
+                    {
+                    <div class="f-actions">                     
+                        @Html.ActionLink("Добавить", "create", "dish", new { catid = Model.SelectedCategory, returl = Request.Url.PathAndQuery }, new { @class = "f-bu" })
+                    </div>                    
+                    
+                    }
+
+            </div>
+</div>
+
+@functions 
+{
+    void DrawNode(int? parentId, int level, IEnumerable<MenuCategory> items)
+    {
+        WriteLiteral("<ul>");
+        foreach (var item in items)
+        {
+            if (item.ParentId == parentId)
+            {
+                WriteLiteral(item.Id == Model.SelectedCategory ? "<li class='active cl'>" : "<li class='cl'>");
+                WriteLiteral(@Html.ActionLink(item.Name, "index", new { id = item.Id}).ToString());
+                WriteLiteral("<div style='float: right; clear:right;'>");
+                WriteLiteral(@Html.EditLinks("category", item.Id).ToString());
+                WriteLiteral("</div></li>");
+                var children = items.Where(x => x.ParentId == item.Id).ToArray();
+                if (children.Count() > 0)
+                {
+                    DrawNode(item.Id, level + 1, items);
+                }
+            }
+        }
+        WriteLiteral("</ul>");
+    }
+}

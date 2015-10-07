@@ -1,0 +1,16 @@
+﻿@using Mcs.WebExtensions
+@{    
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<h3>Удалить элемент?</h3>
+
+@using (Html.BeginForm()) 
+{
+    <div class="f-actions">
+        <input type="submit" value="Удалить" class="f-bu f-bu-warning" />
+        @Html.CancelButton()
+    </div>
+}

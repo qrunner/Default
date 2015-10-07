@@ -1,0 +1,45 @@
+﻿@using Mcs.WebExtensions
+@model IEnumerable<Mcs.Model.Dish>
+
+@{
+    ViewBag.Title = "IndexMobile";
+}
+
+@{
+    var i = 0;
+}
+
+<script type="text/javascript">
+    $(function () {
+        for (var i = 0; i < $('.comp').size(); i++) {
+            $('#stp' + i).UIStepper({
+                start: 1,
+                end: 10
+            });
+        }
+    });
+</script>
+
+<h2>Выберите блюдо</h2>
+
+<article id="main" class="navigable current">
+    <section>
+
+        <ul class='list'>
+            @foreach (var item in Model)
+            {
+                <li class="comp">
+                    <aside>@Html.PlaceImage(70, item)</aside>
+                    
+                    <div>
+                        <h3> @Html.DisplayFor(modelItem => item.Name)</h3>
+                        <p> @Html.DisplayFor(modelItem => item.Description)</p>
+                    </div>
+                    <span class="stepper" id="stp@(i++)"></span>
+                    
+                    
+                </li>
+            }
+        </ul>
+    </section>
+</article>

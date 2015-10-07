@@ -1,0 +1,24 @@
+﻿@using Mcs.WebExtensions
+@model Mcs.Model.MenuCategory 
+
+@{    
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("save", "category", new { returl=Request["returl"]}, FormMethod.Post))
+{
+    <fieldset>
+    <legend>@ViewBag.Title</legend>
+    @Html.ValidationSummary(true)    
+    @Html.HiddenFor(model => model.Id)
+    @Html.HiddenFor(model => model.PlaceId)            
+    @Html.DropDownListBlockFor("Родительская категория", model => model.ParentId, new SelectList(ViewBag.ParentCategories, "Id", "Name", Request.QueryString["catid"]))    
+    @Html.TextBoxBlockFor("Имя категории",model => model.Name)
+    </fieldset>                                
+    <div class="f-actions">
+        @Html.SaveButton()
+        @Html.CancelButton()
+    </div>
+    
+    <div>@ViewBag.ErrorMessage</div>
+}

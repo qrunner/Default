@@ -1,0 +1,61 @@
+﻿@model Mcs.Model.Dish
+
+@{
+    ViewBag.Title = "Описание блюда";
+}
+
+@section Header {
+    @Html.ActionLink("Назад", "Menu", "Menu", null, new { data_icon = "arrow-l", data_rel = "back" })
+    <h1>@ViewBag.Title</h1>
+}
+
+@section scripts{
+    // Функциональные кнопки заголовка
+    $(".ui-header").append(<span style="position: absolute;top: 3px;right: 50px;margin: 0px;">
+        <a href="@Url.Action("Menu", "Menu")"><img src="~/Content/images/book_32.png" alt="" /></a>
+    </span>
+    <span style="position: absolute;top: 3px;right: 5px;margin: 0px;">
+        <a href="@Url.Action("ShoppingCart", "ShoppingCart")"><img src="~/Content/images/cart_32.png" alt="" /></a>
+    </span>);
+}
+
+
+
+
+<table border="0" style="table-layout: fixed; overflow: hidden; word-wrap: break-word; ">
+
+    <tr>
+        <td rowspan="4" width="70%" valign="top" align="center" background="/Mcs.Client/Content/images/dish_64.png" style="background-repeat: no-repeat; background-size: contain;">@Model.Name</td>
+        <td>
+            <a href="#" class="AddDish" data-id="@Model.DishId">
+                <img src="~/Content/images/plus_24.png" alt="" />
+            </a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="#" class="RemoveDish" data-id="@Model.DishId">
+                <img src="~/Content/images/minus_24.png" alt="" />
+            </a>
+        </td>
+    </tr>
+    <tr>
+        <td><label id="@Model.DishId">0</label></td>
+    </tr>
+    <tr>
+        <td>@Model.Price</td>
+    </tr>
+    <tr>
+        <td rowspan="4">Состав</td>
+    </tr>
+    <tr>
+        <td>News</td>
+    </tr>
+    <tr>
+        <td>PromoAction</td>
+    </tr>
+    <tr>
+        <td>Empty</td>
+    </tr>
+    <tr></tr>
+</table>

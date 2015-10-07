@@ -1,0 +1,60 @@
+﻿@using Mcs.WebExtensions
+@model Mcs.Model.Order
+
+@{    
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("save", "order", FormMethod.Post, new {enctype = "multipart/form-data"}))
+{
+    <fieldset>
+        <legend>@ViewBag.Title</legend>
+        @Html.ValidationSummary(true)
+
+        @Html.HiddenFor(model => model.Id)
+        @Html.HiddenFor(model => model.Dishes)
+
+        <div class="f-row">
+            <div class="f-input">
+            </div>    
+        </div>
+    
+        @Html.DisplayTextFor(model => model.State)
+        @Html.DisplayTextFor(model => model.Desk.Name)
+    </fieldset>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Блюдо</th>
+                <th>Цена</th>
+                <th>Количество</th>
+                <th>Сумма</th>
+            </tr>
+        </thead>
+        @foreach (var orderDish in Model.Dishes)
+        {
+            <tr>
+                <td>@orderDish.Dish.Name</td>
+                <td>@orderDish.Dish.Price</td>
+                <td>@orderDish.Quantity</td> 
+                <td>@(orderDish.Quantity * orderDish.Dish.Price)</td> 
+            </tr>        
+        }
+            <tr>
+                <td>ВСЕГО:</td>
+                <td></td>
+                <td>@Model.Dishes.Sum(x => x.Quantity)</td>
+                <td>@Html.DisplayTextFor(model => model.Amount)</td>
+            </tr>
+    </table>
+    
+    <div class="f-actions">
+        <!-- @Html.SaveButton() -->
+
+        @Html.ActionLink("В работу", "index", null, new { @class = "f-bu" })
+        @Html.ActionLink("Закрыть", "index", null, new { @class = "f-bu" })
+        
+        @Html.ActionLink("Отмена", "index", null, new {@class = "f-bu"})   
+    </div>
+}

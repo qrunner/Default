@@ -1,0 +1,2079 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel"
+  dslVersion="1.0.0.0"
+  Id="e1ddbfcb-93f6-4366-9fea-c66ba1e9712a"
+  name="Arch" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <ownedCommentsInternal>
+    <comment
+      Id="8c81a0ee-fbd3-4644-9d15-2de5ebcab6ba">
+      <body>Supervisor
+Mission Commander
+Family Care Center</body>
+    </comment>
+    <comment
+      Id="6049a8d3-a1a7-4327-95d8-9435d83b958b">
+      <body>Task controlled by assigned employee</body>
+      <annotatedElements>
+        <opaqueActionMoniker
+          Id="8ff5f141-f0fa-406a-9182-e236907229df"
+          LastKnownName="Create Task for Handle Issue"
+          LastKnownLocation="Arch.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="2c21eafe-2eda-43c3-bf75-6cb64529027a">
+      <body>According to workflow and Issue details created Resource Requests</body>
+      <annotatedElements>
+        <opaqueActionMoniker
+          Id="33d9ca0a-40c6-4ea9-a49a-41d901e4285d"
+          LastKnownName="Create Resource Request"
+          LastKnownLocation="Arch.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="eb19466f-cab6-4a5e-bcf6-5a9df8639fb8">
+      <body>SMS and E-mail</body>
+      <annotatedElements>
+        <opaqueActionMoniker
+          Id="bd59f91e-9000-4077-8620-b2346a8b708c"
+          LastKnownName="Notify Employee"
+          LastKnownLocation="Arch.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="739c907b-6246-4e30-9f1e-831ee745f8bd">
+      <body>Full information about Issue</body>
+      <annotatedElements>
+        <objectNodeMoniker
+          Id="ee7d148d-de29-46a1-afd7-f9b6c920dd43"
+          LastKnownName="Issue"
+          LastKnownLocation="Arch.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="f528a8d6-ee15-42f8-b42a-7f2b012274de">
+      <body>Category, volume and terms of needed resources</body>
+      <annotatedElements>
+        <objectNodeMoniker
+          Id="d6ae3acb-b91e-47cf-8c0f-94a7e24cdb9c"
+          LastKnownName="Resource Request"
+          LastKnownLocation="Arch.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="89828d4e-6b80-4d54-b871-55ebe96ff7da">
+      <body>For example: Medical institutions or Transportation companies
+</body>
+      <annotatedElements>
+        <objectNodeMoniker
+          Id="494464fa-2f53-4259-a384-118158592dce"
+          LastKnownName="Resource Providers Group"
+          LastKnownLocation="Arch.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="76dd536d-25d9-458a-8c05-42a557d4fa3b">
+      <body>Assigned employee select best option</body>
+      <annotatedElements>
+        <opaqueActionMoniker
+          Id="dc464d0a-4905-45f0-8051-eff8bb1556cb"
+          LastKnownName="Check Responses"
+          LastKnownLocation="Arch.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="0c35fb8a-cf4e-4daa-a4b0-8dca1bbdf246">
+      <body>Providers inform about theirs available Resources</body>
+      <annotatedElements>
+        <opaqueActionMoniker
+          Id="a200c101-997f-414a-be77-ae3bd414d16d"
+          LastKnownName="Add response from Provider to the List"
+          LastKnownLocation="Arch.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="aeb1c886-9ec0-4cb8-9a64-19e7df9a5e56">
+      <body>Accepted response sended to provider</body>
+      <annotatedElements>
+        <opaqueActionMoniker
+          Id="3996f80d-f60e-4f4e-93e7-2e24a32c1be6"
+          LastKnownName="Accept Selected Provider Response(s)"
+          LastKnownLocation="Arch.uml" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <activity
+        Id="5143fca2-943d-41de-a7c4-0e6b7adc76b8"
+        name="Activity1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <opaqueAction
+            Id="78a71e97-8a2f-4ff3-bf71-1512aa33a2af"
+            name="Accident"
+            isLeaf="false">
+            <objectFlowTargets>
+              <objectFlow
+                Id="ca67a60f-843b-4961-a9ec-d128539dd498"
+                isLeaf="false"
+                isMulticast="false"
+                isMultireceive="false">
+                <objectNodeMoniker
+                  Id="bbd1556e-4cac-40db-81f6-f333bdd78a04"
+                  LastKnownName="Victims and Risks"
+                  LastKnownLocation="Arch.uml" />
+              </objectFlow>
+              <objectFlow
+                Id="a700490b-cc31-4b2d-b2d3-fdbb389821d0"
+                isLeaf="false"
+                isMulticast="false"
+                isMultireceive="false">
+                <objectNodeMoniker
+                  Id="d10bd243-ff62-4870-98ee-5671037c2fbc"
+                  LastKnownName="Distructions and Risks"
+                  LastKnownLocation="Arch.uml" />
+              </objectFlow>
+              <objectFlow
+                Id="200dbcbd-95d6-4f96-8f4a-ef1d0ae0451f"
+                isLeaf="false"
+                isMulticast="false"
+                isMultireceive="false">
+                <objectNodeMoniker
+                  Id="379084dd-428b-4600-a050-cfe7c060f84a"
+                  LastKnownName="Contaminations and Risks"
+                  LastKnownLocation="Arch.uml" />
+              </objectFlow>
+              <objectFlow
+                Id="e9d2bc48-2882-4361-a152-af213ab5f257"
+                isLeaf="false"
+                isMulticast="false"
+                isMultireceive="false">
+                <objectNodeMoniker
+                  Id="43fb5c09-d996-4bbe-bfb0-804f528b0387"
+                  LastKnownName="Tasks"
+                  LastKnownLocation="Arch.uml" />
+              </objectFlow>
+            </objectFlowTargets>
+          </opaqueAction>
+          <objectNode
+            Id="bbd1556e-4cac-40db-81f6-f333bdd78a04"
+            name="Victims and Risks"
+            isLeaf="false"
+            ordering="Unordered"
+            isControlType="false">
+            <upperBound>
+              <literalInteger
+                Id="b74e5bac-0dbf-4216-88be-9b91768062fa"
+                name="2147483647"
+                value="2147483647" />
+            </upperBound>
+          </objectNode>
+          <objectNode
+            Id="d10bd243-ff62-4870-98ee-5671037c2fbc"
+            name="Distructions and Risks"
+            isLeaf="false"
+            ordering="Unordered"
+            isControlType="false">
+            <upperBound>
+              <literalInteger
+                Id="e0d36ac5-b14b-4808-b142-e7c310addac8"
+                name="2147483647"
+                value="2147483647" />
+            </upperBound>
+          </objectNode>
+          <objectNode
+            Id="379084dd-428b-4600-a050-cfe7c060f84a"
+            name="Contaminations and Risks"
+            isLeaf="false"
+            ordering="Unordered"
+            isControlType="false">
+            <upperBound>
+              <literalInteger
+                Id="27f7bc08-072a-48eb-81b3-9bb2952fc4f3"
+                name="2147483647"
+                value="2147483647" />
+            </upperBound>
+          </objectNode>
+          <objectNode
+            Id="43fb5c09-d996-4bbe-bfb0-804f528b0387"
+            name="Tasks"
+            isLeaf="false"
+            ordering="Unordered"
+            isControlType="false">
+            <objectFlowTargets>
+              <objectFlow
+                Id="c8a2570c-876c-4b50-a4b9-b0a02b25c385"
+                isLeaf="false"
+                isMulticast="false"
+                isMultireceive="false">
+                <objectNodeMoniker
+                  Id="9a7ccbc4-7956-47c4-9950-d6a5b01da36a"
+                  LastKnownName="Employee"
+                  LastKnownLocation="Arch.uml" />
+              </objectFlow>
+              <objectFlow
+                Id="79faaedc-6cc0-4653-9ecc-3a2e76c2f6c6"
+                isLeaf="false"
+                isMulticast="false"
+                isMultireceive="false">
+                <objectNodeMoniker
+                  Id="dcb91bc4-fa1b-481d-b7ff-9e1cf20b3767"
+                  LastKnownName="Resource Request"
+                  LastKnownLocation="Arch.uml" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger
+                Id="0cee781d-21b7-48c5-8ea9-333542f7851c"
+                name="2147483647"
+                value="2147483647" />
+            </upperBound>
+          </objectNode>
+          <objectNode
+            Id="7d02659f-fd60-459a-88c6-81d74397089a"
+            name="Resources"
+            isLeaf="false"
+            ordering="Unordered"
+            isControlType="false">
+            <upperBound>
+              <literalInteger
+                Id="375b487f-2a14-4ca7-8056-7713cc05d547"
+                name="2147483647"
+                value="2147483647" />
+            </upperBound>
+          </objectNode>
+          <objectNode
+            Id="5718ef31-fa58-4a60-85c6-f32a8009d507"
+            name="ResourceCategory"
+            isLeaf="false"
+            ordering="Unordered"
+            isControlType="false">
+            <upperBound>
+              <literalInteger
+                Id="ff0e213f-2ac9-455d-a169-0daa4142ddb0"
+                name="2147483647"
+                value="2147483647" />
+            </upperBound>
+          </objectNode>
+          <objectNode
+            Id="fd88a5a5-aa9c-4cfb-9454-bf81642a8da6"
+            name="Vendors"
+            isLeaf="false"
+            ordering="Unordered"
+            isControlType="false">
+            <objectFlowTargets>
+              <objectFlow
+                Id="0af52203-3ae6-4f59-bfe5-a0cffe298282"
+                isLeaf="false"
+                isMulticast="false"
+                isMultireceive="false">
+                <objectNodeMoniker
+                  Id="5718ef31-fa58-4a60-85c6-f32a8009d507"
+                  LastKnownName="ResourceCategory"
+                  LastKnownLocation="Arch.uml" />
+              </objectFlow>
+              <objectFlow
+                Id="0d4f7d6f-759d-4904-8701-36195a69ca22"
+                isLeaf="false"
+                isMulticast="false"
+                isMultireceive="false">
+                <objectNodeMoniker
+                  Id="7d02659f-fd60-459a-88c6-81d74397089a"
+                  LastKnownName="Resources"
+                  LastKnownLocation="Arch.uml" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger
+                Id="fc47379d-649e-4839-a51e-2c1604ce53dd"
+                name="2147483647"
+                value="2147483647" />
+            </upperBound>
+          </objectNode>
+          <objectNode
+            Id="17b5e80e-5b3c-4562-bbe5-42782977a243"
+            name="Volunteers"
+            isLeaf="false"
+            ordering="Unordered"
+            isControlType="false">
+            <objectFlowTargets>
+              <objectFlow
+                Id="55ff1577-4dc8-4110-a3d6-1c40d5d201ce"
+                isLeaf="false"
+                isMulticast="false"
+                isMultireceive="false">
+                <objectNodeMoniker
+                  Id="5718ef31-fa58-4a60-85c6-f32a8009d507"
+                  LastKnownName="ResourceCategory"
+                  LastKnownLocation="Arch.uml" />
+              </objectFlow>
+              <objectFlow
+                Id="10f823fd-da7e-4b2e-b571-6645811b6eea"
+                isLeaf="false"
+                isMulticast="false"
+                isMultireceive="false">
+                <objectNodeMoniker
+                  Id="7d02659f-fd60-459a-88c6-81d74397089a"
+                  LastKnownName="Resources"
+                  LastKnownLocation="Arch.uml" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger
+                Id="2ccf57a6-2697-4994-99a6-e9c79e3d45b9"
+                name="2147483647"
+                value="2147483647" />
+            </upperBound>
+          </objectNode>
+          <objectNode
+            Id="dcb91bc4-fa1b-481d-b7ff-9e1cf20b3767"
+            name="Resource Request"
+            isLeaf="false"
+            ordering="Unordered"
+            isControlType="false">
+            <objectFlowTargets>
+              <objectFlow
+                Id="5262fdb2-6e8f-4118-9a06-a628a397c7fe"
+                isLeaf="false"
+                isMulticast="false"
+                isMultireceive="false">
+                <objectNodeMoniker
+                  Id="5718ef31-fa58-4a60-85c6-f32a8009d507"
+                  LastKnownName="ResourceCategory"
+                  LastKnownLocation="Arch.uml" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger
+                Id="307649c0-2bf5-408d-8266-6d33b567b378"
+                name="2147483647"
+                value="2147483647" />
+            </upperBound>
+          </objectNode>
+          <objectNode
+            Id="9a7ccbc4-7956-47c4-9950-d6a5b01da36a"
+            name="Employee"
+            isLeaf="false"
+            ordering="Unordered"
+            isControlType="false">
+            <upperBound>
+              <literalInteger
+                Id="1fa0ce11-209c-4d1b-9229-2a8dc539cb63"
+                name="2147483647"
+                value="2147483647" />
+            </upperBound>
+          </objectNode>
+        </nodes>
+      </activity>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <activity
+        Id="f926a7e2-16f0-4dfa-b813-ffcf1645019a"
+        name="Fire"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <opaqueAction
+            Id="beff71dc-129c-4195-af03-90f30f590bfb"
+            name="Automatic Notification"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="3e138678-5817-4c6d-a577-f4241370c2f0"
+                isLeaf="false">
+                <mergeNodeMoniker
+                  Id="ea1f7c3b-52d2-46e3-a189-0c0020837469"
+                  LastKnownName="Merge1"
+                  LastKnownLocation="Arch.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+            <pins>
+              <opaqueActionHasInputValues>
+                <inputPin
+                  Id="9df51490-ef22-4933-9aa5-17d6ad1b9883"
+                  isLeaf="false"
+                  ordering="Unordered"
+                  isControlType="false"
+                  isControl="false">
+                  <upperBound>
+                    <literalInteger
+                      Id="63514ec6-924c-4faa-8d69-8a7bdebe7718"
+                      name="2147483647"
+                      value="2147483647" />
+                  </upperBound>
+                </inputPin>
+              </opaqueActionHasInputValues>
+            </pins>
+          </opaqueAction>
+          <opaqueAction
+            Id="c4a9992f-172c-4dc6-a85f-d88ac6498c38"
+            name="Create Issue"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="273fd9a6-3ceb-457e-a1ad-37eb0edf20da"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="8ff5f141-f0fa-406a-9182-e236907229df"
+                  LastKnownName="Create Task for Handle Issue"
+                  LastKnownLocation="Arch.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+            <pins>
+              <opaqueActionHasOutputValues>
+                <outputPin
+                  Id="69f3f0ec-882c-41d4-a551-b64944cbd56f"
+                  isLeaf="false"
+                  ordering="Unordered"
+                  isControlType="false"
+                  isControl="false">
+                  <objectFlowTargets>
+                    <objectFlow
+                      Id="6ff7e7c7-5714-4245-abbe-0a22afca3f52"
+                      isLeaf="false"
+                      isMulticast="false"
+                      isMultireceive="false">
+                      <objectNodeMoniker
+                        Id="ee7d148d-de29-46a1-afd7-f9b6c920dd43"
+                        LastKnownName="Issue"
+                        LastKnownLocation="Arch.uml" />
+                    </objectFlow>
+                  </objectFlowTargets>
+                  <upperBound>
+                    <literalInteger
+                      Id="3c37c1e7-5b8c-4292-a294-d6950d0fb9e2"
+                      name="2147483647"
+                      value="2147483647" />
+                  </upperBound>
+                </outputPin>
+              </opaqueActionHasOutputValues>
+            </pins>
+          </opaqueAction>
+          <objectNode
+            Id="29daf8b7-8150-4a31-8e27-8cb5a1b45a38"
+            name="Workflow Contact Lists"
+            isLeaf="false"
+            ordering="Unordered"
+            isControlType="false">
+            <objectFlowTargets>
+              <objectFlow
+                Id="37abb8ad-b4b8-46ad-aeac-174ada249441"
+                isLeaf="false"
+                isMulticast="false"
+                isMultireceive="false">
+                <inputPinMoniker
+                  Id="9df51490-ef22-4933-9aa5-17d6ad1b9883"
+                  LastKnownLocation="Arch.uml" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger
+                Id="d9baac80-98c7-4e7d-9a6f-5dfa01029a6d"
+                name="2147483647"
+                value="2147483647" />
+            </upperBound>
+          </objectNode>
+          <objectNode
+            Id="ee7d148d-de29-46a1-afd7-f9b6c920dd43"
+            name="Issue"
+            isLeaf="false"
+            ordering="Unordered"
+            isControlType="false">
+            <objectFlowTargets>
+              <objectFlow
+                Id="b6575bc4-6030-4937-9bbb-ee469f0c16a5"
+                isLeaf="false"
+                isMulticast="false"
+                isMultireceive="false">
+                <inputPinMoniker
+                  Id="27ab11dc-2843-432a-9fab-90b40e14fdd0"
+                  LastKnownLocation="Arch.uml" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger
+                Id="8099ca34-9e4e-469c-ae8d-e4ea9d049207"
+                name="2147483647"
+                value="2147483647" />
+            </upperBound>
+          </objectNode>
+          <opaqueAction
+            Id="8ff5f141-f0fa-406a-9182-e236907229df"
+            name="Create Task for Handle Issue"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="2ce17a88-032f-4de2-b466-ba6f2b6ed2b3"
+                isLeaf="false">
+                <forkNodeMoniker
+                  Id="e85e70e7-9dc5-405b-a852-693d87760e5c"
+                  LastKnownName="Fork1"
+                  LastKnownLocation="Arch.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+            <pins>
+              <opaqueActionHasInputValues>
+                <inputPin
+                  Id="27ab11dc-2843-432a-9fab-90b40e14fdd0"
+                  isLeaf="false"
+                  ordering="Unordered"
+                  isControlType="false"
+                  isControl="false">
+                  <upperBound>
+                    <literalInteger
+                      Id="24e5b2e5-af22-479c-91e0-b296f1b1ff03"
+                      name="2147483647"
+                      value="2147483647" />
+                  </upperBound>
+                </inputPin>
+              </opaqueActionHasInputValues>
+              <opaqueActionHasInputValues>
+                <inputPin
+                  Id="5ed05e75-b382-4362-8e29-88f824f6e905"
+                  isLeaf="false"
+                  ordering="Unordered"
+                  isControlType="false"
+                  isControl="false">
+                  <upperBound>
+                    <literalInteger
+                      Id="011212a2-73e7-4792-8b9a-2e9714f099ae"
+                      name="2147483647"
+                      value="2147483647" />
+                  </upperBound>
+                </inputPin>
+              </opaqueActionHasInputValues>
+            </pins>
+          </opaqueAction>
+          <opaqueAction
+            Id="33d9ca0a-40c6-4ea9-a49a-41d901e4285d"
+            name="Create Resource Request"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="6adecf88-16ff-4185-b61a-dc4736531b41"
+                isLeaf="false">
+                <joinNodeMoniker
+                  Id="25dd6086-1774-44ae-a48e-03181c315317"
+                  LastKnownName="Join1"
+                  LastKnownLocation="Arch.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+            <pins>
+              <opaqueActionHasOutputValues>
+                <outputPin
+                  Id="9acb39c5-9010-47b4-bb14-e8734a1de0b2"
+                  isLeaf="false"
+                  ordering="Unordered"
+                  isControlType="false"
+                  isControl="false">
+                  <objectFlowTargets>
+                    <objectFlow
+                      Id="0066d7aa-7653-4b0f-8009-6827fd042c74"
+                      isLeaf="false"
+                      isMulticast="false"
+                      isMultireceive="false">
+                      <objectNodeMoniker
+                        Id="d6ae3acb-b91e-47cf-8c0f-94a7e24cdb9c"
+                        LastKnownName="Resource Request"
+                        LastKnownLocation="Arch.uml" />
+                    </objectFlow>
+                  </objectFlowTargets>
+                  <upperBound>
+                    <literalInteger
+                      Id="d72730a1-13dd-4458-9080-528a5cf711a1"
+                      name="2147483647"
+                      value="2147483647" />
+                  </upperBound>
+                </outputPin>
+              </opaqueActionHasOutputValues>
+            </pins>
+          </opaqueAction>
+          <objectNode
+            Id="d6ae3acb-b91e-47cf-8c0f-94a7e24cdb9c"
+            name="Resource Request"
+            isLeaf="false"
+            ordering="Unordered"
+            isControlType="false">
+            <upperBound>
+              <literalInteger
+                Id="135a1da7-4da3-46ca-ab47-f86e131251dd"
+                name="2147483647"
+                value="2147483647" />
+            </upperBound>
+          </objectNode>
+          <objectNode
+            Id="8be7cb6a-b21c-46be-8f49-2ae4768b0804"
+            name="Employee"
+            isLeaf="false"
+            ordering="Unordered"
+            isControlType="false">
+            <objectFlowTargets>
+              <objectFlow
+                Id="b79efc99-54ef-437c-b7ab-b808807d3a14"
+                isLeaf="false"
+                isMulticast="false"
+                isMultireceive="false">
+                <inputPinMoniker
+                  Id="5ed05e75-b382-4362-8e29-88f824f6e905"
+                  LastKnownLocation="Arch.uml" />
+              </objectFlow>
+              <objectFlow
+                Id="5ea9191b-1505-4f81-9b06-ff93c37f4760"
+                isLeaf="false"
+                isMulticast="false"
+                isMultireceive="false">
+                <inputPinMoniker
+                  Id="8fa7f1bc-e074-4d9c-a105-1e0592f00f24"
+                  LastKnownName="Contacts"
+                  LastKnownLocation="Arch.uml" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger
+                Id="87e2d6e3-ec09-487f-b5b3-2ed4aa585b57"
+                name="2147483647"
+                value="2147483647" />
+            </upperBound>
+          </objectNode>
+          <forkNode
+            Id="e85e70e7-9dc5-405b-a852-693d87760e5c"
+            name="Fork1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="71b9338f-af34-4dae-9541-78a942cec189"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="33d9ca0a-40c6-4ea9-a49a-41d901e4285d"
+                  LastKnownName="Create Resource Request"
+                  LastKnownLocation="Arch.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="bcd2930e-17da-40cb-8d3c-e18cf1968db2"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="bd59f91e-9000-4077-8620-b2346a8b708c"
+                  LastKnownName="Notify Employee"
+                  LastKnownLocation="Arch.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </forkNode>
+          <opaqueAction
+            Id="bd59f91e-9000-4077-8620-b2346a8b708c"
+            name="Notify Employee"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="370725bc-29d9-4108-b414-1e5b0bddca38"
+                isLeaf="false">
+                <joinNodeMoniker
+                  Id="25dd6086-1774-44ae-a48e-03181c315317"
+                  LastKnownName="Join1"
+                  LastKnownLocation="Arch.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+            <pins>
+              <opaqueActionHasInputValues>
+                <inputPin
+                  Id="8fa7f1bc-e074-4d9c-a105-1e0592f00f24"
+                  name="Contacts"
+                  isLeaf="false"
+                  ordering="Unordered"
+                  isControlType="false"
+                  isControl="false">
+                  <upperBound>
+                    <literalInteger
+                      Id="81922a31-f57d-426c-95bc-a0ec8d20ad2a"
+                      name="2147483647"
+                      value="2147483647" />
+                  </upperBound>
+                </inputPin>
+              </opaqueActionHasInputValues>
+            </pins>
+          </opaqueAction>
+          <joinNode
+            Id="25dd6086-1774-44ae-a48e-03181c315317"
+            name="Join1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="019b52a2-e8aa-46c0-9efc-516fbb05fd07"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="071ead79-b803-4426-b524-3eb8dd7d5d22"
+                  LastKnownName="Decision1"
+                  LastKnownLocation="Arch.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </joinNode>
+          <mergeNode
+            Id="ea1f7c3b-52d2-46e3-a189-0c0020837469"
+            name="Merge1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="e7ed08fd-f484-412b-bf52-9615010f6414"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="c4a9992f-172c-4dc6-a85f-d88ac6498c38"
+                  LastKnownName="Create Issue"
+                  LastKnownLocation="Arch.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </mergeNode>
+          <decisionNode
+            Id="071ead79-b803-4426-b524-3eb8dd7d5d22"
+            name="Decision1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="1398c5f2-d36f-4bd9-97f9-4e27ba594fab"
+                guard="There are more unprocessed issues"
+                isLeaf="false">
+                <mergeNodeMoniker
+                  Id="ea1f7c3b-52d2-46e3-a189-0c0020837469"
+                  LastKnownName="Merge1"
+                  LastKnownLocation="Arch.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="8bc288ad-f579-4914-95f3-68c11b9dd8fa"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="44ef8a95-8574-48a7-b073-d47261fc83be"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="Arch.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <initialNode
+            Id="0793be98-8f2e-4830-b4fe-71e5b65a1680"
+            name="Initial1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="70b8f4a0-47b5-4002-afa5-73aa8e29bb94"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="beff71dc-129c-4195-af03-90f30f590bfb"
+                  LastKnownName="Automatic Notification"
+                  LastKnownLocation="Arch.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <activityFinalNode
+            Id="44ef8a95-8574-48a7-b073-d47261fc83be"
+            name="ActivityFinal1"
+            isLeaf="false" />
+        </nodes>
+      </activity>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <activity
+        Id="ebe447b2-542b-4981-95c7-2fcc7dc4a0eb"
+        name="Bacic"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <initialNode
+            Id="7a90444d-c952-49a3-9b0d-1c8505725676"
+            name="Initial1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="6d314208-247c-4be7-a2d9-feb77924fa73"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="21da620e-3bcd-4892-98f1-0ad81fa9cfb3"
+                  LastKnownName="Call center employee inputs an new Accident info"
+                  LastKnownLocation="Arch.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction
+            Id="21da620e-3bcd-4892-98f1-0ad81fa9cfb3"
+            name="Call center employee inputs an new Accident info"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="0df2e4ad-3df5-4b49-b3dd-f03630c217a9"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="212c4f80-4ae3-4e1e-bdd4-924d78f7467f"
+                  LastKnownName="Fill Issues List"
+                  LastKnownLocation="Arch.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+            <pins>
+              <opaqueActionHasInputValues>
+                <inputPin
+                  Id="72586053-554a-4044-bab6-ea86290a27b2"
+                  name="Accident information from witness"
+                  isLeaf="false"
+                  ordering="Unordered"
+                  isControlType="false"
+                  isControl="false">
+                  <upperBound>
+                    <literalInteger
+                      Id="1d3c165a-ca36-4584-829c-6ee4081d5057"
+                      name="2147483647"
+                      value="2147483647" />
+                  </upperBound>
+                </inputPin>
+              </opaqueActionHasInputValues>
+              <opaqueActionHasOutputValues>
+                <outputPin
+                  Id="75f82ac8-df29-4d97-a0f8-2cdbd3f1c168"
+                  isLeaf="false"
+                  ordering="Unordered"
+                  isControlType="false"
+                  isControl="false">
+                  <upperBound>
+                    <literalInteger
+                      Id="05b87dfc-6446-4fa8-9c90-50623cc679b0"
+                      name="2147483647"
+                      value="2147483647" />
+                  </upperBound>
+                </outputPin>
+              </opaqueActionHasOutputValues>
+            </pins>
+          </opaqueAction>
+          <opaqueAction
+            Id="212c4f80-4ae3-4e1e-bdd4-924d78f7467f"
+            name="Fill Issues List"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="0b0fbe8c-cd58-4d97-b22f-b4cfffdba604"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="fce3e0be-6ceb-4a58-8394-bf543881f05a"
+                  LastKnownName="Accident Classification"
+                  LastKnownLocation="Arch.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="fce3e0be-6ceb-4a58-8394-bf543881f05a"
+            name="Accident Classification"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="a499fe37-90cd-4652-9040-4968e8febb31"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="5a80fa55-a80c-4035-991e-be7ac254c3ee"
+                  LastKnownName="Select Sutable Workflow"
+                  LastKnownLocation="Arch.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="5a80fa55-a80c-4035-991e-be7ac254c3ee"
+            name="Select Sutable Workflow"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="9299e4b8-2e58-4fee-ae34-357dfad2008a"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="8da6e223-e416-43bf-9452-e71e9530a3b5"
+                  LastKnownName="Process Workflow"
+                  LastKnownLocation="Arch.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="8da6e223-e416-43bf-9452-e71e9530a3b5"
+            name="Process Workflow"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="62537d33-a0fa-428b-9920-43601a782057"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="4f1334cb-cc63-4163-914b-ab4b112bd385"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="Arch.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode
+            Id="4f1334cb-cc63-4163-914b-ab4b112bd385"
+            name="ActivityFinal1"
+            isLeaf="false" />
+        </nodes>
+      </activity>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <activity
+        Id="f6d73ef7-eefd-4e00-9150-04fef5e5edf6"
+        name="Eathershake"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <initialNode
+            Id="d3888ca2-4e60-4a43-b9c4-16de61780ac1"
+            name="Initial1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="b1467585-2df5-42b0-8813-30d9fafb314d"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="d28b3fba-9467-4ef7-ba36-f79482fb93d4"
+                  LastKnownName="Send Resource Request  to  the Resource Providers group"
+                  LastKnownLocation="Arch.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <objectNode
+            Id="2f70b6a4-785b-4fd3-abda-4c31a46744b7"
+            name="Resource Request"
+            isLeaf="false"
+            ordering="Unordered"
+            isControlType="false">
+            <objectFlowTargets>
+              <objectFlow
+                Id="0aa80edb-5291-4655-94f3-90f23683c460"
+                isLeaf="false"
+                isMulticast="false"
+                isMultireceive="false">
+                <inputPinMoniker
+                  Id="133a3f52-f4a6-414e-b086-fd24db7744b7"
+                  LastKnownLocation="Arch.uml" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger
+                Id="95f1a257-efab-48b8-b4cc-e62ef8c87c73"
+                name="2147483647"
+                value="2147483647" />
+            </upperBound>
+          </objectNode>
+          <opaqueAction
+            Id="d28b3fba-9467-4ef7-ba36-f79482fb93d4"
+            name="Send Resource Request  to  the Resource Providers group"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="162990c8-debc-438d-9b5c-57d7a2acddd9"
+                isLeaf="false">
+                <forkNodeMoniker
+                  Id="7168971f-4971-487d-9796-d30425bd3ce5"
+                  LastKnownName="Fork1"
+                  LastKnownLocation="Arch.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+            <pins>
+              <opaqueActionHasInputValues>
+                <inputPin
+                  Id="133a3f52-f4a6-414e-b086-fd24db7744b7"
+                  isLeaf="false"
+                  ordering="Unordered"
+                  isControlType="false"
+                  isControl="false">
+                  <upperBound>
+                    <literalInteger
+                      Id="c7710c06-e5f2-49d5-b052-109c9071bdcf"
+                      name="2147483647"
+                      value="2147483647" />
+                  </upperBound>
+                </inputPin>
+              </opaqueActionHasInputValues>
+              <opaqueActionHasInputValues>
+                <inputPin
+                  Id="62a56031-05d6-4c3d-96b2-3bf27c2b581a"
+                  name="Contact Channels"
+                  isLeaf="false"
+                  ordering="Unordered"
+                  isControlType="false"
+                  isControl="false">
+                  <upperBound>
+                    <literalInteger
+                      Id="ec623db1-99a2-421d-981f-c38f2ad37075"
+                      name="2147483647"
+                      value="2147483647" />
+                  </upperBound>
+                </inputPin>
+              </opaqueActionHasInputValues>
+            </pins>
+          </opaqueAction>
+          <objectNode
+            Id="494464fa-2f53-4259-a384-118158592dce"
+            name="Resource Providers Group"
+            isLeaf="false"
+            ordering="Unordered"
+            isControlType="false">
+            <objectFlowTargets>
+              <objectFlow
+                Id="26590b5e-34b3-4ac7-9d97-458571625cbc"
+                isLeaf="false"
+                isMulticast="false"
+                isMultireceive="false">
+                <inputPinMoniker
+                  Id="62a56031-05d6-4c3d-96b2-3bf27c2b581a"
+                  LastKnownName="Contact Channels"
+                  LastKnownLocation="Arch.uml" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger
+                Id="7036c11c-bd0b-45fc-971e-60cff5500be4"
+                name="2147483647"
+                value="2147483647" />
+            </upperBound>
+          </objectNode>
+          <opaqueAction
+            Id="a200c101-997f-414a-be77-ae3bd414d16d"
+            name="Add response from Provider to the List"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="7f6c0815-2841-4671-8130-a9d6d97eb0fb"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="43ccf7fb-4aee-473b-bf96-defea97c58a1"
+                  LastKnownName="Decision1"
+                  LastKnownLocation="Arch.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+            <pins>
+              <opaqueActionHasOutputValues>
+                <outputPin
+                  Id="f0c179c3-9844-44bd-846e-37390153d46a"
+                  isLeaf="false"
+                  ordering="Unordered"
+                  isControlType="false"
+                  isControl="false">
+                  <objectFlowTargets>
+                    <objectFlow
+                      Id="02d22676-ce8d-437b-8b17-9bd39fefd825"
+                      isLeaf="false"
+                      isMulticast="false"
+                      isMultireceive="false">
+                      <objectNodeMoniker
+                        Id="8cb23374-2646-4fb7-88e6-fe1d655c31d9"
+                        LastKnownName="Response List"
+                        LastKnownLocation="Arch.uml" />
+                    </objectFlow>
+                  </objectFlowTargets>
+                  <upperBound>
+                    <literalInteger
+                      Id="4ffdb94e-e81b-4b8a-9f98-e27afd0b291a"
+                      name="2147483647"
+                      value="2147483647" />
+                  </upperBound>
+                </outputPin>
+              </opaqueActionHasOutputValues>
+              <opaqueActionHasInputValues>
+                <inputPin
+                  Id="20c4e6f5-b335-4353-b1d3-7f19b52f032d"
+                  isLeaf="false"
+                  ordering="Unordered"
+                  isControlType="false"
+                  isControl="false">
+                  <upperBound>
+                    <literalInteger
+                      Id="b00c6143-c852-4c25-9c33-e7bd70abfb0c"
+                      name="2147483647"
+                      value="2147483647" />
+                  </upperBound>
+                </inputPin>
+              </opaqueActionHasInputValues>
+            </pins>
+          </opaqueAction>
+          <mergeNode
+            Id="90e2a5ed-05c5-4bc6-a2c6-e015c34fa7bf"
+            name="Merge1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="4b0a11ab-9ba0-4ee3-a114-d4f7181a2719"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="a200c101-997f-414a-be77-ae3bd414d16d"
+                  LastKnownName="Add response from Provider to the List"
+                  LastKnownLocation="Arch.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </mergeNode>
+          <decisionNode
+            Id="43ccf7fb-4aee-473b-bf96-defea97c58a1"
+            name="Decision1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="fb4048a2-7e5b-44f9-8461-b891c7cf383d"
+                guard="Any more response from another provider and no accepted"
+                isLeaf="false">
+                <mergeNodeMoniker
+                  Id="90e2a5ed-05c5-4bc6-a2c6-e015c34fa7bf"
+                  LastKnownName="Merge1"
+                  LastKnownLocation="Arch.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="4f480d7b-1246-449e-bc9f-4b1b6b98ff50"
+                isLeaf="false">
+                <joinNodeMoniker
+                  Id="89408abe-0925-43a7-bb49-451657eaed82"
+                  LastKnownName="Join1"
+                  LastKnownLocation="Arch.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <objectNode
+            Id="8cb23374-2646-4fb7-88e6-fe1d655c31d9"
+            name="Response List"
+            isLeaf="false"
+            ordering="Unordered"
+            isControlType="false">
+            <objectFlowTargets>
+              <objectFlow
+                Id="375e77e2-8f9f-40e1-b62b-45cc7d712834"
+                isLeaf="false"
+                isMulticast="false"
+                isMultireceive="false">
+                <inputPinMoniker
+                  Id="00d051ef-50c7-4e1a-91c9-43f2ed182ea1"
+                  LastKnownLocation="Arch.uml" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger
+                Id="8b094bbe-3aec-4e7e-984c-ecf9affe366a"
+                name="2147483647"
+                value="2147483647" />
+            </upperBound>
+          </objectNode>
+          <mergeNode
+            Id="d9eb10a3-4425-4e20-83ca-51ff6e3c4406"
+            name="Merge2"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="cb0b54a8-d074-4f23-86a9-f8c17f9a345e"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="dc464d0a-4905-45f0-8051-eff8bb1556cb"
+                  LastKnownName="Check Responses"
+                  LastKnownLocation="Arch.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </mergeNode>
+          <opaqueAction
+            Id="3996f80d-f60e-4f4e-93e7-2e24a32c1be6"
+            name="Accept Selected Provider Response(s)"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="ef2e15fd-63b7-434b-813b-178abd28a5cf"
+                isLeaf="false">
+                <joinNodeMoniker
+                  Id="89408abe-0925-43a7-bb49-451657eaed82"
+                  LastKnownName="Join1"
+                  LastKnownLocation="Arch.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+            <pins>
+              <opaqueActionHasOutputValues>
+                <outputPin
+                  Id="16ee26dd-c3a1-4184-a1ac-3f533bbf2c15"
+                  isLeaf="false"
+                  ordering="Unordered"
+                  isControlType="false"
+                  isControl="false">
+                  <objectFlowTargets>
+                    <objectFlow
+                      Id="122f973d-3f0a-4898-91cd-b07782fcf289"
+                      isLeaf="false"
+                      isMulticast="false"
+                      isMultireceive="false">
+                      <objectNodeMoniker
+                        Id="8cb23374-2646-4fb7-88e6-fe1d655c31d9"
+                        LastKnownName="Response List"
+                        LastKnownLocation="Arch.uml" />
+                    </objectFlow>
+                  </objectFlowTargets>
+                  <upperBound>
+                    <literalInteger
+                      Id="ee18178a-53bb-4cf3-8d98-3bbf7697ec86"
+                      name="2147483647"
+                      value="2147483647" />
+                  </upperBound>
+                </outputPin>
+              </opaqueActionHasOutputValues>
+              <opaqueActionHasOutputValues>
+                <outputPin
+                  Id="ffa50c73-25a0-4ab6-bf48-216218d8aad5"
+                  isLeaf="false"
+                  ordering="Unordered"
+                  isControlType="false"
+                  isControl="false">
+                  <objectFlowTargets>
+                    <objectFlow
+                      Id="71695335-ff0e-4b2c-89ac-5c7dbf8a896b"
+                      isLeaf="false"
+                      isMulticast="false"
+                      isMultireceive="false">
+                      <objectNodeMoniker
+                        Id="8f0dc3e3-6f3a-40f4-add6-aff618131422"
+                        LastKnownName="Resource Provider"
+                        LastKnownLocation="Arch.uml" />
+                    </objectFlow>
+                  </objectFlowTargets>
+                  <upperBound>
+                    <literalInteger
+                      Id="9174ae34-fbbc-4e89-8e83-d8318d7aa5bb"
+                      name="2147483647"
+                      value="2147483647" />
+                  </upperBound>
+                </outputPin>
+              </opaqueActionHasOutputValues>
+            </pins>
+          </opaqueAction>
+          <forkNode
+            Id="7168971f-4971-487d-9796-d30425bd3ce5"
+            name="Fork1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="1c632d3d-5f1a-411e-b60e-4f1dacaba918"
+                isLeaf="false">
+                <mergeNodeMoniker
+                  Id="90e2a5ed-05c5-4bc6-a2c6-e015c34fa7bf"
+                  LastKnownName="Merge1"
+                  LastKnownLocation="Arch.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="7deb9f25-5d79-42d5-8a1b-5a7d3288714a"
+                isLeaf="false">
+                <mergeNodeMoniker
+                  Id="d9eb10a3-4425-4e20-83ca-51ff6e3c4406"
+                  LastKnownName="Merge2"
+                  LastKnownLocation="Arch.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </forkNode>
+          <decisionNode
+            Id="4108a1b1-ea35-4e21-8625-47dc42d09071"
+            name="Decision2"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="ef3dab5a-4b96-49c6-836c-9e40cc58b74c"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="3996f80d-f60e-4f4e-93e7-2e24a32c1be6"
+                  LastKnownName="Accept Selected Provider Response(s)"
+                  LastKnownLocation="Arch.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="ac482c9d-26be-48fc-848b-d0828d3172c4"
+                guard="No sutable responses"
+                isLeaf="false">
+                <mergeNodeMoniker
+                  Id="d9eb10a3-4425-4e20-83ca-51ff6e3c4406"
+                  LastKnownName="Merge2"
+                  LastKnownLocation="Arch.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction
+            Id="dc464d0a-4905-45f0-8051-eff8bb1556cb"
+            name="Check Responses"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="01b63269-7254-4cf5-8552-a610f9d54abb"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="4108a1b1-ea35-4e21-8625-47dc42d09071"
+                  LastKnownName="Decision2"
+                  LastKnownLocation="Arch.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+            <pins>
+              <opaqueActionHasInputValues>
+                <inputPin
+                  Id="00d051ef-50c7-4e1a-91c9-43f2ed182ea1"
+                  isLeaf="false"
+                  ordering="Unordered"
+                  isControlType="false"
+                  isControl="false">
+                  <upperBound>
+                    <literalInteger
+                      Id="d0f6158a-8ef2-4810-96e2-d0416a3a8c95"
+                      name="2147483647"
+                      value="2147483647" />
+                  </upperBound>
+                </inputPin>
+              </opaqueActionHasInputValues>
+            </pins>
+          </opaqueAction>
+          <activityFinalNode
+            Id="ea749a2c-997a-4ddd-87b2-3f334869b092"
+            name="ActivityFinal1"
+            isLeaf="false" />
+          <joinNode
+            Id="89408abe-0925-43a7-bb49-451657eaed82"
+            name="Join1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="7cba6a3f-9dc2-4038-9df2-e017dd2245d8"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="ea749a2c-997a-4ddd-87b2-3f334869b092"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="Arch.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </joinNode>
+          <objectNode
+            Id="8f0dc3e3-6f3a-40f4-add6-aff618131422"
+            name="Resource Provider"
+            isLeaf="false"
+            ordering="Unordered"
+            isControlType="false">
+            <objectFlowTargets>
+              <objectFlow
+                Id="309a9919-43c4-44ac-9e8c-007fd5e3f5f9"
+                isLeaf="false"
+                isMulticast="false"
+                isMultireceive="false">
+                <inputPinMoniker
+                  Id="20c4e6f5-b335-4353-b1d3-7f19b52f032d"
+                  LastKnownLocation="Arch.uml" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger
+                Id="de8dd6de-c63d-4f97-8f94-79dba5d308c0"
+                name="2147483647"
+                value="2147483647" />
+            </upperBound>
+          </objectNode>
+        </nodes>
+      </activity>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <subsystem
+        Id="cb45b067-cc7d-4cd9-92bf-9b4aaf7a4b1f"
+        name="Accident Management System"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="6a2e695f-c47e-4413-864c-0bd529a138b6"
+        name="Head"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="368d7ebb-721e-4ed4-8092-d167b0fb0b86"
+            isDerived="false"
+            sourceEndRoleName="Head"
+            targetEndRoleName="Communicate"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="3d433777-86cc-4bde-bcdb-cc0ba67e2733"
+              LastKnownName="Communicate"
+              LastKnownLocation="Arch.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="76886a24-033c-496d-a912-c9a5f6c2a14a"
+                  name="Head"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="197d3f0d-3f0d-48c9-82e6-112c692e78b0"
+                  name="Communicate"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="ea10d636-084e-4312-888f-299810aadb84"
+            isDerived="false"
+            sourceEndRoleName="Head"
+            targetEndRoleName="Track Task Execution"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="a4b30f49-aa3e-4c5b-adbe-e1ef93c9e609"
+              LastKnownName="Track Task Execution"
+              LastKnownLocation="Arch.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7c60acc9-4c4d-49f7-920a-9f98917d5ac6"
+                  name="Head"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="cb4edd92-1265-4078-b4d9-6d23840e3ea0"
+                  name="Track Task Execution"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="72b89b32-ee47-4e65-b391-840e34919a00"
+            isDerived="false"
+            sourceEndRoleName="Head"
+            targetEndRoleName="Create Tasks"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="4b0d4765-1609-45fb-aba4-ebe1d61fac38"
+              LastKnownName="Create Tasks"
+              LastKnownLocation="Arch.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3dedd94c-3ff1-4ade-9a04-6001d06afde5"
+                  name="Head"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="dc3a3fc4-dc68-4aab-99ba-50b7a5550744"
+                  name="Create Tasks"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="93bf35a0-1bbe-4891-8706-cf10ca1db899"
+        name="Supervisor"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="7eade385-00f1-4d2a-a6cc-f534e49c5668"
+            isDerived="false"
+            sourceEndRoleName="Supervisor"
+            targetEndRoleName="Input Information About Accident"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="c4fc1d4c-f8c6-4199-ba8d-607552854268"
+              LastKnownName="Collect Information About Accident"
+              LastKnownLocation="Arch.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="035fc463-8d32-4a48-b599-bfb4a44b40ba"
+                  name="Supervisor"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="51349955-061c-48d9-b3c3-48f9395d8dbf"
+                  name="Input Information About Accident"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="966fa6ef-dda3-4f57-a84d-445f941ec45b"
+            isDerived="false"
+            sourceEndRoleName="Supervisor"
+            targetEndRoleName="Communication"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="3d433777-86cc-4bde-bcdb-cc0ba67e2733"
+              LastKnownName="Communicate"
+              LastKnownLocation="Arch.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="36bdcc09-c1d0-46c6-821f-71e123d98be2"
+                  name="Supervisor"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3fd6a167-b660-4aaf-b759-3002c01e5ba7"
+                  name="Communication"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="0130c06b-9f08-4f27-8271-e4ace1aed4e2"
+        name="Call Center Operator"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="0e3aec3e-37af-4404-9a92-c9301a4637e2"
+            isDerived="false"
+            sourceEndRoleName="Call Center Operator"
+            targetEndRoleName="Input Information About Accident"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="c4fc1d4c-f8c6-4199-ba8d-607552854268"
+              LastKnownName="Collect Information About Accident"
+              LastKnownLocation="Arch.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c12e6b3b-0200-4087-8016-ee836826c35e"
+                  name="Call Center Operator"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b7264bb0-a7ac-4892-a7fc-bc1086252a0d"
+                  name="Input Information About Accident"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="6ce0c769-db75-4c71-9b58-a9b3fba5806a"
+            isDerived="false"
+            sourceEndRoleName="Call Center Operator"
+            targetEndRoleName="Communicate"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="3d433777-86cc-4bde-bcdb-cc0ba67e2733"
+              LastKnownName="Communicate"
+              LastKnownLocation="Arch.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a37d2d5e-7925-4187-ad9a-3967d0ca5c67"
+                  name="Call Center Operator"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="001826be-d0f5-4c04-927f-aac1f9f20c85"
+                  name="Communicate"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="cc751a04-b6ba-41e9-815f-fa5f66f0c023"
+        name="Team Member"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="5a920ec1-746d-406b-9568-38ef2366b7f0"
+            isDerived="false"
+            sourceEndRoleName="Member"
+            targetEndRoleName="Communication"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="3d433777-86cc-4bde-bcdb-cc0ba67e2733"
+              LastKnownName="Communicate"
+              LastKnownLocation="Arch.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0666b79c-e430-4c50-89fd-d8fc23fbf3b9"
+                  name="Member"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="fb3e0e4c-5085-41f8-8345-cac4b53e6a31"
+                  name="Communication"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="d85682a1-3b82-45d3-8a4b-f6db487a3fb3"
+            isDerived="false"
+            sourceEndRoleName="Member"
+            targetEndRoleName="Track Task Execution"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="a4b30f49-aa3e-4c5b-adbe-e1ef93c9e609"
+              LastKnownName="Track Task Execution"
+              LastKnownLocation="Arch.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c06499c9-b752-4f4c-b766-743db6fd698c"
+                  name="Member"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b2d95f8c-fd12-4a3f-9a79-cf3a908424a6"
+                  name="Track Task Execution"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="371462fb-3308-4a15-8f19-bd33277e19b7"
+            isDerived="false"
+            sourceEndRoleName="Team Member"
+            targetEndRoleName="Analyse Sutable Recources"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="dd105425-fdc6-40d1-9ddd-b1aec0c7653d"
+              LastKnownName="Analyse and select Sutable Recources"
+              LastKnownLocation="Arch.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="15baddb9-5d40-49fe-98b4-ba429d4e0c99"
+                  name="Team Member"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7a96059e-1cc9-440a-9fcc-9234b7c4cde0"
+                  name="Analyse Sutable Recources"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="f71b0d14-989b-4190-b26e-c8ab9119552e"
+        name="Resource Provider"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="c36ef696-5294-49b7-9a9e-7e9892e5f692"
+            isDerived="false"
+            sourceEndRoleName="Resource Provider"
+            targetEndRoleName="Communicate"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="3d433777-86cc-4bde-bcdb-cc0ba67e2733"
+              LastKnownName="Communicate"
+              LastKnownLocation="Arch.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="633ef002-543b-4704-a012-f6d9cbec497e"
+                  name="Resource Provider"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4c09e84e-ea30-4e4f-9529-ba40bc0e8590"
+                  name="Communicate"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="ae8fa08a-8dab-47d2-bd23-e7eb38fa9a40"
+            isDerived="false"
+            sourceEndRoleName="Resource Provider"
+            targetEndRoleName="Provide Resource Information"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="7e0f3e29-a9e1-48f8-bd8e-35236b38148c"
+              LastKnownName="Provide Resource Information"
+              LastKnownLocation="Arch.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4e2368ad-7632-446c-b29e-caa3cd9c901f"
+                  name="Resource Provider"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b6f79a57-82fc-49a5-9245-201000e68f2a"
+                  name="Provide Resource Information"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="c4fc1d4c-f8c6-4199-ba8d-607552854268"
+        name="Collect Information About Accident"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="fc003e43-7483-4d36-8009-208665910af3">
+            <useCaseMoniker
+              Id="fbc8693d-e1c7-449b-bfab-2c2c5a1980a0"
+              LastKnownName="Manage Issues"
+              LastKnownLocation="Arch.uml" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker
+            Id="cb45b067-cc7d-4cd9-92bf-9b4aaf7a4b1f"
+            LastKnownName="Accident Management System"
+            LastKnownLocation="Arch.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="3d433777-86cc-4bde-bcdb-cc0ba67e2733"
+        name="Communicate"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="cb45b067-cc7d-4cd9-92bf-9b4aaf7a4b1f"
+            LastKnownName="Accident Management System"
+            LastKnownLocation="Arch.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="a4b30f49-aa3e-4c5b-adbe-e1ef93c9e609"
+        name="Track Task Execution"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="7e028632-46b1-415e-b158-7257584e80de">
+            <useCaseMoniker
+              Id="3d433777-86cc-4bde-bcdb-cc0ba67e2733"
+              LastKnownName="Communicate"
+              LastKnownLocation="Arch.uml" />
+          </include>
+          <include
+            Id="670acb15-8f1d-4f6f-b852-4ce61c32c1a2">
+            <useCaseMoniker
+              Id="dd105425-fdc6-40d1-9ddd-b1aec0c7653d"
+              LastKnownName="Analyse and select Sutable Recources"
+              LastKnownLocation="Arch.uml" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker
+            Id="cb45b067-cc7d-4cd9-92bf-9b4aaf7a4b1f"
+            LastKnownName="Accident Management System"
+            LastKnownLocation="Arch.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="fbc8693d-e1c7-449b-bfab-2c2c5a1980a0"
+        name="Manage Issues"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="0570d0be-9c6d-4b54-a0c8-c0e83b1ce2b3">
+            <useCaseMoniker
+              Id="4b0d4765-1609-45fb-aba4-ebe1d61fac38"
+              LastKnownName="Create Tasks"
+              LastKnownLocation="Arch.uml" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker
+            Id="cb45b067-cc7d-4cd9-92bf-9b4aaf7a4b1f"
+            LastKnownName="Accident Management System"
+            LastKnownLocation="Arch.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="7e0f3e29-a9e1-48f8-bd8e-35236b38148c"
+        name="Provide Resource Information"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="cb45b067-cc7d-4cd9-92bf-9b4aaf7a4b1f"
+            LastKnownName="Accident Management System"
+            LastKnownLocation="Arch.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="dd105425-fdc6-40d1-9ddd-b1aec0c7653d"
+        name="Analyse and select Sutable Recources"
+        isAbstract="false"
+        isLeaf="false">
+        <suppliersInternal>
+          <dependency
+            Id="8b676101-0737-447d-a81d-c7dfbc51fcb2">
+            <useCaseMoniker
+              Id="7e0f3e29-a9e1-48f8-bd8e-35236b38148c"
+              LastKnownName="Provide Resource Information"
+              LastKnownLocation="Arch.uml" />
+          </dependency>
+        </suppliersInternal>
+        <subjects>
+          <subsystemMoniker
+            Id="cb45b067-cc7d-4cd9-92bf-9b4aaf7a4b1f"
+            LastKnownName="Accident Management System"
+            LastKnownLocation="Arch.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="4b0d4765-1609-45fb-aba4-ebe1d61fac38"
+        name="Create Tasks"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="cb45b067-cc7d-4cd9-92bf-9b4aaf7a4b1f"
+            LastKnownName="Accident Management System"
+            LastKnownLocation="Arch.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>

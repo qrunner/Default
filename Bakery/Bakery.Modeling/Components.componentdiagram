@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<componentModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="54930591-f862-44e8-b725-e3754947e89b" name="Components" linkedPackageId="9acb0343-9987-4694-be22-9d999d9fe640" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner">
+  <packagedElements>
+    <componentModelHasComponents>
+      <component Id="45c85151-575a-4282-aef7-7d86ebf3cf54" name="Production.Model" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="bfb0d239-1076-4818-bb98-49a9f932747b" />
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="e4a629b3-d4bf-48a8-9ae9-ffbfc0e8d105" name="WinForms" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="05e639f7-8842-4dd1-8fb0-62696ba9eaa3" />
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="48781d9a-7b0b-4f1c-9c52-63d5575596df" name="Bakery.Model.Implementation" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="40b2524d-6470-44f5-a21f-0678d277cedf" />
+        <suppliersInternal>
+          <dependency Id="9d9db878-c741-45f0-90ec-76a96aa1731a">
+            <componentMoniker Id="bf5eef26-c902-4087-a1b0-e5bb8ffc212f" LastKnownName="Data Acces Layer (ORM)" />
+            <elementDefinition Id="f17c4e24-59a2-4e48-b0b4-9dc0a121cfb4" />
+          </dependency>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization Id="f7ab3924-15cb-4463-aa8d-58e849c21836" isSubstitutable="false">
+            <componentMoniker Id="45c85151-575a-4282-aef7-7d86ebf3cf54" LastKnownName="Production.Model" />
+            <elementDefinition Id="b5be048f-f798-4c0f-9e49-648db60c7a2f" />
+          </generalization>
+        </generalsInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="bf5eef26-c902-4087-a1b0-e5bb8ffc212f" name="Data Acces Layer (ORM)" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="f43e2bbd-1c1f-42d5-ba14-fbaae1fb2cca" />
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="caa5a894-fe54-4952-aa8b-6cf8b09ddc2a" name="Bakery.Logic" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="ca0179f6-7ae3-47ab-952a-4ed8a65e7c15" />
+        <suppliersInternal>
+          <dependency Id="8a2d8130-add7-4d00-8329-f010ad70b739">
+            <componentMoniker Id="45c85151-575a-4282-aef7-7d86ebf3cf54" LastKnownName="Production.Model" />
+            <elementDefinition Id="d85b9019-f955-4056-8c01-8487bfceb2f2" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="a0c2a15b-e23a-44da-9a83-afd12dbd2233" name="Accounting" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="2c800508-b0e7-40a0-9435-d5f477be7af9" />
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="d54de536-d1d5-4363-82e3-580200313a16" name="Production" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="ecd10fba-76d0-4fb7-85ac-d55af1f20f5f" />
+      </component>
+    </componentModelHasComponents>
+  </packagedElements>
+  <package Id="9acb0343-9987-4694-be22-9d999d9fe640" name="Bakery.Modeling">
+    <elementDefinition Id="0ce85f2c-bed6-488a-a29c-f013cdadff1f" />
+    <profileInstances>
+      <packageHasProfileInstances Id="bf87fcdd-a3b2-42ed-b707-f15102a9df4b">
+        <profileInstance Id="27acee24-51ac-41f3-abf4-cf8eebb1b29a" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="d408be51-47b8-4f68-89fe-55803d18dc62">
+        <profileInstance Id="203286e5-cca5-49d9-baae-eb13d4a066f0" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</componentModel>

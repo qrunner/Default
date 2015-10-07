@@ -1,0 +1,38 @@
+﻿@using Mcs.WebExtensions
+@model Mcs.Model.News
+
+
+@{    
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("save", "news", ViewContext.RouteData.Values, FormMethod.Post, new { enctype = "multipart/form-data" }))
+{    
+    <fieldset>
+    <legend>@ViewBag.Title</legend>
+    @Html.ValidationSummary(true)
+    
+        @Html.HiddenFor(model => model.Id)
+        @Html.HiddenFor(model => model.PlaceId)
+
+        <div class="f-row">
+        <div class="f-input">
+            <img alt="@Model.Title" src="@Url.Content(@Model.GetImagePathFitWidth(128))" width="128px"/>
+            <input id="image" type="file" name="image" accept="image/png" />
+        </div></div>   
+    
+        @Html.TextBoxBlockFor("Дата и время", model => model.Date)
+        @Html.TextBoxBlockFor("Заголовок", model => model.Title)
+        @Html.EditBlockFor("Описание", model => model.Description, Html.TextAreaFor(model => model.Description, new { @class = "g-5" }))
+        @Html.EditBlockFor("Текст", model => model.Text, Html.TextAreaFor(model => model.Text, new { @class = "g-5", style = "height: 100px;" }))
+        @Html.EditBlockFor("Видимость", model => model.Visible, Html.EditorFor(model => model.Visible))
+                
+        </fieldset>
+    
+    <div class="f-actions">
+        @Html.SaveButton()
+        @Html.CancelButton()
+    </div>
+       
+    <div>@ViewBag.ErrorMessage</div>
+}

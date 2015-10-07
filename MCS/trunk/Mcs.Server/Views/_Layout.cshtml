@@ -1,0 +1,71 @@
+﻿@using Mcs.Server
+@using Mcs.Server.Extensions
+@using Mcs.WebExtensions
+
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="lt-ie9 lt-ie8 lt-ie7" lang="ru"><![endif]-->
+<!--[if IE 7]><html class="lt-ie9 lt-ie8" lang="ru"><![endif]-->
+<!--[if IE 8]><html class="lt-ie9" lang="ru"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="ru">
+<!--<![endif]-->
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="@Url.Content("~/Content/css/framework.css")" rel="stylesheet">
+    <link rel="Stylesheet" type="text/css" href="@Url.Content("~/Content/css/Admin.css")" />
+    
+    <!--[if lt IE 9]>
+	    <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+    
+</head>
+<body>
+    <div class="f-nav-bar">
+        <div class="f-nav-bar-body">
+            <div class="f-nav-bar-title">
+                <a href="~/">MCS</a>
+            </div>            
+            <ul class="f-nav">
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <li>@Html.ActionLink(@Application.CurrentPlaceName, "index", "place"/*, new { returl=Request.Url.PathAndQuery}, null */)</li>                 
+                }
+            </ul>
+
+            <ul class="f-nav" id="loginInfo">
+                @if (User.Identity.IsAuthenticated)
+                {   
+                    <li>@User.Identity.Name</li>              
+                    <li>
+                        <a href="javascript:document.getElementById('logoutForm').submit()">Выход</a>
+                        @using (Html.BeginForm("logoff", "account", FormMethod.Post, new { id = "logoutForm" }))
+                        {
+                            @Html.AntiForgeryToken()                           
+                        }
+                    </li>
+                }
+                else
+                {
+                       <li>@Html.ActionLink("Вход","logon","account")</li>              
+                }
+            </ul>
+        </div>        
+    </div>
+    <!-- f-nav-bar -->
+    <div class="g">
+        <div class="g-row"></div>
+        <div class="g-row">
+            <div class="g-12">
+                @Html.Navigation()
+            </div>
+        </div>
+        <div class="g-row">
+            <div class="g-12">
+                    @RenderBody()
+            </div>
+        </div>
+    </div>
+</body>
+</html>

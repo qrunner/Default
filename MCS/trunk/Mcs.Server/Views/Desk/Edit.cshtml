@@ -1,0 +1,27 @@
+﻿@using Mcs.WebExtensions
+@model Mcs.Model.Desk
+
+@{    
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("save", "desk", ViewContext.RouteData.Values, FormMethod.Post))
+{    
+    <fieldset>
+    <legend>@ViewBag.Title</legend>
+        @Html.ValidationSummary(true)
+    
+        @Html.HiddenFor(model => model.Id)
+        @Html.HiddenFor(model => model.PlaceId)
+
+        @Html.TextBoxBlockFor("Номер / наименование", model => model.Name)
+        @Html.EditBlockFor("Заказан", model => model.Reserved, Html.EditorFor(model => model.Reserved))
+        
+    </fieldset>  
+    <div class="f-actions">
+        @Html.SaveButton()
+        @Html.CancelButton()
+    </div>
+    
+    <div>@ViewBag.ErrorMessage</div>
+}

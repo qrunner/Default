@@ -1,0 +1,24 @@
+﻿@model Mcs.Model.MenuCategory
+
+@{
+    ViewBag.Title = "IndexMobile";
+    Layout = "~/Views/_LayoutMobile.cshtml";
+}
+
+<h2>Выберите заведение</h2>
+
+<article id="main" class="navigable current">
+    <section>
+
+        <ul class='list'>
+            @foreach (var item in Model.Dishes)
+{
+    <li data-goto="segmented-article" class="nav">
+        <a href="/dish/@item.Id">
+            <h3 style=""> @Html.DisplayFor(modelItem => item.Name)</h3>
+        </a>
+    </li>
+}
+        </ul>
+    </section>
+</article>

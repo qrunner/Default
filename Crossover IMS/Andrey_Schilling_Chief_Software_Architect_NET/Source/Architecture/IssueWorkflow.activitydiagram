@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="d3e48c6b-8667-4487-8cb1-4f886e7f2664" name="IssueWorkflow" linkedPackageId="d534be41-8908-4335-9962-0c141a58f26a" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <ownedCommentsInternal>
+    <comment Id="00f1a3da-2008-4c9a-875c-bcea767b1676">
+      <elementDefinition Id="8293f815-2cf8-4ad3-984e-b631fd956fbc" />
+      <body>Task controlled by assigned employee</body>
+      <annotatedElements>
+        <opaqueActionMoniker Id="a23e06c3-99c4-409f-84e1-63492164c21f" LastKnownName="Create Task for Handle Issue" />
+      </annotatedElements>
+    </comment>
+    <comment Id="169ab0c6-2eb8-4a28-a5f2-c79a044f7770">
+      <elementDefinition Id="f1017264-4154-483b-8790-5328674d61cc" />
+      <body>According to workflow and Issue details created Resource Requests</body>
+      <annotatedElements>
+        <opaqueActionMoniker Id="702bcfcb-e354-40fa-835d-31d17ab000c8" LastKnownName="Create Resource Request" />
+      </annotatedElements>
+    </comment>
+    <comment Id="7965fac9-146a-45d5-82a8-230cf9420010">
+      <elementDefinition Id="6aa36364-c997-4c54-96c9-10e14e6e3177" />
+      <body>SMS and E-mail</body>
+      <annotatedElements>
+        <opaqueActionMoniker Id="30d80a48-e9e3-4bf7-b5f3-6b373b40bd7b" LastKnownName="Notify Employee" />
+      </annotatedElements>
+    </comment>
+    <comment Id="eb97e58f-213b-4236-aa32-960f3aa97df3">
+      <elementDefinition Id="aa89f2b0-86ca-455e-8b88-c98cfb5bb64b" />
+      <body>Full information about Issue</body>
+      <annotatedElements>
+        <objectNodeMoniker Id="26d89544-c0b9-4ded-83c1-c6e51299b2d6" LastKnownName="Issue" />
+      </annotatedElements>
+    </comment>
+    <comment Id="78ee9af1-95ed-4b1e-8916-fd4c9af5efa3">
+      <elementDefinition Id="9f9a1f45-ab8d-43b0-855a-6800fc6f0c1b" />
+      <body>Category, volume and terms of needed resources</body>
+      <annotatedElements>
+        <objectNodeMoniker Id="67402274-9ff9-44ba-abde-c3d09b098307" LastKnownName="Resource Request" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="745fb6bc-9751-440a-8bba-1f591af03723">
+      <profileInstance Id="0c51a89d-7899-4bd2-9969-f18291806a50" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="1432b611-bea1-404c-a9d5-34207a8e3e09">
+      <profileInstance Id="dd94fd60-be3a-4845-b3fd-268b4c9fc50c" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="5fcfb84a-95c6-41dd-bf48-75c12fd4967c" name="IssueWorkflow" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="887d1de2-1162-4948-a2c7-685759719de9" />
+        <nodes>
+          <opaqueAction Id="cd44ea14-751f-4af0-afb4-9060cb11003a" name="Automatic Notification" isLeaf="false">
+            <elementDefinition Id="431fb148-65b1-429d-bb78-df1e9584a765" />
+            <flowNodeTargets>
+              <controlFlow Id="09af78c0-e36e-4a7b-b952-a2edac22ba5b" isLeaf="false">
+                <mergeNodeMoniker Id="744ed4e7-2814-45ab-95e0-d29d79b6058d" LastKnownName="Merge1" />
+                <elementDefinition Id="5abbf4c1-eec2-4b65-a3ba-690c830effc3" />
+              </controlFlow>
+            </flowNodeTargets>
+            <pins>
+              <opaqueActionHasInputValues>
+                <inputPin Id="7d2f8915-18ab-4a8c-88f5-122196f0c8ba" isLeaf="false" ordering="Unordered" isControlType="false" isControl="false">
+                  <elementDefinition Id="0c820c15-be7a-4b80-a817-0564baf43313" />
+                  <upperBound>
+                    <literalInteger Id="b31fa0e5-a5e6-4a9b-99ed-fe446c735284" name="2147483647" value="2147483647">
+                      <elementDefinition Id="f2d293e0-21b9-4d61-ae66-b707f3354252" />
+                    </literalInteger>
+                  </upperBound>
+                </inputPin>
+              </opaqueActionHasInputValues>
+            </pins>
+          </opaqueAction>
+          <opaqueAction Id="22b7934e-49cf-490f-afbf-f22ff2f6a536" name="Create Issue" isLeaf="false">
+            <elementDefinition Id="8a465d26-09e5-4ee9-9397-a2c2e5665f90" />
+            <flowNodeTargets>
+              <controlFlow Id="ac7d8058-71d9-4431-94f4-472897c41531" isLeaf="false">
+                <opaqueActionMoniker Id="a23e06c3-99c4-409f-84e1-63492164c21f" LastKnownName="Create Task for Handle Issue" />
+                <elementDefinition Id="86a1ba70-a52c-4b5d-847d-9e448d230525" />
+              </controlFlow>
+            </flowNodeTargets>
+            <pins>
+              <opaqueActionHasOutputValues>
+                <outputPin Id="e7d27840-58c8-4fb6-b1cc-a2b13faf34ac" isLeaf="false" ordering="Unordered" isControlType="false" isControl="false">
+                  <elementDefinition Id="e3365176-ecc3-4f7a-81c3-e291f21c9e91" />
+                  <objectFlowTargets>
+                    <objectFlow Id="29e5989e-c7a8-45c8-bf9d-0b8eb6bbcc5f" isLeaf="false" isMulticast="false" isMultireceive="false">
+                      <objectNodeMoniker Id="26d89544-c0b9-4ded-83c1-c6e51299b2d6" LastKnownName="Issue" />
+                      <elementDefinition Id="3cf0b393-3682-473e-869e-5fda7dc5dd38" />
+                    </objectFlow>
+                  </objectFlowTargets>
+                  <upperBound>
+                    <literalInteger Id="c130e05f-c78c-4227-a970-4db297c34caa" name="2147483647" value="2147483647">
+                      <elementDefinition Id="99b252a7-c1d7-4cf9-8e87-7132fa6eccf2" />
+                    </literalInteger>
+                  </upperBound>
+                </outputPin>
+              </opaqueActionHasOutputValues>
+            </pins>
+          </opaqueAction>
+          <objectNode Id="f73e8b8e-4696-4ce2-9595-717166233e8b" name="Workflow Contact Lists" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="b6dab061-d0e5-4e04-9474-9bfc9579341a" />
+            <objectFlowTargets>
+              <objectFlow Id="b1ea75b9-e130-4ebd-b5c5-e94b2752806c" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <inputPinMoniker Id="7d2f8915-18ab-4a8c-88f5-122196f0c8ba" />
+                <elementDefinition Id="5cd3ab97-d4b8-43d7-bd73-8f0f0e6676c9" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger Id="9ccb47fa-d596-4329-903a-80efe7acd8f6" name="2147483647" value="2147483647">
+                <elementDefinition Id="e2f49031-44b7-40e7-bf96-d1323c93e06e" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <objectNode Id="26d89544-c0b9-4ded-83c1-c6e51299b2d6" name="Issue" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="6fff63f3-d12b-4057-a58a-c3c0e7545da6" />
+            <objectFlowTargets>
+              <objectFlow Id="d5fced13-ed6b-431d-a291-5250e072ee15" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <inputPinMoniker Id="9e8518a5-1b44-419e-83a3-8ae6bda17b3d" />
+                <elementDefinition Id="bd3e5c82-b885-476f-8fad-1ea887796205" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger Id="df9f7768-7820-49a1-98c1-409d6aa15e09" name="2147483647" value="2147483647">
+                <elementDefinition Id="30b3119f-04d1-418a-b8e8-36b60132b533" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <opaqueAction Id="a23e06c3-99c4-409f-84e1-63492164c21f" name="Create Task for Handle Issue" isLeaf="false">
+            <elementDefinition Id="21cec9ec-1b1c-4fb1-9427-5e52390b8367" />
+            <flowNodeTargets>
+              <controlFlow Id="cbf8d7e5-b5b4-4e42-8c96-31a631b11b93" isLeaf="false">
+                <forkNodeMoniker Id="1231b7d2-f767-42c3-8632-429e4f2d6453" LastKnownName="Fork1" />
+                <elementDefinition Id="7f5e86a8-9efe-4201-9c65-d8a65c645a82" />
+              </controlFlow>
+            </flowNodeTargets>
+            <pins>
+              <opaqueActionHasInputValues>
+                <inputPin Id="9e8518a5-1b44-419e-83a3-8ae6bda17b3d" isLeaf="false" ordering="Unordered" isControlType="false" isControl="false">
+                  <elementDefinition Id="9a379ae6-d79e-4449-be84-749527d83df8" />
+                  <upperBound>
+                    <literalInteger Id="ed0a1937-ac69-4619-95bc-1cd5020e8016" name="2147483647" value="2147483647">
+                      <elementDefinition Id="04c7f92d-b141-46cc-bfd3-41c5d76b7cb9" />
+                    </literalInteger>
+                  </upperBound>
+                </inputPin>
+              </opaqueActionHasInputValues>
+              <opaqueActionHasInputValues>
+                <inputPin Id="b04e3127-148c-47b9-a17e-38aa191af5ac" isLeaf="false" ordering="Unordered" isControlType="false" isControl="false">
+                  <elementDefinition Id="a72b14d7-1d5b-4cf2-b560-d79bd843fa0a" />
+                  <upperBound>
+                    <literalInteger Id="91ac97b8-2698-4f22-aa15-58c66d213d0e" name="2147483647" value="2147483647">
+                      <elementDefinition Id="1fa7a052-f220-4cbb-b96c-5738e056fe29" />
+                    </literalInteger>
+                  </upperBound>
+                </inputPin>
+              </opaqueActionHasInputValues>
+            </pins>
+          </opaqueAction>
+          <opaqueAction Id="702bcfcb-e354-40fa-835d-31d17ab000c8" name="Create Resource Request" isLeaf="false">
+            <elementDefinition Id="a8099274-8f44-43ef-8686-ed4380cceb16" />
+            <flowNodeTargets>
+              <controlFlow Id="ca15feeb-6524-4627-94d0-9d3d2ba0c7f4" isLeaf="false">
+                <joinNodeMoniker Id="6fdd7c39-5824-4480-88c0-1db1227f5d3f" LastKnownName="Join1" />
+                <elementDefinition Id="3c362a72-ba38-4366-a0f0-d9b5e2b5d423" />
+              </controlFlow>
+            </flowNodeTargets>
+            <pins>
+              <opaqueActionHasOutputValues>
+                <outputPin Id="3b47279c-0d4d-4b1b-95b8-bad302276162" isLeaf="false" ordering="Unordered" isControlType="false" isControl="false">
+                  <elementDefinition Id="75fb5329-5aa4-4996-ae17-da9f47fa824b" />
+                  <objectFlowTargets>
+                    <objectFlow Id="5fba1420-761d-4892-bf86-053587941f20" isLeaf="false" isMulticast="false" isMultireceive="false">
+                      <objectNodeMoniker Id="67402274-9ff9-44ba-abde-c3d09b098307" LastKnownName="Resource Request" />
+                      <elementDefinition Id="f5522680-5217-4b01-a2ce-f2dd2ca16fdc" />
+                    </objectFlow>
+                  </objectFlowTargets>
+                  <upperBound>
+                    <literalInteger Id="78acd20e-84f3-4244-894e-594366769376" name="2147483647" value="2147483647">
+                      <elementDefinition Id="147da858-1249-4190-9ccc-53e94f404afd" />
+                    </literalInteger>
+                  </upperBound>
+                </outputPin>
+              </opaqueActionHasOutputValues>
+            </pins>
+          </opaqueAction>
+          <objectNode Id="67402274-9ff9-44ba-abde-c3d09b098307" name="Resource Request" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="3f2ba313-676c-4c6f-914f-414d5fcc6287" />
+            <upperBound>
+              <literalInteger Id="205c0cf1-7191-4ea0-aee9-1d25b508e4b6" name="2147483647" value="2147483647">
+                <elementDefinition Id="968f0cee-cd8c-4eb8-bc56-70bc884321b7" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <objectNode Id="d40c0d9d-c942-4316-9911-b1da4bdb2e15" name="Employee" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="203d4a44-042b-4c2a-8d94-a2f959dcbadb" />
+            <objectFlowTargets>
+              <objectFlow Id="31e332b1-a8f5-42f2-b11b-22f08af67473" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <inputPinMoniker Id="b04e3127-148c-47b9-a17e-38aa191af5ac" />
+                <elementDefinition Id="5ee61dc1-540d-4e2f-9a57-541481e0e07f" />
+              </objectFlow>
+              <objectFlow Id="8db772a8-d3dc-4f3b-8869-a1d47a490ec5" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <inputPinMoniker Id="eebd10c3-8b91-47e7-92f7-8d3eb8467e5d" LastKnownName="Contacts" />
+                <elementDefinition Id="6772fd86-b8e6-4ea0-931f-8730358ca147" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger Id="749ba089-3e30-40d9-a15c-cc9d9406e082" name="2147483647" value="2147483647">
+                <elementDefinition Id="7dbf1716-b3fb-40d7-bc9b-b981258cabaa" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <forkNode Id="1231b7d2-f767-42c3-8632-429e4f2d6453" name="Fork1" isLeaf="false">
+            <elementDefinition Id="dc938f58-a3e7-47fa-996e-54bb815154f0" />
+            <flowNodeTargets>
+              <controlFlow Id="fef2b883-0fd0-4844-9462-01ef28e101d8" isLeaf="false">
+                <opaqueActionMoniker Id="702bcfcb-e354-40fa-835d-31d17ab000c8" LastKnownName="Create Resource Request" />
+                <elementDefinition Id="c67932ed-7923-4e80-a3f7-edf364b6bbf6" />
+              </controlFlow>
+              <controlFlow Id="c39ebc1b-93dd-4da1-86a1-abda777fe7d1" isLeaf="false">
+                <opaqueActionMoniker Id="30d80a48-e9e3-4bf7-b5f3-6b373b40bd7b" LastKnownName="Notify Employee" />
+                <elementDefinition Id="ffc65870-cfcc-466b-b1dd-6bb62f86e4c1" />
+              </controlFlow>
+            </flowNodeTargets>
+          </forkNode>
+          <opaqueAction Id="30d80a48-e9e3-4bf7-b5f3-6b373b40bd7b" name="Notify Employee" isLeaf="false">
+            <elementDefinition Id="e569317a-5f3c-4b4b-9970-3cdb21e83e37" />
+            <flowNodeTargets>
+              <controlFlow Id="477e50a1-455e-4737-9722-142ada1f4117" isLeaf="false">
+                <joinNodeMoniker Id="6fdd7c39-5824-4480-88c0-1db1227f5d3f" LastKnownName="Join1" />
+                <elementDefinition Id="2e9ca6f0-fd34-4b99-b34f-1cc5cad94caa" />
+              </controlFlow>
+            </flowNodeTargets>
+            <pins>
+              <opaqueActionHasInputValues>
+                <inputPin Id="eebd10c3-8b91-47e7-92f7-8d3eb8467e5d" name="Contacts" isLeaf="false" ordering="Unordered" isControlType="false" isControl="false">
+                  <elementDefinition Id="445271ff-ce9e-4978-abc3-afb365157139" />
+                  <upperBound>
+                    <literalInteger Id="d0575efe-8130-48a6-bd4b-eadfd386d80b" name="2147483647" value="2147483647">
+                      <elementDefinition Id="2a09d601-0c00-4352-a7d1-dc2f99dcf9b0" />
+                    </literalInteger>
+                  </upperBound>
+                </inputPin>
+              </opaqueActionHasInputValues>
+            </pins>
+          </opaqueAction>
+          <joinNode Id="6fdd7c39-5824-4480-88c0-1db1227f5d3f" name="Join1" isLeaf="false">
+            <elementDefinition Id="665efec4-d5f7-4e28-acc0-faf08304d93f" />
+            <flowNodeTargets>
+              <controlFlow Id="dd6bbc32-d9c6-4e67-be5c-2d19d55258d8" isLeaf="false">
+                <decisionNodeMoniker Id="fa655080-2424-4890-9033-163581189602" LastKnownName="Decision1" />
+                <elementDefinition Id="7ba71b03-2447-4fd0-94db-1117ae1fad71" />
+              </controlFlow>
+            </flowNodeTargets>
+          </joinNode>
+          <mergeNode Id="744ed4e7-2814-45ab-95e0-d29d79b6058d" name="Merge1" isLeaf="false">
+            <elementDefinition Id="eb27ae80-7c31-40f0-b69a-96fcb611f457" />
+            <flowNodeTargets>
+              <controlFlow Id="470f6a51-4cc4-457f-8071-28df65eb311b" isLeaf="false">
+                <opaqueActionMoniker Id="22b7934e-49cf-490f-afbf-f22ff2f6a536" LastKnownName="Create Issue" />
+                <elementDefinition Id="d1b3fe36-1409-4321-80a9-caa1d23ba853" />
+              </controlFlow>
+            </flowNodeTargets>
+          </mergeNode>
+          <decisionNode Id="fa655080-2424-4890-9033-163581189602" name="Decision1" isLeaf="false">
+            <elementDefinition Id="d366b742-10fc-401f-8d91-b82e5e5b9138" />
+            <flowNodeTargets>
+              <controlFlow Id="5ec9fee6-6159-4715-b4f7-d5193c560590" guard="There are more unprocessed issues" isLeaf="false">
+                <mergeNodeMoniker Id="744ed4e7-2814-45ab-95e0-d29d79b6058d" LastKnownName="Merge1" />
+                <elementDefinition Id="be6cdedc-7ca4-4f18-9d23-427d3f68ffd8" />
+              </controlFlow>
+              <controlFlow Id="abf1a78a-72c7-46fe-afaf-8b7cd002c90f" isLeaf="false">
+                <activityFinalNodeMoniker Id="874589dd-e0c4-46d1-a1ba-b3ef54bf22ec" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="5cfb1992-821f-427a-af36-64df102cb658" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <initialNode Id="00f86793-ca75-4185-8b04-8470176c5a58" name="Initial1" isLeaf="false">
+            <elementDefinition Id="cfde1fdd-8a3c-4283-9f64-7cc90af52f52" />
+            <flowNodeTargets>
+              <controlFlow Id="f13e5be4-e1ee-4e48-b84b-1c6aa6b9946f" isLeaf="false">
+                <opaqueActionMoniker Id="cd44ea14-751f-4af0-afb4-9060cb11003a" LastKnownName="Automatic Notification" />
+                <elementDefinition Id="38a1f450-b9b1-4d7b-908d-53081bd9595a" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <activityFinalNode Id="874589dd-e0c4-46d1-a1ba-b3ef54bf22ec" name="ActivityFinal1" isLeaf="false">
+            <elementDefinition Id="cbb3befe-7d4c-4056-972e-d259c4e8ec56" />
+          </activityFinalNode>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="d534be41-8908-4335-9962-0c141a58f26a" name="Architecture">
+    <elementDefinition Id="a2cca7bc-a604-4d6c-9e29-ac2e428a33f6" />
+  </package>
+</activityRootModel>

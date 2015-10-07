@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Deploy">
+
+    <PropertyGroup>
+      <Dest>$(WorkingDirectory)\$(BuildConfiguration)\TEMP\$(SVNRevision)</Dest>
+      <PublishPath>$(WorkingDirectory)\$(BuildConfiguration)\$(SVNRevision).zip</PublishPath>
+	  <LastBuildPath>$(WorkingDirectory)\$(BuildConfiguration)\LastBuild</LastBuildPath>
+      <zipPath>C:\Program Files\7-Zip\7z.exe</zipPath>
+    </PropertyGroup>
+
+    <ItemGroup>
+		<!-- =================== БАЗА ДАННЫХ =================== -->
+		<FilesDatabaseChanges 		Include="DatabaseChanges\**\*.*" />
+		
+		<!-- =================== ТОНКИЙ =================== -->
+		<FilesMETADATA 				Include="METADATA\**\*.*" />
+		<FilesCoreWS 				Include="corews\**\*.*" />
+		<FilesFrontWS 				Include="frontws\**\*.*" />
+		<FilesRep_excel 			Include="rep_excel\**\*.*" />
+		
+		<!-- =================== ОБЩИЕ ПРОВАЙДЕРЫ =================== -->
+		<TibcoProvider 				Include="Common\TibcoProvider\bin\**\*.*" 					Exclude="Common\TibcoProvider\bin\**\*.pdb" />
+		<MsSql 						Include="Common\DatabaseProviders\MsSql\bin\**\*.*" 		Exclude="Common\DatabaseProviders\MsSql\bin\**\*.pdb" />
+		<Oracle_10_2 				Include="Common\DatabaseProviders\Oracle_10_2\bin\**\*.*" 	Exclude="Common\DatabaseProviders\Oracle_10_2\bin\**\*.pdb" />
+		<Oracle_11_2	 			Include="Common\DatabaseProviders\Oracle_11_2\bin\**\*.*" 	Exclude="Common\DatabaseProviders\Oracle_11_2\bin\**\*.pdb" />
+		<Provider_Logging_File	 	Include="Common\Provider.Logging.File\bin\**\*.*" 			Exclude="Common\Provider.Logging.File\bin\**\*.pdb" />
+		<Provider_Logging_Database 	Include="Common\Provider.Logging.Database\bin\**\*.*" 		Exclude="Common\Provider.Logging.Database\bin\**\*.pdb" />
+		<Provider_Logging_Mail	 	Include="Common\Provider.Logging.Mail\bin\**\*.*" 			Exclude="Common\Provider.Logging.Mail\bin\**\*.pdb" />
+		
+		<!-- =================== СЕРВИС ИНТЕГРАЦИИ НОВЫЙ =================== -->
+		<FilesWindowsServiceHost 	Include="IntegrationServiceNew\WindowsServiceHost\bin\$(BuildConfiguration)\**\*.*" />
+		<FilesMetodix 				Include="IntegrationServiceNew\Metodix\bin\**\*.*" />
+		<Files3CardR 				Include="IntegrationServiceNew\3CardR\bin\**\*.*" />
+		<FilesCreditRegistry 		Include="IntegrationServiceNew\CreditRegistry\bin\**\*.*" 	Exclude="IntegrationServiceNew\CreditRegistry\bin\**\*.config" />
+		<FilesSchedule 				Include="IntegrationServiceNew\Schedule\bin\**\*.*" />
+		<FilesNPF 					Include="IntegrationServiceNew\NPF\bin\**\*.*" />
+		
+		<!-- =================== СЕРВИС ИНТЕГРАЦИИ СТАРЫЙ =================== -->
+		<FilesPatterns					Include="IntegrationService\Patterns\**\*.*" />
+		<FilesDIASOFT_ROB 				Include="IntegrationService\SERVICE_ROB_ONLINE\DIASOFT_ROB\bin\$(BuildConfiguration)\**\*.*" />
+		<FilesDIASOFT_ROB_THREAD_POS 	Include="IntegrationService\SERVICE_ROB_ONLINE\DIASOFT_ROB_THREAD_POS\bin\$(BuildConfiguration)\**\*.*" Exclude="IntegrationService\SERVICE_ROB_ONLINE\DIASOFT_ROB_THREAD_POS\bin\$(BuildConfiguration)\**\*.pdb" />
+		
+		<!-- =================== ТОЛСТЫЕ КЛИЕНТЫ =================== -->
+		<FilesUB 					Include="ClientDPRPZ\WinAppClient\bin\$(BuildConfiguration)\**\*.*" Exclude="ClientDPRPZ\WinAppClient\bin\$(BuildConfiguration)\**\*.pdb" />
+		<FilesSKP 					Include="ClientSKP\WinAppClient\bin\$(BuildConfiguration)\**\*.*" 	Exclude="ClientSKP\WinAppClient\bin\$(BuildConfiguration)\**\*.pdb" />
+		<FilesUrk 					Include="ClientUrk\WinAppClient\bin\$(BuildConfiguration)\**\*.*" 	Exclude="ClientUrk\WinAppClient\bin\$(BuildConfiguration)\**\*.pdb" />
+		
+		<!-- =================== КЕШ СЕРВЕР И КЛИЕНТ =================== -->
+		<FilesServerCASH 			Include="ServerCASH\Server\bin\$(BuildConfiguration)\**\*.*" 	Exclude="ServerCASH\Server\bin\$(BuildConfiguration)\**\*.pdb" />
+		
+		<ClientClient 				Include="ClientCASH\Client\bin\$(BuildConfiguration)\**\*.*" 	Exclude="ClientCASH\Client\bin\$(BuildConfiguration)\**\*.pdb;ClientCASH\Client\bin\$(BuildConfiguration)\**\*.xml" />
+		<Admin 						Include="ClientCASH\Plugin.Admin\bin\**\*.*" 					Exclude="ClientCASH\Plugin.Admin\bin\**\*.pdb;ClientCASH\Plugin.Admin\bin\**\*.xml" />
+		<CashCredit 				Include="ClientCASH\Plugin.CashCredit\bin\**\*.*" 				Exclude="ClientCASH\Plugin.CashCredit\bin\**\*.pdb;ClientCASH\Plugin.CashCredit\bin\**\*.xml" />
+		<CardCredit 				Include="ClientCASH\Plugin.CardCredit\bin\**\*.*" 				Exclude="ClientCASH\Plugin.CardCredit\bin\**\*.pdb;ClientCASH\Plugin.CardCredit\bin\**\*.xml" />
+		<Pageflow 					Include="ClientCASH\Plugin.Pageflow\bin\**\*.*" 				Exclude="ClientCASH\Plugin.Pageflow\bin\**\*.pdb;ClientCASH\Plugin.Pageflow\bin\**\*.xml" />
+		
+		<!-- =================== БАЛАНСИРОВЩИК =================== -->
+		<Balancer 					Include="Openbank\Balancer\*.aspx;Openbank\Balancer\*.asmx;Openbank\Balancer\Web.config;Openbank\Balancer\Servers.config;" />
+		<BalancerBin 				Include="Openbank\Balancer\bin\**\*.*;" Exclude="*.config;"/>
+    </ItemGroup>
+	
+    <Target Name="Deploy">      
+		<!-- =================== БАЗА ДАННЫХ =================== -->
+		
+		<!-- =================== КЕШ СЕРВЕР И КЛИЕНТ =================== -->
+		<!--<Exec Command="syncDirectoryDelete.bat $(LastBuildPath)\ClientCASH $(ServicesDeployRoot)\ServerCASH\Client"/>
+		
+		<Exec Command="srvStop rumskapt027.open.ru SOZ_ServerCASH"/>
+		<Exec Command="ping -n 7 127.0.0.1 >nul"/>
+		<Exec Command="syncDirectory.bat $(LastBuildPath)\ServerCASH $(ServicesDeployRoot)\ServerCASH"/>
+		<Exec Command="srvStart rumskapt027.open.ru SOZ_ServerCASH"/>
+		-->
+		<!-- =================== ТОНКИЙ =================== -->		
+		<Exec Command="syncDirectory.bat $(LastBuildPath)\METADATA $(MetadataDeploy)"/>		
+		<Exec Command="syncDirectory.bat $(LastBuildPath)\frontws $(FrontwsDeploy)"/>
+		<!-- =================== ОТЧЕТЫ =================== -->		
+		<Exec Command="syncDirectoryDelete.bat $(LastBuildPath)\rep_excel $(RepExcelDeploy)"/>
+		
+		<!-- =================== ОБЩИЕ ПРОВАЙДЕРЫ =================== -->		
+		
+		<!-- =================== СЕРВИС ИНТЕГРАЦИИ НОВЫЙ =================== -->
+		<Exec Command="sc \\rumskapt027.open.ru stop SOZ_IntegrationServiceNew"/>
+		<Exec Command="ping -n 11 127.0.0.1 >nul"/>
+		<Exec Command="taskkill /s rumskapt027.open.ru /im WindowsServiceHost.exe /t /f"/>
+		<Exec Command="syncDirectory.bat $(LastBuildPath)\IntegrationServiceNew $(ServicesDeployRoot)\IntegrationServiceNew"/>
+		<Exec Command="srvStart rumskapt027.open.ru SOZ_IntegrationServiceNew"/>
+		<!-- =================== СЕРВИС ИНТЕГРАЦИИ СТАРЫЙ =================== -->
+		<!--<Exec Command="srvStop rumskapt027.open.ru SOZ_IntegrationService"/>-->		
+		<Exec Command="sc \\rumskapt027.open.ru stop SOZ_IntegrationService"/>
+		<Exec Command="ping -n 21 127.0.0.1 >nul"/>
+		<Exec Command="taskkill /s rumskapt027.open.ru /im DIASOFT_ROB_THREAD_CASH.exe /t /f"/>
+		<Exec Command="syncDirectory.bat $(LastBuildPath)\IntegrationService $(ServicesDeployRoot)\IntegrationService"/>
+		<Exec Command="srvStart rumskapt027.open.ru SOZ_IntegrationService"/>
+		<!-- =================== ТОЛСТЫЕ КЛИЕНТЫ =================== -->
+		
+		<!-- =================== БАЛАНСИРОВЩИК =================== -->
+		<Exec Command="syncDirectory.bat $(LastBuildPath)\Balancer $(ServicesDeployRoot)\Balancer"/>
+    </Target>
+</Project>

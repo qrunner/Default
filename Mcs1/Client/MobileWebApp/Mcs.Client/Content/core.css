@@ -1,0 +1,25 @@
+﻿.right-inner-addon {
+    position: relative;
+}
+
+    .right-inner-addon input {
+        padding-right: 30px;
+    }
+
+    .right-inner-addon i {
+        position: absolute;
+        right: 0px;
+        padding: 10px 12px;
+        pointer-events: none;
+    }
+
+.price-panel {
+    position: fixed;
+    border: 0;
+    width: 100%;
+    vertical-align: middle;
+    text-align: center;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(51, 170, 238, 0.6);
+}

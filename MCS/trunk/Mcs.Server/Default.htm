@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="/scripts/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript">
+
+        update();
+
+        setInterval(update, 1000);
+
+        function update()
+        {
+            $('body').empty();
+
+            jQuery.getJSON("/api/order/place/1", null, function(data) {
+                var items = [];
+
+                $.each(data, function(index,val) {
+                    items.push('<li id="' + index + '">Id:' + val.Id + ' State:' + val.State + ' Opened:' + val.Opened + ' Closed:' + val.Closed + '</li>');
+                });
+
+                $('<ul/>', { 'class': 'order-list', html: items.join('') }).appendTo('body');
+            });
+        };
+
+    </script>
+</head>
+<body>
+    <ul id="order-list">
+        
+    </ul>
+</body>
+</html>

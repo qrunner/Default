@@ -1,0 +1,12 @@
+﻿@{
+    ViewBag.Title = "Заказ сохранен";
+}
+
+@section scripts{
+    // Функциональные кнопки заголовка
+    $(".ui-header").append(<span style="position: absolute;top: 3px;right: 50px;margin: 0px;">
+        <a href="@Url.Action("Menu", "Menu")"><img src="~/Content/images/book_32.png" alt="" /></a>
+    </span>);
+}
+
+<h2>Ваш заказ успешно сохранен!</h2>

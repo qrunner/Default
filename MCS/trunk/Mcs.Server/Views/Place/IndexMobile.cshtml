@@ -1,0 +1,33 @@
+﻿@using Mcs.Server
+@using Mcs.WebExtensions
+@model IEnumerable<Mcs.Model.Place>
+
+@{
+    ViewBag.Title = "IndexMobile";
+    Layout = "~/Views/_LayoutMobile.cshtml";
+}
+
+<h2>Выберите заведение</h2>
+
+@using (Html.BeginForm("indexmobile", "place", new {returl = Request.QueryString["returl"]}))
+{
+    <ul class='list select'>
+        @foreach (var item in Model)
+        {
+            var className = item.Id == Application.CurrentPlaceId ? "selected" : "";
+
+            <li class="@className" role="radio" style="clear: both; height: 70px" onclick="submit(@item.Id)">
+                
+                    <div style="width: 100px; float: left;"> @Html.PlaceImage(70, item) </div>
+                
+                    <div style="vertical-align: middle;">
+                        <h3 style=""> @Html.DisplayFor(modelItem => item.Name)</h3>
+                    </div>
+                    @Html.RadioButton("Place" + item.Id, item.Id, item.Id == Application.CurrentPlaceId)
+                
+            </li>
+        }
+    
+    </ul>
+    <p id="select-response"></p>
+}

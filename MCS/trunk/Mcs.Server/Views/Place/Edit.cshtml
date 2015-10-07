@@ -1,0 +1,30 @@
+﻿@using Mcs.WebExtensions
+@model Mcs.Model.Place
+
+@{    
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("save", "place", FormMethod.Post, new{ enctype = "multipart/form-data"})) 
+{
+    <fieldset>
+    <legend>@ViewBag.Title</legend>
+        @Html.ValidationSummary(true)
+
+        @Html.HiddenFor(model => model.Id)
+
+        <div class="f-row">
+        <div class="f-input">
+            <img alt="@Model.Name" src="@Url.Content(@Model.GetImagePathFitWidth(128))" width="128px"/>
+            <input id="image" type="file" name="image" accept="image/png" />
+        </div>    
+        </div>
+    
+        @Html.TextBoxBlockFor("Наименование", model => model.Name)        
+    </fieldset>  
+
+    <div class="f-actions">
+        @Html.SaveButton()
+        @Html.ActionLink("Отмена", "index", null, new { @class = "f-bu" })   
+    </div>
+}

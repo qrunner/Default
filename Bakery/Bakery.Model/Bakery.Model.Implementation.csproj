@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2394A6F9-A651-46D2-9594-1CED818BC84E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Bakery.Model.Implementation</RootNamespace>
+    <AssemblyName>Bakery.Model.Implementation</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EntityCollection.cs" />
+    <Compile Include="Order.cs" />
+    <Compile Include="ProductEntry.cs" />
+    <Compile Include="Unit.cs" />
+    <Compile Include="Recipe.cs" />
+    <Compile Include="Document.cs" />
+    <Compile Include="Entity.cs" />
+    <Compile Include="MeasureUnit.cs" />
+    <Compile Include="NamedEntity.cs" />
+    <Compile Include="UnitCategory.cs" />
+    <Compile Include="UnitEntry.cs" />
+    <Compile Include="Warehouse\Documents\IncomeInvoice.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Warehouse\Documents\InvoiceItem.cs" />
+    <Compile Include="Warehouse\Log.cs" />
+    <Compile Include="Warehouse\Entry.cs" />
+    <Compile Include="Warehouse\InvoiceType.cs" />
+    <Compile Include="RawEntry.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Bakery.Abstractions\Bakery.Model.csproj">
+      <Project>{6c4c4ee1-10a9-4c6e-a976-fe780f8e25f0}</Project>
+      <Name>Bakery.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bakery.Accounting\Accounting.csproj">
+      <Project>{0124E24D-C6EF-4104-ACE3-67A7CC126837}</Project>
+      <Name>Accounting</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{5DE43DD1-FF70-442D-A894-04D79C290AE7}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Production\Production.csproj">
+      <Project>{B53BE638-ECD3-49C6-AD4E-012F79B91E20}</Project>
+      <Name>Production</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Bakerhouse\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

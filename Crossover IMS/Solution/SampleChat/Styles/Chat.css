@@ -1,0 +1,80 @@
+﻿body {
+    font-family: arial,sans-serif;
+    color: #151515;
+}
+
+p, ul, li {
+    font-size: 13px;
+}
+
+a {
+    color: #2A5DB0;
+}
+
+#chatPanel {
+    border: solid 2px #E0ECFF;
+    border-top: solid 5px #E0ECFF;
+    width: 350px;
+    height: 205px;
+}
+
+    #chatPanel #chatBody {
+        height: 150px;
+    }
+
+    #chatPanel #userPanel {
+        float: left;
+        width: 140px;
+        height: 150px;
+        overflow: auto;
+        border-right: solid 1px #E0ECFF;
+    }
+
+        #chatPanel #userPanel ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+            #chatPanel #userPanel ul li {
+                padding: 2px 0 2px 5px;
+            }
+
+    #chatPanel #messagePanel {
+        height: 150px;
+        overflow: auto;
+    }
+
+        #chatPanel #messagePanel ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+            #chatPanel #messagePanel ul li {
+                padding: 5px 0 0 0;
+            }
+
+    #chatPanel #messagePanel {
+        width: 190px;
+        float: right;
+    }
+
+        #chatPanel #messagePanel span.userName {
+            font-weight: bold;
+        }
+
+    #chatPanel #chatFooter {
+        padding: 5px;
+    }
+
+    #chatPanel input#txtMessage {
+        float: right;
+        border-color: #666666 #CCCCCC #CCCCCC;
+        border-style: solid;
+        border-width: 1px;
+        width: 184px;
+        padding: 3px;
+        height: 35px;
+    }
+    

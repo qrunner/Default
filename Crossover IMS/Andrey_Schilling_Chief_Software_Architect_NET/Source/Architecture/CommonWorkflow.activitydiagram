@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="9c6a4843-bc52-4985-aed0-9b281a275e5d" name="CommonWorkflow" linkedPackageId="a5b76ed6-4875-4059-a02c-22b46894a7f3" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="c060f7d6-9582-46c7-8f73-fee72e62ee6a">
+      <profileInstance Id="1270e688-30ba-44c4-8ba5-b269b29de2a7" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="ffeb3ae8-3e5d-4180-9480-cd867d325e2d">
+      <profileInstance Id="854e391e-140c-4fd2-880f-ff3ed854068c" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="12852073-75bd-4852-af2c-2084214347dd" name="CommonWorkflow" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="4815cb0e-fc4c-4a33-bb46-0970ebe813bf" />
+        <nodes>
+          <initialNode Id="dcaeecf9-dd2d-49ea-8ca8-7dd0cf1095e2" name="Initial1" isLeaf="false">
+            <elementDefinition Id="662ce9a3-faae-4cf0-bbc3-474ace6f018b" />
+            <flowNodeTargets>
+              <controlFlow Id="98a67062-9e85-4d12-bec5-cf10756c8b1d" isLeaf="false">
+                <opaqueActionMoniker Id="ea5196e7-7c8b-4659-b689-2af0e839a3dd" LastKnownName="Call center employee inputs an new Accident info" />
+                <elementDefinition Id="0286b78c-3464-4f7c-916f-99b3778c247a" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction Id="ea5196e7-7c8b-4659-b689-2af0e839a3dd" name="Call center employee inputs an new Accident info" isLeaf="false">
+            <elementDefinition Id="422fd616-2044-4662-bec5-5ec723813965" />
+            <flowNodeTargets>
+              <controlFlow Id="5fae10ca-3cf6-4472-9e54-c1bd649c2327" isLeaf="false">
+                <opaqueActionMoniker Id="2845f7c7-fa8b-46e2-9fef-744c944a7897" LastKnownName="Fill Issues List" />
+                <elementDefinition Id="7397bdda-52bf-46c6-866b-154eada570c0" />
+              </controlFlow>
+            </flowNodeTargets>
+            <pins>
+              <opaqueActionHasInputValues>
+                <inputPin Id="7f6d43c2-a0d8-4ee6-90d3-0c0a6b148f84" name="Accident information from witness" isLeaf="false" ordering="Unordered" isControlType="false" isControl="false">
+                  <elementDefinition Id="e0109c8d-ae50-4d84-9394-242aa0b70cfa" />
+                  <upperBound>
+                    <literalInteger Id="796c62d6-e976-4c47-a232-e157ae01bb49" name="2147483647" value="2147483647">
+                      <elementDefinition Id="8ba00f2b-aa19-4e9c-b2d8-c2f38c614a6c" />
+                    </literalInteger>
+                  </upperBound>
+                </inputPin>
+              </opaqueActionHasInputValues>
+              <opaqueActionHasOutputValues>
+                <outputPin Id="1ed93d6b-e5c8-4eae-837e-71fa26e46aeb" isLeaf="false" ordering="Unordered" isControlType="false" isControl="false">
+                  <elementDefinition Id="3bcca38b-535f-42ca-ad26-9c54fdfc9d29" />
+                  <upperBound>
+                    <literalInteger Id="4cfc0313-0e07-42b3-bfb8-283c36b3ae51" name="2147483647" value="2147483647">
+                      <elementDefinition Id="5370f959-f97b-40c7-bc80-a6e320f046ad" />
+                    </literalInteger>
+                  </upperBound>
+                </outputPin>
+              </opaqueActionHasOutputValues>
+            </pins>
+          </opaqueAction>
+          <opaqueAction Id="2845f7c7-fa8b-46e2-9fef-744c944a7897" name="Fill Issues List" isLeaf="false">
+            <elementDefinition Id="0d7b3efa-6299-4935-b682-00dd4c271a94" />
+            <flowNodeTargets>
+              <controlFlow Id="5ecb5199-4cd8-4771-b35a-91437cc1fcf4" isLeaf="false">
+                <opaqueActionMoniker Id="0b63a2f5-af1c-4acb-a21d-b2519ce1e40e" LastKnownName="Accident Classification" />
+                <elementDefinition Id="1ac6c915-8143-4703-be96-ea9061bf381d" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="0b63a2f5-af1c-4acb-a21d-b2519ce1e40e" name="Accident Classification" isLeaf="false">
+            <elementDefinition Id="ad00283f-f138-4c19-a586-54042f60dbda" />
+            <flowNodeTargets>
+              <controlFlow Id="7f848d10-ca72-4579-b3d6-99d6c0dd3798" isLeaf="false">
+                <opaqueActionMoniker Id="607f5fde-61af-4e4b-ba54-83616a3b9d88" LastKnownName="Select Sutable Workflow" />
+                <elementDefinition Id="68e588fb-7e95-4c65-aed9-a49293221aec" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="607f5fde-61af-4e4b-ba54-83616a3b9d88" name="Select Sutable Workflow" isLeaf="false">
+            <elementDefinition Id="29f152b6-d125-41dc-8fae-f1252e04c3ae" />
+            <flowNodeTargets>
+              <controlFlow Id="de4edfe4-ae0a-4e4e-910f-b48327a485ce" isLeaf="false">
+                <opaqueActionMoniker Id="2c74a8a8-e99e-416b-ad43-358987dc9904" LastKnownName="Process Workflow" />
+                <elementDefinition Id="ebcff1fb-c2bc-4086-b188-d8249ce9662f" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="2c74a8a8-e99e-416b-ad43-358987dc9904" name="Process Workflow" isLeaf="false">
+            <elementDefinition Id="4b0d2479-dc94-4155-a45f-29507e2b55d2" />
+            <flowNodeTargets>
+              <controlFlow Id="4647dec4-6828-4b50-8fb4-c34936bf94a0" isLeaf="false">
+                <activityFinalNodeMoniker Id="d456335c-cc06-4f12-98cf-fce9fcfc5a55" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="8586e1ee-0e51-4967-8a8d-19db96afa1b9" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode Id="d456335c-cc06-4f12-98cf-fce9fcfc5a55" name="ActivityFinal1" isLeaf="false">
+            <elementDefinition Id="8e9b40a4-7d2e-4964-93a7-353eee542e52" />
+          </activityFinalNode>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="a5b76ed6-4875-4059-a02c-22b46894a7f3" name="Architecture">
+    <elementDefinition Id="a2cca7bc-a604-4d6c-9e29-ac2e428a33f6" />
+  </package>
+</activityRootModel>

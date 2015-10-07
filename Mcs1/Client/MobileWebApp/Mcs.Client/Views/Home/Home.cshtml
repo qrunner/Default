@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "Cafe Del Mar";
+}
+
+@section scripts{
+    // Функциональные кнопки заголовка
+    $(".ui-header").append(<span style="position: absolute;top: 3px;right: 5px;margin: 0px;">
+        <a href="@Url.Action("ShoppingCart", "ShoppingCart")"><img src="~/Content/images/cart_32.png" alt="" /></a></span>);
+}
+
+<div align="center">
+    <table>
+        <tr>
+            <td><a href="@Url.Action("Menu", "Menu")"><div><img src="~/Content/images/book_64.png" alt="" /><p>Меню</p></div></a></td>
+        </tr>
+        <tr>
+            <td><a href="@Url.Action("News", "News")"><div><img src="~/Content/images/star_64.png" alt="" /><p>Новости</p></div></a></td>
+        </tr>
+        <tr>
+            <td><a href="@Url.Action("PromoActions", "PromoActions")"><div><img src="~/Content/images/rss_64.png" alt="" /><p>Акции</p></div></a></td>
+        </tr>
+    </table>
+</div>

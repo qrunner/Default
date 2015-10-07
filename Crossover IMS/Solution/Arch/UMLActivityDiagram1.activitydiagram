@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="fde75d30-e075-4bb6-9019-3bc7cec5782b" name="Activity1" linkedPackageId="af552887-7c11-4625-9920-ba4e9c798323" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <ownedCommentsInternal>
+    <comment Id="495bdb54-14bf-4b70-8563-bd1b2cf008d2">
+      <elementDefinition Id="8c81a0ee-fbd3-4644-9d15-2de5ebcab6ba" />
+      <body>Supervisor
+Mission Commander
+Family Care Center</body>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="b72b31a9-803b-46bb-bcbd-c6e9b7cafb20">
+      <profileInstance Id="aec4f456-8db4-4694-ae27-bb4aed559af4" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="0794ae36-71e0-4c08-9eef-ea048c36e5ad">
+      <profileInstance Id="77d5b44d-59f1-4f9f-9690-a130f6b0985c" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="9607c4c4-8006-4f23-9577-a507ba2b1e91" name="Activity1" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="5143fca2-943d-41de-a7c4-0e6b7adc76b8" />
+        <nodes>
+          <opaqueAction Id="a7293fe5-d249-4e76-8131-0bd70c6862a7" name="Accident" isLeaf="false">
+            <elementDefinition Id="78a71e97-8a2f-4ff3-bf71-1512aa33a2af" />
+            <objectFlowTargets>
+              <objectFlow Id="d5ca2fd2-fb28-4cff-b8e3-7d12dc356849" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <objectNodeMoniker Id="df510e28-c7bd-41ba-b6b1-65eda8745ac0" LastKnownName="Victims and Risks" />
+                <elementDefinition Id="ca67a60f-843b-4961-a9ec-d128539dd498" />
+              </objectFlow>
+              <objectFlow Id="1d30dfaf-8fe9-47e5-884b-cd8613353287" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <objectNodeMoniker Id="8c93159e-f893-4d47-8cfd-0f60db6cdec2" LastKnownName="Distructions and Risks" />
+                <elementDefinition Id="a700490b-cc31-4b2d-b2d3-fdbb389821d0" />
+              </objectFlow>
+              <objectFlow Id="dca6f934-0412-4e47-81e9-e6a2a34656e6" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <objectNodeMoniker Id="a440c3b1-ad2a-4f8a-a1bb-c3b6db5c1028" LastKnownName="Contaminations and Risks" />
+                <elementDefinition Id="200dbcbd-95d6-4f96-8f4a-ef1d0ae0451f" />
+              </objectFlow>
+              <objectFlow Id="bc788b4e-b68f-451a-920b-007414b96041" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <objectNodeMoniker Id="de04b156-7331-4235-91e2-0ffedf389e61" LastKnownName="Tasks" />
+                <elementDefinition Id="e9d2bc48-2882-4361-a152-af213ab5f257" />
+              </objectFlow>
+            </objectFlowTargets>
+          </opaqueAction>
+          <objectNode Id="df510e28-c7bd-41ba-b6b1-65eda8745ac0" name="Victims and Risks" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="bbd1556e-4cac-40db-81f6-f333bdd78a04" />
+            <upperBound>
+              <literalInteger Id="09217005-7a58-4916-858c-5fc9ed245666" name="2147483647" value="2147483647">
+                <elementDefinition Id="b74e5bac-0dbf-4216-88be-9b91768062fa" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <objectNode Id="8c93159e-f893-4d47-8cfd-0f60db6cdec2" name="Distructions and Risks" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="d10bd243-ff62-4870-98ee-5671037c2fbc" />
+            <upperBound>
+              <literalInteger Id="7fa2a76a-3ef3-4052-8772-818f41ce6397" name="2147483647" value="2147483647">
+                <elementDefinition Id="e0d36ac5-b14b-4808-b142-e7c310addac8" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <objectNode Id="a440c3b1-ad2a-4f8a-a1bb-c3b6db5c1028" name="Contaminations and Risks" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="379084dd-428b-4600-a050-cfe7c060f84a" />
+            <upperBound>
+              <literalInteger Id="feb49b87-067a-458c-8171-203ce14068d7" name="2147483647" value="2147483647">
+                <elementDefinition Id="27f7bc08-072a-48eb-81b3-9bb2952fc4f3" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <objectNode Id="de04b156-7331-4235-91e2-0ffedf389e61" name="Tasks" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="43fb5c09-d996-4bbe-bfb0-804f528b0387" />
+            <objectFlowTargets>
+              <objectFlow Id="15a729a3-a1e2-47bc-92f9-3f1144693e4a" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <objectNodeMoniker Id="b5b97ace-258e-46f1-ab49-a3fbce7b731b" LastKnownName="Employee" />
+                <elementDefinition Id="c8a2570c-876c-4b50-a4b9-b0a02b25c385" />
+              </objectFlow>
+              <objectFlow Id="7a5c3ed7-0bc5-4290-99ea-60efdd4fa44a" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <objectNodeMoniker Id="2051d205-4228-4ce2-aec4-b942912f39af" LastKnownName="Resource Request" />
+                <elementDefinition Id="79faaedc-6cc0-4653-9ecc-3a2e76c2f6c6" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger Id="b7996489-5e5e-4c5a-aac4-3a2eedd149b0" name="2147483647" value="2147483647">
+                <elementDefinition Id="0cee781d-21b7-48c5-8ea9-333542f7851c" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <objectNode Id="4fea41a1-2bd6-4899-baaa-cf0f8834dd5e" name="Resources" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="7d02659f-fd60-459a-88c6-81d74397089a" />
+            <upperBound>
+              <literalInteger Id="7aa60e4b-653e-47da-ae66-c0eac97e3044" name="2147483647" value="2147483647">
+                <elementDefinition Id="375b487f-2a14-4ca7-8056-7713cc05d547" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <objectNode Id="5f6af24d-a884-4211-a9e6-ab034c7ea05c" name="ResourceCategory" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="5718ef31-fa58-4a60-85c6-f32a8009d507" />
+            <upperBound>
+              <literalInteger Id="297e76a0-6c8d-4b04-af02-f3895fe6abc3" name="2147483647" value="2147483647">
+                <elementDefinition Id="ff0e213f-2ac9-455d-a169-0daa4142ddb0" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <objectNode Id="2ac5ab47-c43a-4417-8aa9-89ee3c139f55" name="Vendors" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="fd88a5a5-aa9c-4cfb-9454-bf81642a8da6" />
+            <objectFlowTargets>
+              <objectFlow Id="7213d2b0-c08f-4cbe-a832-55809bad103b" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <objectNodeMoniker Id="5f6af24d-a884-4211-a9e6-ab034c7ea05c" LastKnownName="ResourceCategory" />
+                <elementDefinition Id="0af52203-3ae6-4f59-bfe5-a0cffe298282" />
+              </objectFlow>
+              <objectFlow Id="7c432ab1-32f2-4f63-8cce-fe3c242363ea" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <objectNodeMoniker Id="4fea41a1-2bd6-4899-baaa-cf0f8834dd5e" LastKnownName="Resources" />
+                <elementDefinition Id="0d4f7d6f-759d-4904-8701-36195a69ca22" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger Id="9efa5fe8-4acc-425c-ab41-a725dfa5c586" name="2147483647" value="2147483647">
+                <elementDefinition Id="fc47379d-649e-4839-a51e-2c1604ce53dd" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <objectNode Id="a907d4ee-cf58-4666-807a-f82307bcd6cf" name="Volunteers" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="17b5e80e-5b3c-4562-bbe5-42782977a243" />
+            <objectFlowTargets>
+              <objectFlow Id="0aad7279-8f0f-4edc-9a68-41be71baa505" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <objectNodeMoniker Id="5f6af24d-a884-4211-a9e6-ab034c7ea05c" LastKnownName="ResourceCategory" />
+                <elementDefinition Id="55ff1577-4dc8-4110-a3d6-1c40d5d201ce" />
+              </objectFlow>
+              <objectFlow Id="e9a48eb4-686a-4af5-9dac-f5f7efc6305b" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <objectNodeMoniker Id="4fea41a1-2bd6-4899-baaa-cf0f8834dd5e" LastKnownName="Resources" />
+                <elementDefinition Id="10f823fd-da7e-4b2e-b571-6645811b6eea" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger Id="e950d1a0-9b06-4414-be7c-dcc58f31e476" name="2147483647" value="2147483647">
+                <elementDefinition Id="2ccf57a6-2697-4994-99a6-e9c79e3d45b9" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <objectNode Id="2051d205-4228-4ce2-aec4-b942912f39af" name="Resource Request" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="dcb91bc4-fa1b-481d-b7ff-9e1cf20b3767" />
+            <objectFlowTargets>
+              <objectFlow Id="3f7e705f-7283-4c19-ae9d-0163213f92bc" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <objectNodeMoniker Id="5f6af24d-a884-4211-a9e6-ab034c7ea05c" LastKnownName="ResourceCategory" />
+                <elementDefinition Id="5262fdb2-6e8f-4118-9a06-a628a397c7fe" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger Id="e3a222d6-fb18-4d9c-9330-b0a222b244e3" name="2147483647" value="2147483647">
+                <elementDefinition Id="307649c0-2bf5-408d-8266-6d33b567b378" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <objectNode Id="b5b97ace-258e-46f1-ab49-a3fbce7b731b" name="Employee" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="9a7ccbc4-7956-47c4-9950-d6a5b01da36a" />
+            <upperBound>
+              <literalInteger Id="513df8a0-2486-424a-bb0a-c4fab886d57b" name="2147483647" value="2147483647">
+                <elementDefinition Id="1fa0ce11-209c-4d1b-9229-2a8dc539cb63" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="af552887-7c11-4625-9920-ba4e9c798323" name="Arch">
+    <elementDefinition Id="e1ddbfcb-93f6-4366-9fea-c66ba1e9712a" />
+  </package>
+</activityRootModel>

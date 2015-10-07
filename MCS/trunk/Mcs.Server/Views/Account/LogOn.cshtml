@@ -1,0 +1,29 @@
+﻿@using Mcs.WebExtensions
+@model Mcs.Server.Models.Account.LogOnViewModel
+@{    
+    ViewBag.Title = "Вход";
+
+    ViewBag.returnUrl = Request["returnUrl"];
+    Layout = "~/Views/_Layout.cshtml";    
+}
+    @using (Html.BeginForm(null, null, new { returnUrl = ViewBag.returnUrl }, FormMethod.Post))
+    {
+        <fieldset>
+        <legend>@ViewBag.Title</legend>
+
+        @Html.AntiForgeryToken()
+
+        <div class="f-row f-invalid f-input-comment">
+            @Html.ValidationSummary(true)
+        </div>
+
+        @Html.EditBlockFor("Пользователь", m => m.UserName, Html.TextBoxFor(m => m.UserName, new {@class="g-4" }))
+        @Html.EditBlockFor("Пароль", m => m.Password, Html.PasswordFor(m => m.Password, new { @class = "g-4" }))       
+        @Html.EditBlockFor("Запомнить меня", model => model.RememberMe, Html.EditorFor(model => model.RememberMe))
+        
+        </fieldset>
+        <div class="f-actions">            
+            @Html.SubmitButton("Войти")
+            @Html.CancelButton()
+        </div>        
+    }

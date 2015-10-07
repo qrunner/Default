@@ -1,0 +1,39 @@
+﻿@using Mcs.Server.Extensions
+@using Mcs.WebExtensions
+@model IEnumerable<Mcs.Model.News>
+
+
+
+@{
+    ViewBag.Title = "Новости";
+    Layout = "~/Views/_Layout.cshtml";    
+}
+
+<h2>@ViewBag.Title</h2>
+
+<table>
+    <thead>
+		<tr>
+            <th>Изображение</th>
+			<th>Дата</th>
+            <th>Заголовок</th>
+            <th>Видимость</th>
+            <th>Действия</th>
+		</tr>
+	</thead>
+
+@foreach(var item in Model)
+{
+    <tr>
+        <td><img alt="@item.Title" src="@Url.Content(@item.GetImagePathFit(48))" width="48px" height="48px"/></td> 
+        <td>@item.Date.ToString("D")</td>
+        <td>@item.Title</td>
+        <td><input type="checkbox" checked="@item.Visible" disabled></td>
+        <td>@Html.EditLinks("news", item.Id)</td>        
+    </tr>
+}
+</table>
+
+<div class="f-actions">
+@Html.CreateButton("news")
+</div>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="Crossover.AMS.Communication" elementFormDefault="qualified" targetNamespace="Crossover.AMS.Communication" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8082/CommunicationService?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Crossover.AMS.Communication.Model" />
+  <xs:import schemaLocation="http://localhost:8082/CommunicationService?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:element name="SendConferenceMessage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Crossover.AMS.Communication.Model" minOccurs="0" name="message" nillable="true" type="q1:ConferenceMessage" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendConferenceMessageResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendPrivateMessage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Crossover.AMS.Communication.Model" minOccurs="0" name="message" nillable="true" type="q2:PrivateMessage" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendPrivateMessageResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPrivateMessages">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="senderSid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="recipientSid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPrivateMessagesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Crossover.AMS.Communication.Model" minOccurs="0" name="GetPrivateMessagesResult" nillable="true" type="q3:ArrayOfPrivateMessage" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNewPrivateSenders">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="recipientSid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNewPrivateSendersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetNewPrivateSendersResult" nillable="true" type="q4:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MarkAsReaded">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Crossover.AMS.Communication.Model" minOccurs="0" name="message" nillable="true" type="q5:PrivateMessage" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MarkAsReadedResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetConferenceMessages">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="conferenceId" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetConferenceMessagesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Crossover.AMS.Communication.Model" minOccurs="0" name="GetConferenceMessagesResult" nillable="true" type="q6:ArrayOfConferenceMessage" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateConference">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accidentId" type="xs:long" />
+        <xs:element minOccurs="0" name="title" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateConferenceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Crossover.AMS.Communication.Model" minOccurs="0" name="CreateConferenceResult" nillable="true" type="q7:Conference" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateConference">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Crossover.AMS.Communication.Model" minOccurs="0" name="conference" nillable="true" type="q8:Conference" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateConferenceResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteConference">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="conferenceId" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteConferenceResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetConferencieList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accidentId" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetConferencieListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Crossover.AMS.Communication.Model" minOccurs="0" name="GetConferencieListResult" nillable="true" type="q9:ArrayOfConference" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

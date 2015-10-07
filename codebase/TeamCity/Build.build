@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0" DefaultTargets="Build">
+
+    <Import Project="C:\Program Files\MSBuild\MSBuildCommunityTasks\MSBuild.Community.Tasks.Targets" />
+
+    <Target Name="Build">
+
+	<FileUpdate Files="ClientCASH\Client\Properties\AssemblyInfo.cs"
+                Regex="(\d+)\.(\d+)\.(\d+)\.(\d+)"
+                ReplacementText="$(CashVersionPrefix).$(SVNRevision)" />
+	
+	<FileUpdate Files="ClientCASH\Core\Properties\AssemblyInfo.cs"
+                Regex="(\d+)\.(\d+)\.(\d+)\.(\d+)"
+                ReplacementText="$(CashVersionPrefix).$(SVNRevision)" />
+
+	<FileUpdate Files="METADATA\FORMS\WELCOME.FRM"
+                Regex="Caption = #1074#1077#1088#1089#1080#1103' ([0-9]|#)*'"				
+                ReplacementText="Caption = #1074#1077#1088#1089#1080#1103' $(SVNRevision)'" />	
+				
+    <MSBuild Projects="Openbank.Soz.sln" Targets="Build" Properties="Configuration=$(BuildConfiguration);Platform=$(BuildPlatform)" />
+
+	<!-- =================== КЕШ СЕРВЕР И КЛИЕНТ =================== -->
+	<!--	
+	<FileUpdate
+				Files="ServerCASH\Server\bin\$(BuildConfiguration)\O-Server.exe.config"
+                Regex='&lt;setting name="ClientVersion" serializeAs="String"&gt;\s.*\s*&lt;/setting&gt;'
+				ReplacementText='&lt;setting name="ClientVersion" serializeAs="String"&gt;&lt;value&gt;$(CashVersionPrefix).$(SVNRevision)&lt;/value&gt;&lt;/setting&gt;' />				
+	
+	<FileUpdate
+				Files="ServerCASH\Server\bin\$(BuildConfiguration)\O-Server.exe.config"
+                Regex='<setting name="ClientVersionMin" serializeAs="String">\s.*\s*</setting>' 
+				ReplacementText='<setting name="ClientVersionMin" serializeAs="String"><value>$(CashVersionPrefix).$(SVNRevision)</value></setting>' />				
+				-->	
+    </Target>
+</Project>

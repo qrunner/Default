@@ -1,0 +1,32 @@
+﻿@using Mcs.Server
+@using Mcs.Server.Extensions
+@using Mcs.WebExtensions
+
+@{
+    ViewBag.Title = "Выберите заведение";
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@using (Html.BeginForm("index", "place", new { returl=Request.QueryString["returl"]}))
+{
+    <table>
+        @foreach (var place in Application.AvailablePlaces)
+        {
+            <tr>
+                <td>@Html.RadioButton("placeId", place.Id, place.Id == Application.CurrentPlaceId)</td>
+                <td><img alt="@place.Name" src="@Url.Content(@place.GetImagePathFit(48))" width="48px" height="48px"/></td> 
+                <td>@place.Name</td>
+                <td>@Html.EditLinks("place", place.Id)</td>
+            </tr>        
+        }
+    </table>
+    
+    <div class="f-actions">
+    <input type="submit" value="Выбрать" class="f-bu f-bu-success" />
+    @Html.CreateButton("place")
+    </div>    
+    
+    <div>@ViewBag.ErrorMessage</div>
+}

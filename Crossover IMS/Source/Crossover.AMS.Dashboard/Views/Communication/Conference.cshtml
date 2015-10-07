@@ -1,0 +1,83 @@
+﻿@using Crossover.AMS.Dashboard
+@model Crossover.AMS.Dashboard.Models.Communication.ConferenceModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Communication</title>
+    @Scripts.Render("~/bootstrap/js/bootstrap.js")
+        @Styles.Render("~/bootstrap/css/bootstrap.css")
+        @Styles.Render("~/bootstrap/css/bootstrap-responsive.css")
+</head>
+<body>
+        
+<script src="~/Scripts/jquery-1.8.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+
+                <fieldset >
+                    <legend>Virtual Rooms</legend>
+
+                    @Html.HiddenFor(model => model.AccidentId)
+                    @Html.HiddenFor(model => model.SelectedConferention)
+        
+                    <ul class="nav nav-tabs">
+                        @foreach (var conf in Model.Conferences)
+                        {
+                            <li @{
+                                    if (conf.Id == Model.SelectedConferention)
+                                    {
+                                        <text>class="active"</text>
+                                    }
+                                } >
+                                @Html.ActionLink(conf.Title, "Conference", new {accidentId = Model.AccidentId, confId = conf.Id})
+                            </li>
+                        }
+                    </ul>
+
+                    <div id="messages" style="overflow: auto; padding: 5px; height: 400px; width: 400px;">
+                        @foreach (var message in Model.Messages)
+                        {
+                            <small>@AppFactory.MembershipProvider.GetUser(message.SenderSid) at @message.Sended.ToShortTimeString():</small>
+                            <div class="well well-small">
+                                <p>@message.Text</p>
+                            </div>
+                        }
+                     </div>
+                    <div class="input-append">
+                        @Html.EditorFor(model => model.MessageText, new {@class = "span2"})
+                        <input type="submit" value="Send" class="btn btn-inverse" />
+                    </div>
+                </fieldset>
+}
+
+<script type="text/javascript">
+    window.onload = function () {
+        document.getElementById("MessageText").focus();
+        var objDiv = document.getElementById("messages");
+        objDiv.scrollTop = objDiv.scrollHeight;
+
+        window.scrollTo(0, document.body.scrollHeight);
+
+        /*setTimeout(function () {
+            window.location.reload(1);
+        }, 2000);*/
+    }
+</script>
+    
+    
+</body>
+</html>
+

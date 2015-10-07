@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{48FCC21F-6A36-495F-A504-4D3552E06A52}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Crossover.AMS.Contracts</RootNamespace>
+    <AssemblyName>Crossover.AMS.Contracts</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel.Web" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Communication\ConferenceState.cs" />
+    <Compile Include="Communication\IConference.cs" />
+    <Compile Include="Communication\IMessage.cs" />
+    <Compile Include="Communication\ICommunicationService.cs" />
+    <Compile Include="Communication\IConferenceMessage.cs" />
+    <Compile Include="Communication\IPrivateMessage.cs" />
+    <Compile Include="CrisisManagement\ICMSService.cs" />
+    <Compile Include="CrisisManagement\ICollectionHostOf.cs" />
+    <Compile Include="CrisisManagement\ICrisis.cs" />
+    <Compile Include="CrisisManagement\ICrisisCategory.cs" />
+    <Compile Include="CrisisManagement\IEntity.cs" />
+    <Compile Include="CrisisManagement\IIssue.cs" />
+    <Compile Include="CrisisManagement\IMission.cs" />
+    <Compile Include="CrisisManagement\IResourceCategory.cs" />
+    <Compile Include="CrisisManagement\IResourceProvider.cs" />
+    <Compile Include="CrisisManagement\IResourceProvidersPool.cs" />
+    <Compile Include="CrisisManagement\IResourceRequest.cs" />
+    <Compile Include="CrisisManagement\IResourceResponse.cs" />
+    <Compile Include="CrisisManagement\IssueCategory.cs" />
+    <Compile Include="CrisisManagement\IssueType.cs" />
+    <Compile Include="CrisisManagement\ITeam.cs" />
+    <Compile Include="CrisisManagement\ITeamMember.cs" />
+    <Compile Include="CrisisManagement\ResourceProviderCategory.cs" />
+    <Compile Include="CrisisManagement\ResourceRequestState.cs" />
+    <Compile Include="CrisisManagement\ServiceFactory.cs" />
+    <Compile Include="CrisisManagement\TeamMemberRole.cs" />
+    <Compile Include="IContactsProvider.cs" />
+    <Compile Include="Membership\IMembershipProvider.cs" />
+    <Compile Include="Membership\IMembershipUser.cs" />
+    <Compile Include="Messaging\IMessage.cs" />
+    <Compile Include="Messaging\IMessageConsumer.cs" />
+    <Compile Include="Messaging\IMessageProducer.cs" />
+    <Compile Include="Messaging\IMessageService.cs" />
+    <Compile Include="ContactCategory.cs" />
+    <Compile Include="ContactType.cs" />
+    <Compile Include="IContact.cs" />
+    <Compile Include="Notification\IMailNotificationMessage.cs" />
+    <Compile Include="Notification\INotificationMessage.cs" />
+    <Compile Include="Notification\INotificationResult.cs" />
+    <Compile Include="Notification\INotificationService.cs" />
+    <Compile Include="Notification\INotificationTask.cs" />
+    <Compile Include="Notification\ITextNotificationMessage.cs" />
+    <Compile Include="Notification\IVoiceNotificationMessage.cs" />
+    <Compile Include="Notification\NotificationState.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TaskPlanning\ISchedule.cs" />
+    <Compile Include="TaskPlanning\ITask.cs" />
+    <Compile Include="TaskPlanning\ITaskManager.cs" />
+    <Compile Include="TaskPlanning\ScheduleType.cs" />
+    <Compile Include="TaskPlanning\TaskState.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,326 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="fd4f1628-5d23-496a-bf4b-75249a81c790" name="Eathershake" linkedPackageId="74963a61-78aa-4f17-99dd-8f89ce714ffa" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <ownedCommentsInternal>
+    <comment Id="c685be7b-6eba-4849-9db2-b9f3ed039c7a">
+      <elementDefinition Id="89828d4e-6b80-4d54-b871-55ebe96ff7da" />
+      <body>For example: Medical institutions or Transportation companies
+</body>
+      <annotatedElements>
+        <objectNodeMoniker Id="e3056505-2368-447e-88a9-7af7ab8dbad5" LastKnownName="Resource Providers Group" />
+      </annotatedElements>
+    </comment>
+    <comment Id="8f708a08-5408-4e58-bbc0-579559ff8d85">
+      <elementDefinition Id="76dd536d-25d9-458a-8c05-42a557d4fa3b" />
+      <body>Assigned employee select best option</body>
+      <annotatedElements>
+        <opaqueActionMoniker Id="22d7e270-3034-4325-8b38-d491a22370a8" LastKnownName="Check Responses" />
+      </annotatedElements>
+    </comment>
+    <comment Id="218207b9-142f-4aed-9c65-5fedb3fc0baa">
+      <elementDefinition Id="0c35fb8a-cf4e-4daa-a4b0-8dca1bbdf246" />
+      <body>Providers inform about theirs available Resources</body>
+      <annotatedElements>
+        <opaqueActionMoniker Id="f1294fb6-82c7-426d-b459-a07169ae3673" LastKnownName="Add response from Provider to the List" />
+      </annotatedElements>
+    </comment>
+    <comment Id="06c8a057-8c28-4908-91ef-aab0d0bf3d78">
+      <elementDefinition Id="aeb1c886-9ec0-4cb8-9a64-19e7df9a5e56" />
+      <body>Accepted response sended to provider</body>
+      <annotatedElements>
+        <opaqueActionMoniker Id="6fbd3bda-bc21-4858-a2e1-48d5f7c1e233" LastKnownName="Accept Selected Provider Response(s)" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="a15135f3-cfdb-4b90-a43b-73cf71baa561">
+      <profileInstance Id="024e3332-a000-4ed8-858f-cfbef55cc9a3" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="c54b4eb2-3bdc-4b5a-af8a-d5dd1aab754f">
+      <profileInstance Id="436b108a-0322-49e5-be9e-561e8c0ad743" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="04e10a01-b663-4611-8842-2627c4bf67df" name="Eathershake" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="f6d73ef7-eefd-4e00-9150-04fef5e5edf6" />
+        <nodes>
+          <initialNode Id="f6e02eb5-16a2-4045-83a0-ecda0f816f5b" name="Initial1" isLeaf="false">
+            <elementDefinition Id="d3888ca2-4e60-4a43-b9c4-16de61780ac1" />
+            <flowNodeTargets>
+              <controlFlow Id="fa377022-c0ed-40b8-8fb4-84ddb984acb6" isLeaf="false">
+                <opaqueActionMoniker Id="429972a8-9f0f-4498-9e2b-5cc4d285420a" LastKnownName="Send Resource Request  to  the Resource Providers group" />
+                <elementDefinition Id="b1467585-2df5-42b0-8813-30d9fafb314d" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <objectNode Id="e50f928d-cd8f-4c41-947a-4235ff9fdddc" name="Resource Request" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="2f70b6a4-785b-4fd3-abda-4c31a46744b7" />
+            <objectFlowTargets>
+              <objectFlow Id="11bb7f08-0179-4c92-9040-352c93151209" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <inputPinMoniker Id="e8e6db22-be17-4433-ac97-3215de0c8478" />
+                <elementDefinition Id="0aa80edb-5291-4655-94f3-90f23683c460" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger Id="f7c995d7-29d9-4bb7-8a80-49ca66e38997" name="2147483647" value="2147483647">
+                <elementDefinition Id="95f1a257-efab-48b8-b4cc-e62ef8c87c73" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <opaqueAction Id="429972a8-9f0f-4498-9e2b-5cc4d285420a" name="Send Resource Request  to  the Resource Providers group" isLeaf="false">
+            <elementDefinition Id="d28b3fba-9467-4ef7-ba36-f79482fb93d4" />
+            <flowNodeTargets>
+              <controlFlow Id="4c3bba8f-fc82-4c03-bfee-31574870131d" isLeaf="false">
+                <forkNodeMoniker Id="554edd5f-fd9f-4e5f-a566-59d92dbe0702" LastKnownName="Fork1" />
+                <elementDefinition Id="162990c8-debc-438d-9b5c-57d7a2acddd9" />
+              </controlFlow>
+            </flowNodeTargets>
+            <pins>
+              <opaqueActionHasInputValues>
+                <inputPin Id="e8e6db22-be17-4433-ac97-3215de0c8478" isLeaf="false" ordering="Unordered" isControlType="false" isControl="false">
+                  <elementDefinition Id="133a3f52-f4a6-414e-b086-fd24db7744b7" />
+                  <upperBound>
+                    <literalInteger Id="262e7f29-ae3c-4979-aaf3-43b2e2b0b60e" name="2147483647" value="2147483647">
+                      <elementDefinition Id="c7710c06-e5f2-49d5-b052-109c9071bdcf" />
+                    </literalInteger>
+                  </upperBound>
+                </inputPin>
+              </opaqueActionHasInputValues>
+              <opaqueActionHasInputValues>
+                <inputPin Id="4bd9f533-6ac6-4527-9116-689bee90da52" name="Contact Channels" isLeaf="false" ordering="Unordered" isControlType="false" isControl="false">
+                  <elementDefinition Id="62a56031-05d6-4c3d-96b2-3bf27c2b581a" />
+                  <upperBound>
+                    <literalInteger Id="a5b5bb80-c5d0-4194-ae75-42172d7a70b0" name="2147483647" value="2147483647">
+                      <elementDefinition Id="ec623db1-99a2-421d-981f-c38f2ad37075" />
+                    </literalInteger>
+                  </upperBound>
+                </inputPin>
+              </opaqueActionHasInputValues>
+            </pins>
+          </opaqueAction>
+          <objectNode Id="e3056505-2368-447e-88a9-7af7ab8dbad5" name="Resource Providers Group" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="494464fa-2f53-4259-a384-118158592dce" />
+            <objectFlowTargets>
+              <objectFlow Id="75b2e6cd-b0d7-48c4-a463-029305bd4ea2" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <inputPinMoniker Id="4bd9f533-6ac6-4527-9116-689bee90da52" LastKnownName="Contact Channels" />
+                <elementDefinition Id="26590b5e-34b3-4ac7-9d97-458571625cbc" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger Id="4288ca5a-00e1-43e8-aff8-b6d1ea12d719" name="2147483647" value="2147483647">
+                <elementDefinition Id="7036c11c-bd0b-45fc-971e-60cff5500be4" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <opaqueAction Id="f1294fb6-82c7-426d-b459-a07169ae3673" name="Add response from Provider to the List" isLeaf="false">
+            <elementDefinition Id="a200c101-997f-414a-be77-ae3bd414d16d" />
+            <flowNodeTargets>
+              <controlFlow Id="b90d1b00-695f-4cc3-8f3a-15cb2d83b7da" isLeaf="false">
+                <decisionNodeMoniker Id="4857d2de-310b-4248-89a2-9bec97099bbf" LastKnownName="Decision1" />
+                <elementDefinition Id="7f6c0815-2841-4671-8130-a9d6d97eb0fb" />
+              </controlFlow>
+            </flowNodeTargets>
+            <pins>
+              <opaqueActionHasOutputValues>
+                <outputPin Id="6fdadb94-1abe-4c4b-af9c-81a02735dc67" isLeaf="false" ordering="Unordered" isControlType="false" isControl="false">
+                  <elementDefinition Id="f0c179c3-9844-44bd-846e-37390153d46a" />
+                  <objectFlowTargets>
+                    <objectFlow Id="89abb490-e535-4dec-9d37-cd8427a64132" isLeaf="false" isMulticast="false" isMultireceive="false">
+                      <objectNodeMoniker Id="105d76b2-77a2-4983-8ace-b6730d737949" LastKnownName="Response List" />
+                      <elementDefinition Id="02d22676-ce8d-437b-8b17-9bd39fefd825" />
+                    </objectFlow>
+                  </objectFlowTargets>
+                  <upperBound>
+                    <literalInteger Id="23e6cefa-178c-470d-9bc8-ae5d31efdd67" name="2147483647" value="2147483647">
+                      <elementDefinition Id="4ffdb94e-e81b-4b8a-9f98-e27afd0b291a" />
+                    </literalInteger>
+                  </upperBound>
+                </outputPin>
+              </opaqueActionHasOutputValues>
+              <opaqueActionHasInputValues>
+                <inputPin Id="b1fad38e-27de-425d-8229-176f9f56508b" isLeaf="false" ordering="Unordered" isControlType="false" isControl="false">
+                  <elementDefinition Id="20c4e6f5-b335-4353-b1d3-7f19b52f032d" />
+                  <upperBound>
+                    <literalInteger Id="25a828e8-df80-46cc-9214-e9ba5520098b" name="2147483647" value="2147483647">
+                      <elementDefinition Id="b00c6143-c852-4c25-9c33-e7bd70abfb0c" />
+                    </literalInteger>
+                  </upperBound>
+                </inputPin>
+              </opaqueActionHasInputValues>
+            </pins>
+          </opaqueAction>
+          <mergeNode Id="89910a33-6bd6-4d63-ad13-f276740aaf74" name="Merge1" isLeaf="false">
+            <elementDefinition Id="90e2a5ed-05c5-4bc6-a2c6-e015c34fa7bf" />
+            <flowNodeTargets>
+              <controlFlow Id="252fde2d-47bb-4ed8-9537-7daafd77b041" isLeaf="false">
+                <opaqueActionMoniker Id="f1294fb6-82c7-426d-b459-a07169ae3673" LastKnownName="Add response from Provider to the List" />
+                <elementDefinition Id="4b0a11ab-9ba0-4ee3-a114-d4f7181a2719" />
+              </controlFlow>
+            </flowNodeTargets>
+          </mergeNode>
+          <decisionNode Id="4857d2de-310b-4248-89a2-9bec97099bbf" name="Decision1" isLeaf="false">
+            <elementDefinition Id="43ccf7fb-4aee-473b-bf96-defea97c58a1" />
+            <flowNodeTargets>
+              <controlFlow Id="a78a6f04-ae45-43e9-bbd4-3c9e33408dbe" guard="Any more response from another provider and no accepted" isLeaf="false">
+                <mergeNodeMoniker Id="89910a33-6bd6-4d63-ad13-f276740aaf74" LastKnownName="Merge1" />
+                <elementDefinition Id="fb4048a2-7e5b-44f9-8461-b891c7cf383d" />
+              </controlFlow>
+              <controlFlow Id="8dce07f5-fdaf-4329-9c62-b1c92137be0f" isLeaf="false">
+                <joinNodeMoniker Id="74c7dba8-f3c1-4b41-8a7f-ecf45cf4ca81" LastKnownName="Join1" />
+                <elementDefinition Id="4f480d7b-1246-449e-bc9f-4b1b6b98ff50" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <objectNode Id="105d76b2-77a2-4983-8ace-b6730d737949" name="Response List" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="8cb23374-2646-4fb7-88e6-fe1d655c31d9" />
+            <objectFlowTargets>
+              <objectFlow Id="17c62dc2-2e4b-40db-b372-f3c429165508" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <inputPinMoniker Id="c5d33c15-e14b-4422-977d-3d545ba734bf" />
+                <elementDefinition Id="375e77e2-8f9f-40e1-b62b-45cc7d712834" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger Id="492ed3ca-7db1-4f5d-8972-c82811b15a84" name="2147483647" value="2147483647">
+                <elementDefinition Id="8b094bbe-3aec-4e7e-984c-ecf9affe366a" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <mergeNode Id="28c7cc6a-769d-42fb-8f1c-822ac332a336" name="Merge2" isLeaf="false">
+            <elementDefinition Id="d9eb10a3-4425-4e20-83ca-51ff6e3c4406" />
+            <flowNodeTargets>
+              <controlFlow Id="5e01051e-6377-42dc-8207-4694c5661fb7" isLeaf="false">
+                <opaqueActionMoniker Id="22d7e270-3034-4325-8b38-d491a22370a8" LastKnownName="Check Responses" />
+                <elementDefinition Id="cb0b54a8-d074-4f23-86a9-f8c17f9a345e" />
+              </controlFlow>
+            </flowNodeTargets>
+          </mergeNode>
+          <opaqueAction Id="6fbd3bda-bc21-4858-a2e1-48d5f7c1e233" name="Accept Selected Provider Response(s)" isLeaf="false">
+            <elementDefinition Id="3996f80d-f60e-4f4e-93e7-2e24a32c1be6" />
+            <flowNodeTargets>
+              <controlFlow Id="5c1dfc0d-734f-4ed4-9654-220aeede3411" isLeaf="false">
+                <joinNodeMoniker Id="74c7dba8-f3c1-4b41-8a7f-ecf45cf4ca81" LastKnownName="Join1" />
+                <elementDefinition Id="ef2e15fd-63b7-434b-813b-178abd28a5cf" />
+              </controlFlow>
+            </flowNodeTargets>
+            <pins>
+              <opaqueActionHasOutputValues>
+                <outputPin Id="f54e7067-9273-4cb4-b70c-b13f77f01270" isLeaf="false" ordering="Unordered" isControlType="false" isControl="false">
+                  <elementDefinition Id="16ee26dd-c3a1-4184-a1ac-3f533bbf2c15" />
+                  <objectFlowTargets>
+                    <objectFlow Id="04fd52fb-5955-4cb1-8685-13953e7d1010" isLeaf="false" isMulticast="false" isMultireceive="false">
+                      <objectNodeMoniker Id="105d76b2-77a2-4983-8ace-b6730d737949" LastKnownName="Response List" />
+                      <elementDefinition Id="122f973d-3f0a-4898-91cd-b07782fcf289" />
+                    </objectFlow>
+                  </objectFlowTargets>
+                  <upperBound>
+                    <literalInteger Id="a5128f62-ef72-43cb-b207-9c20e7dd4c56" name="2147483647" value="2147483647">
+                      <elementDefinition Id="ee18178a-53bb-4cf3-8d98-3bbf7697ec86" />
+                    </literalInteger>
+                  </upperBound>
+                </outputPin>
+              </opaqueActionHasOutputValues>
+              <opaqueActionHasOutputValues>
+                <outputPin Id="c9c21d71-204c-4aa4-a4ab-7c464666f3e6" isLeaf="false" ordering="Unordered" isControlType="false" isControl="false">
+                  <elementDefinition Id="ffa50c73-25a0-4ab6-bf48-216218d8aad5" />
+                  <objectFlowTargets>
+                    <objectFlow Id="216c5665-53e4-49b8-ba4a-4343734cc030" isLeaf="false" isMulticast="false" isMultireceive="false">
+                      <objectNodeMoniker Id="4746cbd1-d72c-4d6b-808b-40879f409b73" LastKnownName="Resource Provider" />
+                      <elementDefinition Id="71695335-ff0e-4b2c-89ac-5c7dbf8a896b" />
+                    </objectFlow>
+                  </objectFlowTargets>
+                  <upperBound>
+                    <literalInteger Id="8f3effc2-2d26-4767-af4e-1be810a1298b" name="2147483647" value="2147483647">
+                      <elementDefinition Id="9174ae34-fbbc-4e89-8e83-d8318d7aa5bb" />
+                    </literalInteger>
+                  </upperBound>
+                </outputPin>
+              </opaqueActionHasOutputValues>
+            </pins>
+          </opaqueAction>
+          <forkNode Id="554edd5f-fd9f-4e5f-a566-59d92dbe0702" name="Fork1" isLeaf="false">
+            <elementDefinition Id="7168971f-4971-487d-9796-d30425bd3ce5" />
+            <flowNodeTargets>
+              <controlFlow Id="c5c99096-3988-4895-94a5-08bc8f689815" isLeaf="false">
+                <mergeNodeMoniker Id="89910a33-6bd6-4d63-ad13-f276740aaf74" LastKnownName="Merge1" />
+                <elementDefinition Id="1c632d3d-5f1a-411e-b60e-4f1dacaba918" />
+              </controlFlow>
+              <controlFlow Id="608fcd14-4f54-47d3-9aa3-f4a67a4141a9" isLeaf="false">
+                <mergeNodeMoniker Id="28c7cc6a-769d-42fb-8f1c-822ac332a336" LastKnownName="Merge2" />
+                <elementDefinition Id="7deb9f25-5d79-42d5-8a1b-5a7d3288714a" />
+              </controlFlow>
+            </flowNodeTargets>
+          </forkNode>
+          <decisionNode Id="4e89bcf0-6b8f-44c8-ba5e-50698fa4906d" name="Decision2" isLeaf="false">
+            <elementDefinition Id="4108a1b1-ea35-4e21-8625-47dc42d09071" />
+            <flowNodeTargets>
+              <controlFlow Id="97a88c03-5877-4b09-b480-487b6aa804b5" isLeaf="false">
+                <opaqueActionMoniker Id="6fbd3bda-bc21-4858-a2e1-48d5f7c1e233" LastKnownName="Accept Selected Provider Response(s)" />
+                <elementDefinition Id="ef3dab5a-4b96-49c6-836c-9e40cc58b74c" />
+              </controlFlow>
+              <controlFlow Id="dcf92cd7-12b2-4ee4-a9a6-000cbdce13ee" guard="No sutable responses" isLeaf="false">
+                <mergeNodeMoniker Id="28c7cc6a-769d-42fb-8f1c-822ac332a336" LastKnownName="Merge2" />
+                <elementDefinition Id="ac482c9d-26be-48fc-848b-d0828d3172c4" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction Id="22d7e270-3034-4325-8b38-d491a22370a8" name="Check Responses" isLeaf="false">
+            <elementDefinition Id="dc464d0a-4905-45f0-8051-eff8bb1556cb" />
+            <flowNodeTargets>
+              <controlFlow Id="0be26000-f973-498a-8598-0116c031e756" isLeaf="false">
+                <decisionNodeMoniker Id="4e89bcf0-6b8f-44c8-ba5e-50698fa4906d" LastKnownName="Decision2" />
+                <elementDefinition Id="01b63269-7254-4cf5-8552-a610f9d54abb" />
+              </controlFlow>
+            </flowNodeTargets>
+            <pins>
+              <opaqueActionHasInputValues>
+                <inputPin Id="c5d33c15-e14b-4422-977d-3d545ba734bf" isLeaf="false" ordering="Unordered" isControlType="false" isControl="false">
+                  <elementDefinition Id="00d051ef-50c7-4e1a-91c9-43f2ed182ea1" />
+                  <upperBound>
+                    <literalInteger Id="8a1dfb8c-9cf4-42eb-ab64-3940b7628404" name="2147483647" value="2147483647">
+                      <elementDefinition Id="d0f6158a-8ef2-4810-96e2-d0416a3a8c95" />
+                    </literalInteger>
+                  </upperBound>
+                </inputPin>
+              </opaqueActionHasInputValues>
+            </pins>
+          </opaqueAction>
+          <activityFinalNode Id="39594792-f95a-4026-878b-77967a57bd0b" name="ActivityFinal1" isLeaf="false">
+            <elementDefinition Id="ea749a2c-997a-4ddd-87b2-3f334869b092" />
+          </activityFinalNode>
+          <joinNode Id="74c7dba8-f3c1-4b41-8a7f-ecf45cf4ca81" name="Join1" isLeaf="false">
+            <elementDefinition Id="89408abe-0925-43a7-bb49-451657eaed82" />
+            <flowNodeTargets>
+              <controlFlow Id="bec505bd-57ca-4378-8f3f-f9666416b3d0" isLeaf="false">
+                <activityFinalNodeMoniker Id="39594792-f95a-4026-878b-77967a57bd0b" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="7cba6a3f-9dc2-4038-9df2-e017dd2245d8" />
+              </controlFlow>
+            </flowNodeTargets>
+          </joinNode>
+          <objectNode Id="4746cbd1-d72c-4d6b-808b-40879f409b73" name="Resource Provider" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="8f0dc3e3-6f3a-40f4-add6-aff618131422" />
+            <objectFlowTargets>
+              <objectFlow Id="e30ea8c0-fc46-4e28-9d9b-fff7ba7bf900" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <inputPinMoniker Id="b1fad38e-27de-425d-8229-176f9f56508b" />
+                <elementDefinition Id="309a9919-43c4-44ac-9e8c-007fd5e3f5f9" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger Id="cdd88a8b-daf6-493c-ad07-4f1da6cf61a1" name="2147483647" value="2147483647">
+                <elementDefinition Id="de8dd6de-c63d-4f97-8f94-79dba5d308c0" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="74963a61-78aa-4f17-99dd-8f89ce714ffa" name="Arch">
+    <elementDefinition Id="e1ddbfcb-93f6-4366-9fea-c66ba1e9712a" />
+  </package>
+</activityRootModel>

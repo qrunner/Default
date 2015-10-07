@@ -1,0 +1,338 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" dslVersion="1.0.0.0" Id="718c0838-52c0-4b9a-bede-f9c8a47a9845" name="TeamRoles" linkedPackageId="e33eb982-8308-4312-96f4-d0faa5c3474c" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="417c5523-cc12-4fa8-9517-76de2820f56c">
+      <profileInstance Id="d1d2ff65-a5a6-4a11-81c9-3fb207bb1848" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="898b208c-cfee-4196-8ee5-ca9393eac055">
+      <profileInstance Id="4e672a91-ab82-44c3-819d-a75f4dec8d95" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="864d7b2a-3d32-48c0-801e-a19b1e4ee7a6" name="Head" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="8b14cf22-ff1d-43f6-a6db-4226f94193f3" />
+        <targetEnds>
+          <association Id="bdb97386-3d47-4542-bcfd-0af0296f268d" isDerived="false" sourceEndRoleName="Head" targetEndRoleName="Communicate" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="92b1ca58-806c-44e9-9590-27a39c0b537c" LastKnownName="Communicate" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f58b1dbf-5eae-48e7-9ecf-0e19315b8f75" name="Head" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="bcff5f4a-5fee-4b39-9957-579b2819be8d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6d0c40fe-2bda-48ed-aa47-1d8a30709133" name="Communicate" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="aca72c88-90e7-4833-8bc1-f2756f7be3bc" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="fa348a6b-8ce7-494b-8063-03a98241a950" />
+          </association>
+          <association Id="e8fbb9c6-546f-4305-9264-76932f00b23f" isDerived="false" sourceEndRoleName="Head" targetEndRoleName="Track Task Execution" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="ac56916d-4e64-4dc6-abb9-bbb8f9e7a68b" LastKnownName="Track Mission Execution" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b9735282-e9d0-4a1b-b5e9-087b1521461a" name="Head" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="00356758-cde8-4af2-a3a5-cc8d53b19a23" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="cc1e18d6-b439-4349-ad4d-c83aac8e1527" name="Track Task Execution" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="57ff32a4-a945-4798-98fd-2ce2e9315152" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="7a30e44f-7f17-4fa2-821a-150ec29ac0f2" />
+          </association>
+          <association Id="ba4a8e69-8f4e-4341-9c3f-366cb0497f30" isDerived="false" sourceEndRoleName="Head" targetEndRoleName="Create Tasks" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="492c9fbf-ac4c-4755-a944-19b03158f65c" LastKnownName="Create Missions" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="dd7ebd0c-e117-482c-9966-68cbe71ac9fa" name="Head" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="1a7311b4-7cb6-4a0f-af63-e1c38f978de7" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3c8991d5-d592-4f4d-840a-8bf1958d3fbb" name="Create Tasks" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="31b6fd06-7cdd-467f-a923-b3be70ae654a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="5d766177-f310-493c-91ed-8b81074e92fa" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="30a1b47c-862e-4518-b31a-ec90481e396b" name="Supervisor" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="afabd576-5c90-4655-aa53-0653c5a6c390" />
+        <targetEnds>
+          <association Id="6a858752-a838-4c26-9a9c-e7093e8720c7" isDerived="false" sourceEndRoleName="Supervisor" targetEndRoleName="Input Information About Accident" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="7957dfb0-07c1-493d-b05b-e734167c07bf" LastKnownName="Collect Information About Accident" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d96963e4-0487-482c-84ff-0a89158d0e67" name="Supervisor" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="129696c7-4516-41a3-85d7-494862f78f10" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="78b29e42-07c7-49ae-ac94-a7b842b591c6" name="Input Information About Accident" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="15d7ddf9-33af-40f7-bd07-1f085f22b7e3" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="2269f480-a96b-428c-b103-0b97a2f0e605" />
+          </association>
+          <association Id="e1a85fbe-5282-492f-aa60-7399f7a101be" isDerived="false" sourceEndRoleName="Supervisor" targetEndRoleName="Communication" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="92b1ca58-806c-44e9-9590-27a39c0b537c" LastKnownName="Communicate" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="493e0211-210a-4cd5-bedd-701b11f055b8" name="Supervisor" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="7b588e0c-4c3d-462e-add4-2310d94841d7" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="52f7f84b-bee2-41f2-bca7-24b65494ec94" name="Communication" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="122c32eb-e42d-440b-9f44-b401527125c8" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="b2067a6c-5f6a-4b0c-8bdb-e3f91fee6d42" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="ce25b856-88bb-47f6-ac81-9aecdccc0ec0" name="Call Center Operator" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="0affbada-fa30-4aad-8550-8bd2c61df02a" />
+        <targetEnds>
+          <association Id="2a424ec5-175d-4892-9dc3-6aec4c9babe3" isDerived="false" sourceEndRoleName="Call Center Operator" targetEndRoleName="Input Information About Accident" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="7957dfb0-07c1-493d-b05b-e734167c07bf" LastKnownName="Collect Information About Accident" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3f8ee935-2d4b-4622-ab22-8346eb7c8f7b" name="Call Center Operator" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="774741b0-5ae0-453e-ba56-af7111e3413a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6f82dbe6-cbc3-4aed-acc4-9fe383185030" name="Input Information About Accident" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="b9d98082-505b-4779-a36e-d03cb46df3c6" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="43020bb5-7269-4071-9690-d14b9e8fe0be" />
+          </association>
+          <association Id="826e39fa-7d60-4c72-b10f-d9b0a8a7e92e" isDerived="false" sourceEndRoleName="Call Center Operator" targetEndRoleName="Communicate" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="92b1ca58-806c-44e9-9590-27a39c0b537c" LastKnownName="Communicate" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="64fb175c-7226-4e07-8014-36493fe9b731" name="Call Center Operator" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="be9197f6-222f-4d19-9f90-71813f2467e9" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f04da5ae-6b99-4254-947d-e5718df10f5d" name="Communicate" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ae6852f1-99ec-4d2d-a24a-de1abf191c7d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="513cbbeb-f967-438a-989e-32d9a25a0a39" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="c3040f63-aabc-4096-a642-e77280ee4113" name="Team Member" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="a9724598-381e-4878-86dc-bef0a8840f05" />
+        <targetEnds>
+          <association Id="649650f0-ce96-4626-9d2e-dd2bddde3961" isDerived="false" sourceEndRoleName="Member" targetEndRoleName="Communication" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="92b1ca58-806c-44e9-9590-27a39c0b537c" LastKnownName="Communicate" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a89b57a1-2582-446d-9db1-75e56eac67e5" name="Member" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="d3709ec1-0df5-4744-b180-a66e917531be" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0f8f2814-02bd-495a-8572-2ba48ceed9d1" name="Communication" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="8eeb9f99-c9ad-4f07-a28f-4c22304498ba" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="4735319b-5ceb-46b5-be71-d359181000e5" />
+          </association>
+          <association Id="9174648e-e8bc-4e96-8808-cada1da737f3" isDerived="false" sourceEndRoleName="Member" targetEndRoleName="Track Task Execution" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="ac56916d-4e64-4dc6-abb9-bbb8f9e7a68b" LastKnownName="Track Mission Execution" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7493e14e-7f63-47e9-9181-8f6c7637b5de" name="Member" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="b1f4cf11-bee8-4172-92d6-2a2e2654a8bc" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="55e15bd5-8dbd-4866-beec-de48bd4c4bb5" name="Track Task Execution" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="5840e043-b407-4709-bc87-79e3ad7ccefd" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="87db2d45-4a33-41b9-9d77-412721cdf66e" />
+          </association>
+          <association Id="b1f14c58-3c16-4d90-bfea-62e7bd688f8b" isDerived="false" sourceEndRoleName="Team Member" targetEndRoleName="Analyse Sutable Recources" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="142e1aec-d8c3-43b3-859e-6578ef15516e" LastKnownName="Analyse and select Sutable Recources" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="31166a1d-40cd-40d6-a03f-3019909ab52a" name="Team Member" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="820f5d54-0a00-4224-812e-26751b8e99de" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b0ab8a16-11db-4fe0-b99f-8581973a28ea" name="Analyse Sutable Recources" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="25ef7806-0a07-40ee-b065-110a968f029a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="0f5e5f1b-5b11-409c-8021-d8cfa5fe9232" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="fe438a01-d4a9-44d7-8a5d-26ec1fc9ed79" name="Resource Provider" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="67e8baf9-5898-4331-a30c-cff4bf20c9fc" />
+        <targetEnds>
+          <association Id="c9922059-a259-4c57-bbb9-18c7a47bdf1a" isDerived="false" sourceEndRoleName="Resource Provider" targetEndRoleName="Communicate" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="92b1ca58-806c-44e9-9590-27a39c0b537c" LastKnownName="Communicate" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="fb23de78-b7f5-4a8a-957f-c74b8383778e" name="Resource Provider" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="24e55064-620c-4141-b0e8-f011e13e047f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c71fefe4-9ef5-4c8e-8bfe-fa0756a9c7b2" name="Communicate" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="f5bb045f-dad5-4b8d-a483-84f4abd9c3bf" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="d1ebf595-e50d-4401-9bb5-9d71fec46d85" />
+          </association>
+          <association Id="96614f72-d9c2-479d-bc42-15a63c1922e3" isDerived="false" sourceEndRoleName="Resource Provider" targetEndRoleName="Provide Resource Information" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="beffc453-b79b-4e6a-abef-c76d8d11aa20" LastKnownName="Provide Resource Information" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="13a385bc-5c1e-4b3b-bb5a-5cabac35ff4f" name="Resource Provider" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="7f52d0be-7bc2-4ac1-8808-1aa1535e2dbb" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="60a315b7-bc25-4f0a-8b46-77fc6e0f9704" name="Provide Resource Information" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ed36dbea-597e-4b97-8b74-ec7e57c9bcf5" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="c6b5bc02-e7f9-4a23-afb5-7ee9d610a8a4" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="407623cc-52dd-421c-a250-015576906d19" name="Accident Management System" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="614d0d74-2f46-431f-a930-109eeabcf08c" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="7957dfb0-07c1-493d-b05b-e734167c07bf" name="Collect Information About Accident" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="7ec996e8-28d4-4d4d-a0da-1cdc50677e4f" />
+        <additions>
+          <include Id="4fde2490-4e1e-4075-9ab8-655fa07d2088">
+            <useCaseMoniker Id="5d1fd60f-cf54-434a-bd92-f10ea0b81490" LastKnownName="Manage Issues" />
+            <elementDefinition Id="812ee904-1cf0-4abe-9e10-2c05a5db6141" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker Id="407623cc-52dd-421c-a250-015576906d19" LastKnownName="Accident Management System" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="92b1ca58-806c-44e9-9590-27a39c0b537c" name="Communicate" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="731a8476-5176-48af-9605-2f797f912939" />
+        <subjects>
+          <subsystemMoniker Id="407623cc-52dd-421c-a250-015576906d19" LastKnownName="Accident Management System" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="ac56916d-4e64-4dc6-abb9-bbb8f9e7a68b" name="Track Mission Execution" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d13e32fa-08a6-44d1-9e14-be4e7dbff2e7" />
+        <additions>
+          <include Id="3c7b9125-8120-4586-800f-f59661172f3b">
+            <useCaseMoniker Id="92b1ca58-806c-44e9-9590-27a39c0b537c" LastKnownName="Communicate" />
+            <elementDefinition Id="5be430c4-ad3b-4042-9e44-e8cf2c249ddd" />
+          </include>
+          <include Id="1d5e725c-beba-4679-b426-f0e282877080">
+            <useCaseMoniker Id="142e1aec-d8c3-43b3-859e-6578ef15516e" LastKnownName="Analyse and select Sutable Recources" />
+            <elementDefinition Id="8725aed3-620d-404d-b0ba-2a2f40708077" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker Id="407623cc-52dd-421c-a250-015576906d19" LastKnownName="Accident Management System" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="5d1fd60f-cf54-434a-bd92-f10ea0b81490" name="Manage Issues" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="84472ea7-072a-4773-9161-81c7f8c6e493" />
+        <extendedCases>
+          <extend Id="6cb05a37-bb4c-4fc0-a20f-3809be04e49e">
+            <useCaseMoniker Id="492c9fbf-ac4c-4755-a944-19b03158f65c" LastKnownName="Create Missions" />
+            <elementDefinition Id="bbda7346-247e-4c17-ad71-094f78b4731b" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker Id="407623cc-52dd-421c-a250-015576906d19" LastKnownName="Accident Management System" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="beffc453-b79b-4e6a-abef-c76d8d11aa20" name="Provide Resource Information" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d9446023-3e43-43f7-a259-a1d6629a005b" />
+        <subjects>
+          <subsystemMoniker Id="407623cc-52dd-421c-a250-015576906d19" LastKnownName="Accident Management System" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="142e1aec-d8c3-43b3-859e-6578ef15516e" name="Analyse and select Sutable Recources" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="2aef6a38-12f6-4272-b7a3-cf8c1ff8922b" />
+        <suppliersInternal>
+          <dependency Id="d3acbd95-20d1-4fe5-826f-238d8bc8d368">
+            <useCaseMoniker Id="beffc453-b79b-4e6a-abef-c76d8d11aa20" LastKnownName="Provide Resource Information" />
+            <elementDefinition Id="6909c305-9991-4bd8-a0af-6a5f7ee21186" />
+          </dependency>
+        </suppliersInternal>
+        <subjects>
+          <subsystemMoniker Id="407623cc-52dd-421c-a250-015576906d19" LastKnownName="Accident Management System" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="492c9fbf-ac4c-4755-a944-19b03158f65c" name="Create Missions" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="28629fd8-93d9-4d31-871f-b183284a547f" />
+        <subjects>
+          <subsystemMoniker Id="407623cc-52dd-421c-a250-015576906d19" LastKnownName="Accident Management System" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="e33eb982-8308-4312-96f4-d0faa5c3474c" name="Architecture">
+    <elementDefinition Id="a2cca7bc-a604-4d6c-9e29-ac2e428a33f6" />
+  </package>
+</useCaseModelRoot>

@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Mcs.Model.MenuCategory>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<script type="text/javascript">
+    function submit(id) {
+        var xhr = new XMLHttpRequest();
+        var params = 'id=' + id;
+        xhr.open("POST", '', true);
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        xhr.send(params);
+
+        window.location.href = '/dish/index/' + id;
+    }
+</script>
+
+<h2>Выберите категорию меню</h2>
+
+<article id="main" class="navigable current">
+    <section>
+
+        <ul class='list'>
+            @foreach (var item in Model)
+            {
+                <li data-goto="segmented-article" class="nav" onclick="submit(@item.Id)">
+                    <h3 style=""> @Html.DisplayFor(modelItem => item.Name)</h3>
+                </li>
+            }
+        </ul>
+    </section>
+</article>

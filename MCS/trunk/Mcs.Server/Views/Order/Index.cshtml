@@ -1,0 +1,33 @@
+﻿@using Mcs.Server.Extensions
+@model IEnumerable<Mcs.Model.Order>
+
+@{
+    ViewBag.Title = "Заказы";
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Открыт</th>
+            <th>Закрыт</th>
+            <th>Стол</th>
+            <th>Статус</th>  
+            <th>Сумма</th>  
+            <th>Действия</th>
+        </tr>
+    </thead>
+    @foreach (var order in Model)
+    {
+        <tr>            
+            <td>@order.Opened.ToString()</td>
+            <td>@order.Closed.ToString()</td>
+            <td>@order.Desk.Name</td>
+            <td>@order.State</td>
+            <td>@order.Amount</td>
+            <td>@Html.EditLinks("order", order.Id)</td>            
+        </tr>
+    }
+</table>
